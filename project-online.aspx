@@ -1,0 +1,139 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="project-online.aspx.cs" Inherits="projectonline" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="title" runat="Server"> - Project Online</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="titleExtra" runat="Server"> | Project Server (PPM e EPM)</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="description" runat="server">
+	<meta name="description" content="Consultoria Project Server (PPM - EPM) e Project Online - Implantação, Treinamento e Suporte Especializado - Portfólio Project Management - Microsoft Gold Partner." />
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="head" runat="Server">
+	<style type="text/css">
+		.principal .box-slide
+		{
+			background-repeat: no-repeat; background-size: cover; background-position-x: center;
+		}
+	</style>
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="content" runat="Server">
+	<section class="pg-project" data-aos="fade-down" data-aos-duration="500">
+		<div class="container">
+			<div class="row sem-espaco">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 titulo-project">
+					<h1>Project Online <span>e</span> Project Server</h1>
+					<h2>Microsoft PPM e EPM</h2>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="bg-clientes-texto" data-aos="fade-down" data-aos-duration="650">
+		<div class="container">
+			<div class="row sem-espaco">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 titulo-project-contato">
+					<p class="desc">A MLPro é expert no Microsoft Project Online, no Microsoft Project, no EPM - Enterprise Project Management e no PPM - Project and Portfólio Management. A MLPro atua nas etapas de implementação do PPM, Project Server e Project Online nos processos de: Consultoria, Implantação, Configuração, Customização, Integração, Treinamento, Administração e Suporte.</p>
+					<p>&nbsp;</p>
+					<p class="desc">A MLPro implementa <b>soluções</b> que permitirão que a sua empresa <b>otimize</b> o trabalho do <b>escritório de projetos</b>, garantindo mais <b>agilidade</b> nas tomadas de decisões, <b>redução</b> de eventuais <b>desvios</b> de prazo ou custo no <b>cronograma</b>.</p>
+					<p>&nbsp;</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="bg-project-texto" data-aos="fade-down" data-aos-duration="500">
+		<div class="container">
+			<div class="row sem-espaco">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 texto-project">
+					<ul>
+						<li><i></i>A MLPro é certificada <b><span>Microsoft Gold Partner</span></b> no <b><span>Project and Portfólio Management</span></b>.</li>
+						<li><i></i><b>Consultoria</b> no <b>Project Server</b> e no <b>Project Online</b>, especializada em Implantação, Treinamento e Suporte.</li>
+						<li><i></i>A MLPro apóia e incentiva a <b>constante atualização</b> de seus <b>profissionais</b> garantindo que suas soluções estejam alinhadas com as melhores práticas de mercado.</li>
+						<li><i></i>Somos Especialistas no <b>Microsoft PPM</b> (Project and Portfólio Management) e no <b>Microsoft EPM</b> (Enterprise Project Management).</li>
+						<li><i></i>Nosso time de <b>profissionais certificados</b> oferece uma abordagem customizada e abrangente para integrar esta complexa solução em sua empresa, para que atinja os benefícios esperados em seu portfólio de projetos.</li>
+						<li><i></i><b>Soluções customizadas</b> de relatórios permitindo mais <b>agilidade</b> e <b>melhor gestão do portfólio</b> de projetos de sua empresa.</li>
+						<li><i></i>Entendemos que com projetos, nossos <b>parceiros</b> constroem o futuro de sua organização, e buscamos com nossas soluções, facilitar a gestão para atingir o resultado esperado, em via do futuro mais seguro, inclusivo e sustentável.</li>
+					</ul>
+				</div>
+				<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 img-project">
+					<img src="/content/img/microsoft-partner-gold-project-and-portfolio-management-box.jpg" alt="Microsoft Partnet Gold - Project and Portfólio Management" title="Microsoft Partnet Gold - Project and Portfólio Management" width="288" height="232" class="segundo-img-project" data-aos="fade-down" data-aos-duration="500" />
+					<img src="/content/img/microsoft-project-server-project-online.jpg"                     alt="Microsoft Project Server e Microsoft Project Online"       title="Microsoft Project Server e Microsoft Project Online"       width="288" height="232" class="primeiro-img-project" data-aos="fade-down" data-aos-duration="900" />
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="pg-project-contato" data-aos="fade-down" data-aos-duration="500">
+		<div class="container">
+			<div class="row sem-espaco">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 titulo-project-contato">
+					<h3>Microsoft PPM e EPM</h3>
+					<p>Solicite uma demonstração do produto, será um prazer mostrarmos como podemos <br /> melhorar a gestão do portfólio de projetos da sua empresa.</p>
+					<a href="/contato/" class="btn-project-contato">Contato <i></i></a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="bg-clientes">
+		<div class="row sem-espaco">
+			<div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 clientes-titulo" data-aos="fade-down" data-aos-duration="800">
+				<h2>Clientes MLPro <br />Microsoft <b>EPM</b> e <b>PPM</b></h2>
+				<button class="slide-clientes-left"></button>
+				<button class="slide-clientes-right"></button>
+			</div>
+			<div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 clientes-espaco" data-aos="fade-down" data-aos-duration="800">
+				<div class="slide-clientes">
+					<a target="_blank" href="https://www.voeazul.com.br/"            ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/azul.jpg"               alt="Azul"                                   title="Azul"                                   /></span></a>
+					<a target="_blank" href="http://www.ibope.com.br/"               ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/ibope.jpg"              alt="Ibope"                                  title="Ibope"                                  /></span></a>
+					<a target="_blank" href="https://www.tigre.com.br/"              ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/tigre.jpg"              alt="Tigre"                                  title="Tigre"                                  /></span></a>
+					<a target="_blank" href="https://www.metrorio.com.br/"           ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/metro-rio.jpg"          alt="Metro Rio"                              title="Metro Rio"                              /></span></a>
+					<a target="_blank" href="https://www.cristalia.com.br/"          ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/cristalia.jpg"          alt="Cristalia"                              title="Cristalia"                              /></span></a>
+					<a target="_blank" href="https://www.alphavilleurbanismo.com.br/"><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/alphaville.jpg"         alt="Alphaville"                             title="Alphaville"                             /></span></a>
+					<a target="_blank" href="http://www.damha.com.br/"               ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/damha.jpg"              alt="Damha"                                  title="Damha"                                  /></span></a>
+					<a target="_blank" href="http://alta-rt.com/"                    ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/art.jpg"                alt="Alta-RT"                                title="Alta-RT"                                /></span></a>
+
+					<a target="_blank" href="http://www.fm.usp.br/"                  ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/medicina.jpg"           alt="Faculdade de Medicina da USP"           title="Faculdade de Medicina da USP"           /></span></a>
+					<a target="_blank" href="https://www.funcao.com.br/"             ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/funcao.jpg"             alt="Função"                                 title="Função"                                 /></span></a>
+					<a target="_blank" href="http://www.ype.ind.br/"                 ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/ype.jpg"                alt="Ype"                                    title="Ype"                                    /></span></a>
+					<a target="_blank" href="https://www.tecmon.com/"                ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/tecmon.jpg"             alt="Tecmon"                                 title="Tecmon"                                 /></span></a>
+					<a target="_blank" href="http://www.rabobank.com.br/"            ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/rabobank.jpg"           alt="Rabobank"                               title="Rabobank"                               /></span></a>
+
+					<a target="_blank" href="http://www.alfarealty.com.br/"          ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/alfa-realty.jpg"        alt="Alfa-Realty"                            title="Alfa-Realty"                            /></span></a>
+					                                                                  <span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/engesis.jpg"            alt="Engesis"                                title="Engesis"                                /></span>
+					<a target="_blank" href="https://www.gafisa.com.br/"             ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/gafisa.jpg"             alt="Gafisa"                                 title="Gafisa"                                 /></span></a>
+					<a target="_blank" href="http://lock.com.br/"                    ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/lock.jpg"               alt="Lock"                                   title="Lock"                                   /></span></a>
+					<a target="_blank" href="http://www.techint.com/"                ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/techint.jpg"            alt="Techint"                                title="Techint"                                /></span></a>
+					<a target="_blank" href="https://www.band.uol.com.br/"           ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/bandeirantes.jpg"       alt="Bandeirantes"                           title="Bandeirantes"                           /></span></a>
+					                                                                  <span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/olitel.jpg"             alt="Olitel"                                 title="Olitel"                                 /></span>
+					<a target="_blank" href="https://www.sky.com.br/"                ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/sky.jpg"                alt="Sky"                                    title="Sky"                                    /></span></a>
+					<a target="_blank" href="http://www.ccee.org.br/"                ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/ccee.jpg"               alt="CCEE"                                   title="CCEE"                                   /></span></a>
+					<a target="_blank" href="http://www.light.com.br/"               ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/light.jpg"              alt="Light"                                  title="Light"                                  /></span></a>
+					                                                                  <span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/wincor.jpg"             alt="Wincor"                                 title="Wincor"                                 /></span>
+					<a target="_blank" href="https://www1.brasilprev.com.br/"        ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/brasilprev.jpg"         alt="Brasilprev"                             title="Brasilprev"                             /></span></a>
+					<a target="_blank" href="http://www.vizca.com.br/"               ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/vizca.jpg"              alt="Vizca"                                  title="Vizca"                                  /></span></a>
+					<a target="_blank" href="http://www.cobrape.com.br/"             ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/cobrape.jpg"            alt="Cobrape"                                title="Cobrape"                                /></span></a>
+					<a target="_blank" href="https://www.avibras.com.br/"            ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/avibras.jpg"            alt="Avibras"                                title="Avibras"                                /></span></a>
+					<a target="_blank" href="https://www.royalcanin.com.br/"         ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/royal.jpg"              alt="Royal"                                  title="Royal"                                  /></span></a>
+					<a target="_blank" href="https://www.tuper.com.br/"              ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/tuper.jpg"              alt="Tuper"                                  title="Tuper"                                  /></span></a>
+					<a target="_blank" href="http://www.apdata.com/bra/pt/index"     ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/apdata.jpg"             alt="Apdata"                                 title="Apdata"                                 /></span></a>
+					<a target="_blank" href="https://cipher.com/"                    ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/cipher.jpg"             alt="Cipher"                                 title="Cipher"                                 /></span></a>
+					<a target="_blank" href="https://www.lobtec.com.br/"             ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/lobtec.jpg"             alt="Lobtec"                                 title="Lobtec"                                 /></span></a>
+					                                                                  <span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/senior.jpg"             alt="Senior"                                 title="Senior"                                 /></span>
+					<a target="_blank" href="http://www.sabesp.com.br/"              ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/sabesp.jpg"             alt="Sabesp"                                 title="Sabesp"                                 /></span></a>
+					<a target="_blank" href="http://www.policiamilitar.sp.gov.br/"   ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/policia-militar.jpg"    alt="Polícia Militar do Estado de São Paulo" title="Polícia Militar do Estado de São Paulo" /></span></a>
+					                                                                  <span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/onda-limpa.jpg"         alt="Sabesp - Programa Onda Limpa"           title="Sabesp - Programa Onda Limpa"           /></span>
+					                                                                  <span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/corrego-limpo.jpg"      alt="Sabesp - Programa Corrego Limpo"        title="Sabesp - Programa Corrego Limpo"        /></span>
+					<a target="_blank" href="https://www.sescsp.org.br/"             ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/sesc.jpg"               alt="Sesc"                                   title="Sesc"                                   /></span></a>
+					<a target="_blank" href="https://www.akatu.org.br/"              ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/akatu.jpg"              alt="Akatu"                                  title="Akatu"                                  /></span></a>
+					<a target="_blank" href="http://www.butantan.gov.br/"            ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/butantan.jpg"           alt="Butantan"                               title="Butantan"                               /></span></a>
+					<a target="_blank" href="http://extranet.ffm.br/"                ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/faculdade-medicina.jpg" alt="Fundação Faculdade de Medicina"         title="Fundação Faculdade de Medicina"         /></span></a>
+					<a target="_blank" href="http://www.ipt.br/"                     ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/ipt.jpg"                alt="IPT"                                    title="IPT"                                    /></span></a>
+					<a target="_blank" href="https://www.procknor.com.br/"           ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/procknor.jpg"           alt="Procknor"                               title="Procknor"                               /></span></a>
+					<a target="_blank" href="#"                                      ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/promon.jpg"             alt="Promon"                                 title="Promon"                                 /></span></a>
+					<a target="_blank" href="http://www.toyosetal.com/"              ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/toyo.jpg"               alt="Toyo"                                   title="Toyo"                                   /></span></a>
+					<a target="_blank" href="https://www.walmart.com.br/"            ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/walmart.jpg"            alt="Walmart"                                title="Walmart"                                /></span></a>
+				</div>
+			</div>
+		</div>
+	</section>
+</asp:Content>
+<asp:Content ID="Content6" ContentPlaceHolderID="footer" runat="Server">
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$("#ctl00_headermaster").addClass("topo-internas");
+		});
+	</script>
+</asp:Content>

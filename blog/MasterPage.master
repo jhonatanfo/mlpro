@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="~/blog/MasterPage.master.cs" Inherits="MasterPage" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="title" runat="Server"> - Blog</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="titleExtra" runat="Server"> | Project Online</asp:Content>
+
+<asp:Content ID="Content3" ContentPlaceHolderID="head" runat="Server">
+	<link rel="stylesheet" type="text/css" href="/content/css/blog.min.css" />
+	<script type="text/javascript" src="/content/js/blog.min.js"></script>
+</asp:Content>
+
+<asp:Content ID="Content4" ContentPlaceHolderID="linguaContent" runat="Server"></asp:Content>
+
+<asp:Content ID="Content5" ContentPlaceHolderID="content" runat="Server">
+	<section class="pg-project">
+		<div class="container">
+			<div class="row sem-espaco">
+				<div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 titulo-project">
+					<h1>Blog MLPro</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="pg-project">
+		<div class="container">
+			<div class="row sem-espaco">
+				<div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 posts">
+					<asp:ContentPlaceHolder ID="BlogContent" runat="server"></asp:ContentPlaceHolder>
+				</div>
+				<div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 posts-list">
+					<p><img src="/content/img/Project-Server-blog.png" width="100%" height="auto" alt="Project Server" title="Project Server" /></p>
+					<p>Novidades e dicas relacionadas ao Microsoft Project Online e Project Server.</p>
+					<asp:label runat="server" ID="BlogPostsList" />
+				</div>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$("#ctl00_ctl00_headermaster").addClass("topo-internas");
+		});
+	</script>
+</asp:Content>

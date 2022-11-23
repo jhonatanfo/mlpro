@@ -1,0 +1,1 @@
+﻿<%@ Page Title="" Language="C#" AutoEventWireup="true" CodeFile="~/cadastro-newsletter.aspx.cs" Inherits="_Cadastro_Newsletter" %><asp:literal runat="server" ID="Content" />

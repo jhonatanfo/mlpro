@@ -1,0 +1,108 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.Script.Serialization;
+using System.IO;
+
+public partial class contato : System.Web.UI.Page
+{
+	protected void Page_Load(object sender, EventArgs e)
+	{
+	}
+
+	protected void btnEnviar_Click(object sender, EventArgs e)
+	{
+		if (FrameWork.Util.GetString(token.Value) == "") {
+
+		} else if (FrameWork.Util.GetString(nome.Value).Length == 0) {
+			nome.Attributes.Add("style", "border-color:red");
+			nome.Focus();
+
+		} else if (FrameWork.Util.GetString(email.Value) == "") {
+			nome.Attributes.Add("style", "");
+			email.Attributes.Add("style", "border-color:red");
+			email.Focus();
+
+		} else if (FrameWork.Util.GetString(telefone.Value) == "") {
+			nome.Attributes.Add("style", "");
+			email.Attributes.Add("style", "");
+			telefone.Attributes.Add("style", "border-color:red");
+			telefone.Focus();
+
+		} else if (FrameWork.Util.GetString(assunto.Value) == "") {
+			nome.Attributes.Add("style", "");
+			email.Attributes.Add("style", "");
+			telefone.Attributes.Add("style", "");
+			assunto.Attributes.Add("style", "border-color:red");
+			assunto.Focus();
+
+		} else if (FrameWork.Util.GetString(mensagem.Value) == "") {
+			nome.Attributes.Add("style", "");
+			email.Attributes.Add("style", "");
+			telefone.Attributes.Add("style", "");
+			assunto.Attributes.Add("style", "");
+			mensagem.Attributes.Add("style", "border-color:red");
+			mensagem.Focus();
+
+		} else {
+			// recaptcha v3
+			string secretKey = "6LdFRYIUAAAAABnHTG1YaL5slTSMFNQOU3BmLU6t";
+
+			string sPara      = "contato@mlpro.com.br";
+			string sCc        = "fabio@mlpro.com.br; ricardo.sabino@mlpro.com.br";
+			string sCco       = "";
+			string strAssunto = "MLPro Soluções PPM - Contato";
+			string FilePath   = Server.MapPath("../template_email/FaleConosco.html");
+
+			System.Net.WebRequest req = System.Net.WebRequest.Create("https://www.google.com/recaptcha/api/siteverify");
+
+			req.ContentType = "application/x-www-form-urlencoded";
+			req.Method      = "POST";
+
+			byte[] bytes = System.Text.Encoding.ASCII.GetBytes("secret=" + secretKey + "&response=" + FrameWork.Util.GetString(token.Value)); // .Replace("&", "&amp;")
+			req.ContentLength = bytes.Length;
+
+			System.IO.Stream os = req.GetRequestStream();
+			os.Write(bytes, 0, bytes.Length); //Push it out there
+			os.Close();
+
+			System.Net.WebResponse resp = req.GetResponse();
+
+			System.IO.StreamReader sr = new System.IO.StreamReader(resp.GetResponseStream());
+			string result = sr.ReadToEnd().Trim().Replace(" ", "");
+			// Response.Write( sr.ReadToEnd().Trim() );
+			// { "success": false, "error-codes": [ "invalid-input-secret" ] }
+			// { "success": true, "challenge_ts": "2019-06-14T13:24:24Z", "hostname": "www.mlpro.com.br", "score": 0.9, "action": "homepage" }
+
+			if (result.IndexOf("\"success\":true") > -1) {
+				System.IO.StreamReader objStreamReader = System.IO.File.OpenText(FilePath);
+				string strArq = objStreamReader.ReadToEnd();
+
+				strArq = strArq.Replace("#Nome"    , FrameWork.Util.GetString(nome.Value    ));
+				strArq = strArq.Replace("#Email"   , FrameWork.Util.GetString(email.Value   ));
+				strArq = strArq.Replace("#Telefone", FrameWork.Util.GetString(telefone.Value));
+				strArq = strArq.Replace("#Assunto" , FrameWork.Util.GetString(assunto.Value ));
+				strArq = strArq.Replace("#Mensagem", FrameWork.Util.GetString(mensagem.Value));
+
+				String strResultadoEnvio = FrameWork.Util.GetString(Funcoes.EnvioEmail(strArq, "contato@mlpro.com.br", strAssunto, sPara, sCc, sCco));
+			}
+
+			Funcoes.msgbox("Dados enviados com sucesso!", this);
+
+			nome.Attributes.Add("style", "");
+			email.Attributes.Add("style", "");
+			telefone.Attributes.Add("style", "");
+			assunto.Attributes.Add("style", "");
+			mensagem.Attributes.Add("style", "");
+
+			nome.Value     = "";
+			email.Value    = "";
+			telefone.Value = "";
+			assunto.Value  = "";
+			mensagem.Value = "";
+		}
+	}
+}
