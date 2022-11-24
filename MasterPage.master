@@ -50,9 +50,10 @@
 	<link rel="stylesheet" type="text/css" href="/content/slick/slick-animation.min.css" />
 	<!--//SLICK-->
 	<link rel="stylesheet" type="text/css" href="/content/dist/aos.min.css" />
-	<link rel="stylesheet" type="text/css" href="/content/css/style.min.css" />
+	<link rel="stylesheet" type="text/css" href="/content/css/style.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="/content/css/style.min.css" />-->
+	<link rel="stylesheet" type="text/css" href="/content/css/new-layout-style.css" /> 
 	<link rel="stylesheet" type="text/css" href="/content/css/mobile.min.css" />
-	<link rel="stylesheet" type="text/css" href="/content/css/new-layout-style.css" />
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -80,7 +81,8 @@
 	<script type="text/javascript" src="/content/slick/slick-animation.min.js"></script>
 	<!--/Slick script-->
 	<script type="text/javascript" src="/content/dist/aos.js"></script>
-	<script type="text/javascript" src="/content/js/padrao.min.js"></script>
+	<!-- <script type="text/javascript" src="/content/js/padrao.min.js"></script> -->
+	<script type="text/javascript" src="/content/js/padrao.js"></script>
 	<asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
 </head>
 <body itemscope="itemscope" itemtype="https://schema.org/WebPage">
@@ -91,8 +93,8 @@
 		<!--Menu-->
 		<nav class="navbar navbar-expand-lg">
 			<div class="container">
-				<a href="/" id="logo-link">
-					<img src="/content/img/mlpro-ppm.jpg" class="logo" id="logo" title="MLPro - PPM e EPM (Project Server e Project Online)" alt="MLPro - PPM e EPM (Project Server e Project Online)" title="MLPro - PPM e EPM (Project Server e Project Online)" width="262" height="76" />
+				<a class="logo" href="/" id="logo-link">
+					<img src="/content/img/mlpro-ppm.png" id="logo" title="MLPro - PPM e EPM (Project Server e Project Online)" alt="MLPro - PPM e EPM (Project Server e Project Online)" title="MLPro - PPM e EPM (Project Server e Project Online)" width="262" height="76" />
 				</a>
 				<asp:ContentPlaceHolder ID="linguaContent" runat="server">
 				<div class="lingua">
@@ -108,14 +110,14 @@
 				</button>
 				<div class="collapse navbar-collapse justify-content-end" id="conteudoNavbarSuportado" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
 					<ul class="navbar-nav">
-						<li class="nav-item"><a class="nav-link" href="/">HOME</a></li>
-						<li class="nav-item"><a class="nav-link" href="/project-online/">PROJECT ONLINE</a></li>
-						<li class="nav-item"><a class="nav-link" href="/institucional/">INSTITUCIONAL</a></li>
-						<li class="nav-item"><a class="nav-link" href="/clientes/">CLIENTES</a></li>
-						<li class="nav-item"><a class="nav-link" href="/suporte/">SUPORTE</a></li>
-						<li class="nav-item"><a class="nav-link" href="/contato/">CONTATO</a></li>
-						<li class="nav-item"><a class="nav-link" href="/devops/">DEVOPS</a></li>
-						<li class="nav-item"><a class="nav-link" href="/blog/">BLOG</a></li>
+						<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+						<li class="nav-item"><a class="nav-link" href="/project-online/">Project Online</a></li>
+						<li class="nav-item"><a class="nav-link" href="/institucional/">Institucional</a></li>
+						<li class="nav-item"><a class="nav-link" href="/clientes/">Clientes</a></li>
+						<li class="nav-item"><a class="nav-link" href="/suporte/">Suporte</a></li>
+						<li class="nav-item"><a class="nav-link" href="/contato/">Contato</a></li>
+						<li class="nav-item"><a class="nav-link" href="/devops/">Devops</a></li>
+						<li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
 					</ul>
 				</div>
 			</div>

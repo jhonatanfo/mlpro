@@ -1,3 +1,4 @@
+
 @font-face {
 	font-family: 'BwModelica-ThinItalic';
 	src: url('../fonts/BwModelica-ThinItalic.eot');
@@ -110,17 +111,7 @@
 	font-style: normal;
 }
 
-A .logo {
-	color: #3f455b;
-}
 
-.logo {
-	width: 262px;
-	height: 76px;
-	position: absolute;
-	top: 0;
-	margin-left: -20px;
-}
 
 .principal .box-slide .btn-veja,
 .slide-principal-right,
@@ -234,36 +225,7 @@ A .logo {
 	padding: 0;
 }
 
-ul.navbar-nav {
-	margin: 15px -30px 0 0;
-	text-align: center;
-}
 
-ul.navbar-nav li a {
-	-webkit-transition: all 0.2s ease-out;
-	-moz-transition: all 0.2s ease-out;
-	-o-transition: all 0.2s ease-out;
-	transition: all 0.2s ease-out;
-}
-
-ul.navbar-nav li a:hover {
-	opacity: 0.5
-}
-
-.navbar.navbar-expand-lg {
-	position: absolute;
-	left: 0;
-	right: 0;
-	z-index: 2;
-	padding: 0;
-}
-
-.nav-item a {
-	font-family: 'BwModelica-Bold', Arial;
-	font-size: 15px;
-	color: #FFFFFF;
-	margin: 0 5px 0 5px
-}
 
 .box-slide img {
 	margin: 0;

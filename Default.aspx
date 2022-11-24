@@ -13,6 +13,75 @@
 	<script src="https://www.google.com/recaptcha/api.js?render=6LdFRYIUAAAAAHE40bdXPFve0jSkUEHtEXm08oEI&amp;ver=3.0"></script>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="content" runat="Server">
+
+		<section>
+			<div class="bg-banner-principal">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-9">
+							<h2 data-animation-in="bounceInLeft">Implantação, Consultoria e Suporte ao <b>Project Online</b></h2>
+							<p data-animation-in="bounceInUp">A MLPro nas etapas de implementação do PPM, Project Server e Project Online nos processos de: Consultoria, Implantação, Configuração, Customização, Integração, Treinamento, Administração e Suporte...</p>
+							<a href="/project-online/" data-animation-in="bounceInUp" class="btn-veja">veja mais</a>	 
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="logo-microsoft-partner-2022">
+				<div class="container">
+					<img src="/content/img/logo-microsoft-partner-2022.png"  >
+				</div>
+			</div>
+		</section>
+
+		<section class="bg-solucoes">
+			<div class="container">
+				<div class="row sem-espaco">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 titulo-solucoes" data-aos="fade-down" data-aos-duration="500">
+						<h1>Soluções MLPro</h1>
+					</div>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+							<div class="slide-solucoes">
+								<div class="box-slide-solucoes-mlpro ativo" data-aos="fade-down" data-aos-duration="700">
+									<i class="icon-microsoft-gold"></i>
+									<h3>Instalação e<br />Configuração do<br />Microsoft PPM:</h3>
+									<p>Implantação e Consultoria,<br />garantindo a aplicação das<br />melhores práticas do<br />mercado.</p>
+									<div class="solucoes" data-aos="fade-down" data-aos-duration="800">
+										<a href="/project-online/" class="btn-saiba-solucoes">Saiba mais <i></i></a>
+									</div>
+								</div>
+								<!--
+								<div class="box-slide-solucoes" data-aos="fade-down" data-aos-duration="900">
+									<i class="icon-implantando"></i>
+									<h3>Soluções<br />Exclusivas MLPro</h3>
+									<p>Visando atender às melhores<br />práticas de gerenciamento de<br />projetos</p>
+									<div class="solucoes" data-aos="fade-down" data-aos-duration="800">
+										<a href="/project-online/" class="btn-saiba-solucoes">Saiba mais <i></i></a>
+									</div>
+								</div>
+								<div class="box-slide-solucoes" data-aos="fade-down" data-aos-duration="1400">
+									<i class="icon-suporte-usuarios"></i>
+									<h3>Consultoria PPM</h3>
+									<p>Aplicação prática da ferramenta<br />em projetos do cliente,<br />assegurando que a empresa<br />obtenha resultados de forma<br />mais rápida</p>
+									<div class="solucoes" data-aos="fade-down" data-aos-duration="800">
+										<a href="/project-online/" class="btn-saiba-solucoes">Saiba mais <i></i></a>
+									</div>
+								</div> 
+								<div class="box-slide-solucoes" data-aos="fade-down" data-aos-duration="1400">
+									<i class="icon-empresas-atendidas"></i>
+									<h3>Treinamento PPM</h3>
+									<p>Treinamento em Project<br />Online, Project Server, Project<br />Professional e no SharePoint.</p>
+									<div class="solucoes" data-aos="fade-down" data-aos-duration="800">
+										<a href="/project-online/" class="btn-saiba-solucoes">Saiba mais <i></i></a>
+									</div>
+								</div> -->
+							</div>
+					</div>
+				</div>
+				 
+			</div>
+		</section>
+
+	<!-- 
 	<div class="bg-slide-principal">
 		<div class="row sem-espaco">
 			<img data-aos="fade-right" src="/content/img/microsoft-partner-gold-project-and-portfolio-management.png" width="239" height="72" class="home-microsoft-partner" alt="Microsoft Partner Gold - Project and Portfólio Management" title="Microsoft Partner Gold - Project and Portfólio Management" />
@@ -61,8 +130,10 @@
 				<li><a target="_blank" href="https://www.linkedin.com/company/mlpro---solu-es-epm/"><i class="icon-linkedin"></i></a></li>
 			</ul>
 		</div>
-	</div>
-	<section class="bg-ml-solucoes">
+	</div>  
+	-->
+
+	<!-- <section class="bg-ml-solucoes">
 		<div class="container">
 			<div class="row sem-espaco">
 				<div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 bg-titulo-solucoes" data-aos="fade-down" data-aos-duration="500">
@@ -101,7 +172,8 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
+
 	<section class="bg-beneficios" id="beneficios">
 		<div class="container">
 			<div class="row sem-espaco">
@@ -121,6 +193,7 @@
 			</div>
 		</div>
 	</section>
+
 	<section class="bg-produtos" id="produtos">
 		<div class="container">
 			<div class="row sem-espaco">
@@ -160,6 +233,7 @@
 			</div>
 		</div>
 	</section>
+
 	<section class="bg-clientes">
 		<div class="row sem-espaco">
 			<div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 clientes-titulo" data-aos="fade-down" data-aos-duration="800">
@@ -185,6 +259,7 @@
 			</div>
 		</div>
 	</section>
+
 	<section class="bg-contato">
 		<div class="container">
 			<div class="row sem-espaco">
@@ -221,6 +296,7 @@
 			</div>
 		</div>
 	</section>
+
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="footer" runat="Server">
 	<script type="text/javascript">

@@ -79,7 +79,7 @@ $(document).on('ready', function () {
 		arrows: false,
 		dots: false,
 		infinite: true,
-		slidesToShow: 3,
+		slidesToShow: 4,
 		slidesToScroll: 1,
 		responsive: [
 			{
