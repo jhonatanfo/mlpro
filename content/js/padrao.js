@@ -23,12 +23,12 @@ $(document).on('ready', function () {
 	}
 
 	if(tam>breakpoint_1) {
-		$(".box-slide-solucoes").hover(function() {
-			$('.box-slide-solucoes').removeClass("ativo");
+		$(".box-slide-solucoes, .box-slide-solucoes-mlpro").hover(function() {
+			$('.box-slide-solucoes, .box-slide-solucoes-mlpro').removeClass("ativo");
 			$(this).addClass("ativo");
 		});
 	} else {
-		$('.box-slide-solucoes').removeClass("ativo");
+		$('.box-slide-solucoes, .box-slide-solucoes-mlpro').removeClass("ativo");
 	}
 
 	AOS.init({
@@ -75,8 +75,9 @@ $(document).on('ready', function () {
 	$('.slide-principal-left' ).click(function () { $('.principal').slick('slickPrev'); });
 	$('.slide-principal-right').click(function () { $('.principal').slick('slickNext'); });
 
-	$(".slide-solucoes").slick({
-		arrows: false,
+
+	$(".slide-solucoes-mlpro").slick({
+		arrows: true,
 		dots: false,
 		infinite: true,
 		slidesToShow: 4,
@@ -98,6 +99,32 @@ $(document).on('ready', function () {
 			}
 		]
 	});
+	
+
+	$(".slide-solucoes").slick({
+		arrows: false,
+		dots: false,
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: breakpoint_1,
+				settings: {
+					slidesToShow: 1,
+					centerPadding: '0px',
+					centerMode: true
+				},
+				breakpoint: breakpoint_2 - 1,
+				settings: {
+					slidesToShow: 1,
+					centerPadding: '0px',
+					centerMode: true
+				}
+			}
+		]
+	});
+
 	$('.slide-solucoes-left' ).click(function () { $('.slide-solucoes').slick('slickPrev'); });
 	$('.slide-solucoes-right').click(function () { $('.slide-solucoes').slick('slickNext'); });
 
@@ -122,6 +149,28 @@ $(document).on('ready', function () {
 	});
 	$('.slide-clientes-left' ).click(function () { $('.slide-clientes').slick('slickPrev'); });
 	$('.slide-clientes-right').click(function () { $('.slide-clientes').slick('slickNext'); });
+
+	$(".slide-clientes-mlpro").slick({
+		arrows: false,
+		dots: false,
+		infinite: true,
+		slidesToShow: 5,
+		slidesToScroll: 1,
+		// variableWidth: true,
+		responsive: [
+			{
+				breakpoint: breakpoint_2,
+				settings: {
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					centerPadding: '20px',
+					centerMode: true
+				}
+			}
+		]
+	});
+	$('.slide-clientes-left-mlpro' ).click(function () { $('.slide-clientes-mlpro').slick('slickPrev'); });
+	$('.slide-clientes-right-mlpro').click(function () { $('.slide-clientes-mlpro').slick('slickNext'); });
 
 	$(".slide-numeros").slick({
 		arrows: false,
