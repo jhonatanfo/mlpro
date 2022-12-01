@@ -127,57 +127,79 @@
 	<asp:ContentPlaceHolder ID="content" runat="server"></asp:ContentPlaceHolder>
 	<asp:ContentPlaceHolder ID="footer" runat="server"></asp:ContentPlaceHolder>
 	<footer itemscope="itemscope" itemtype="https://schema.org/WPFooter">
-		<div class="bg-rodape">
+		<div class="bg-rodape-mlpro">
 			<div class="container">
 				<div class="row sem-espaco" itemscope="itemscope" itemtype="https://schema.org/Person">
-					<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 rodape-logo">
-						<img src="/content/img/mlpro-solucoes-ppm.png" alt="MLPro - Soluções PPM" title="MLPro - Soluções PPM" width="192" height="40" />
-						<p>&copy; 2019 - Todos os direitos <br />reservados a <span itemprop="jobTitle">MLPro - Soluções PPM</span></p>
-						<ul class="rodape-rede-social">
-							<li><a href="https://www.facebook.com/MLProPPM/"><i class="icon-facebook"></i></a></li>
+					<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 rodape-logo-mlpro">
+						<img src="/content/img/logo-rodape.png" alt="MLPro - Soluções PPM" title="MLPro - Soluções PPM" width="180"  />
+						
+						<ul class="rodape-rede-social-mlpro">
 							<li><a href="https://www.instagram.com/MLProPPM/"><i class="icon-instagram"></i></a></li>
-							<li><a href="https://twitter.com/MLProPPM"><i class="icon-twitter"></i></a></li>
+							<li><a href="https://www.facebook.com/MLProPPM/"><i class="icon-facebook"></i></a></li>
 							<li><a href="https://www.linkedin.com/company/mlpro---solu-es-epm/"><i class="icon-linkedin"></i></a></li>
+							<li><a href="https://twitter.com/MLProPPM"><i class="icon-twitter"></i></a></li>
 						</ul>
 					</div>
-					<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 rodape-contato">
-						<p itemprop="telephone"><i class="icon-rodape-telefone"></i><a href="tel:+55(11)4113-4123">+55 (11) 4113-4123</a></p>
-						<p><i class="icon-rodape-whatsapp"></i><a href="https://api.whatsapp.com/send?1=BR&phone=5511994997179&text=Este%20contato%20foi%20iniciado%20pelo%20site%20da%20MLPro.%0D%0ATenho%20interesse%20em%20saber%20mais%20sobre%20os%20produtos%20oferecidos." target="_blank">+55 (11) 99499-7179</a></p>
-						<p><i class="icon-rodape-email"></i><a href="mailto:contato%40mlpro.com.br" itemprop="email">contato(a)mlpro.com.br</a></p>
+					<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 rodape-contato-mlpro">
+						<h2>CONTATO</h2>
+						<p itemprop="telephone">
+							<a href="tel:+55(11)4113-4123">
+								+55 (11) 4113-4123
+							</a>
+						</p>
+						<p>
+							<a href="https://api.whatsapp.com/send?1=BR&phone=5511994997179&text=Este%20contato%20foi%20iniciado%20pelo%20site%20da%20MLPro.%0D%0ATenho%20interesse%20em%20saber%20mais%20sobre%20os%20produtos%20oferecidos." target="_blank">
+								+55 (11) 99499-7179
+							</a>
+						</p>
+						<p>
+							<a href="mailto:contato%40mlpro.com.br" itemprop="email">
+								contato(a)mlpro.com.br
+							</a>
+						</p>
 						<p itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
-							<i class="icon-rodape-endereco"></i><a href="/contato/#mapa">
-								<span itemprop="streetAddress">Rua Restinga, 113 - Sala 1706</span><br />
-								CEP: <span itemprop="postalCode">03065-020</span> - Tatuapé - <span itemprop="addressLocality">São Paulo</span> - <span itemprop="addressRegion">SP</span>
+							<a href="/contato/#mapa">
+								<span itemprop="streetAddress">Rua Restinga, 113 - Sala 1706</span>
+								<br />
+								CEP: <span itemprop="postalCode">03065-020</span> - Tatuapé  
+								<br />
+								<span itemprop="addressLocality">São Paulo</span> - <span itemprop="addressRegion">SP</span>
 							</a>
 						</p>
 					</div>
-					<div class="col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2 rodape-menu">
+					<div class="col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2 rodape-menu-mlpro">
+						<h2>INSTITUCIONAL</h2>
 						<ul>
-							<li><a href="/"><i class="rodape-icon-home"></i>Home</a></li>
-							<li><a href="/project-online/"><i class="rodape-icon-project"></i>Project Online</a></li>
-							<li><a href="/institucional/"><i class="rodape-icon-institucional"></i>Institucional</a></li>
-							<li><a href="/clientes/"><i class="rodape-icon-clientes"></i>Clientes</a></li>
+							<li><a href="/">Home</a></li>
+							<li><a href="/project-online/">Project Online</a></li>
+							<li><a href="/institucional/">Institucional</a></li>
+							<li><a href="/clientes/">Clientes</a></li>
 						</ul>
 					</div>
-					<div class="col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2 rodape-menu">
+					<div class="col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2 rodape-menu-mlpro espaco">
+						
+
 						<ul>
-							<li><a href="/suporte/"><i class="rodape-icon-suporte"></i>Suporte</a></li>
-							<li><a href="/contato/"><i class="rodape-icon-contato"></i>Contato</a></li>
-							<li><a href="/devops/"><i class="rodape-icon-project"></i>DevOps</a></li>
-							<li><a href="/blog/"><i class="rodape-icon-institucional"></i>Blog</a></li>
+							<li><a href="/suporte/">Suporte</a></li>
+							<li><a href="/contato/">Contato</a></li>
+							<li><a href="/devops/">DevOps</a></li>
+							<li><a href="/blog/">Blog</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="bg-hauze">
-			<div class="row sem-espaco">
-				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sem-espaco">
-					<p>
-						<nobr>Desenvolvido por <a target="_blank" href="http://homebrasil.com/">HomeBrasil</a></nobr>
-						|
-						<nobr>Parceria por <a target="_blank" href="https://www.melicontrol.com.br/">Melicontrol – Gerenciador de vendas do Mercado Livre</a></nobr>
-					</p>
+		<div class="bg-hauze-mlpro">
+			<div class="container border">
+				<div class="row sem-espaco">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sem-espaco">
+						<p>
+							<nobr>Desenvolvido por <a target="_blank" href="http://homebrasil.com/">HomeBrasil</a></nobr>
+							|
+							<nobr>Parceria por <a target="_blank" href="https://www.melicontrol.com.br/">Melicontrol – Gerenciador de vendas do Mercado Livre</a></nobr>
+						</p>
+						
+					</div>
 				</div>
 			</div>
 		</div>

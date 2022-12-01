@@ -453,7 +453,8 @@
 									<a href="tel:+55(11)4113-4123">
 										+55 (11) 4113-4123
 									</a> 
-									<br>
+								</p>
+								<p>
 									<a href="https://api.whatsapp.com/send?1=BR&phone=5511994997179">
 										+55 (11) 99499-7179
 									</a>
@@ -461,7 +462,7 @@
 							</li>
 							<li>
 								<i class="icon-email-mlpro"></i>
-								<p>
+								<p class="line-one">
 									<a href="mailto:contato(a)mlpro.com.br">
 										contato(a)mlpro.com.br
 									</a>
@@ -475,61 +476,42 @@
 						</ul>
 						 
 					</div>
-					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 contato-form sem-espaco">
-						 
+
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 contato-form-mlpro sem-espaco">
+						<div id="form-container">
+							<form id="form1" runat="server">
+								<input type="hidden" name="token" id="token" value="" runat="server" />
+								<div class="input-group">
+									<i class="icon-nome-form"></i>
+									<input type="text" class="form-control" data-mask="" placeholder="Nome" id="nome" name="nome" runat="server" />
+								</div>
+								<div class="input-group">
+									<i class="icon-email-form"></i>
+									<input type="text" class="form-control" data-mask="" placeholder="Email" id="email" name="email" runat="server" />
+								</div>
+								<div class="input-group">
+									<i class="icon-telefone-form"></i>
+									<input type="text" class="form-control" data-mask="" placeholder="Telefone" id="telefone" name="telefone" runat="server" />
+								</div>
+								<div class="input-group" style="display: none">
+									<input type="text" class="form-control" data-mask="" placeholder="Qual o assunto?" id="assunto" name="assunto" runat="server" />
+								</div>
+								<div class="input-group assunto-form">
+									<i class="icon-mensagem-form"></i>
+									<textarea class="form-control" data-mask="" placeholder="Mensagem" id="mensagem" name="mensagem" runat="server" />
+									</textarea>
+								</div>
+								<div class="erro"></div>
+								<asp:Button ID="btnEnviar" class="btn-form-enviar" runat="server" Text="ENVIAR" OnClick="btnEnviar_Click" />
+							</form>
+						</div>
 					</div>
+				
 				</div>
 			</div>
 		</section> 
 
-		<!-- <section class="bg-contato">
-			<div class="container">
-				<div class="row sem-espaco">
-					<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 sem-espaco">
-						<div class="contato-titulo" data-aos="fade-down" data-aos-duration="500">
-							<h2>Entre em <b>contato</b></h2>
-						</div>
-						<div class="contato-telefone" data-aos="fade-down" data-aos-duration="800">
-							<h4>Contato:</h4>
-							<p><a href="tel:+55(11)4113-4123">+55 (11) 4113-4123</a> | <a
-									href="https://api.whatsapp.com/send?1=BR&phone=5511994997179">+55 (11)
-									99499-7179</a></p>
-							<p><a href="mailto:contato(a)mlpro.com.br">contato(a)mlpro.com.br</a></p>
-						</div>
-						<div class="contato-endereco" data-aos="fade-down" data-aos-duration="1000">
-							<h4>Endereço:</h4>
-							<p>Rua Restinga, 113 - Sala 1706</p>
-							<p>CEP: 03065-020 - Tatuapé - São Paulo - SP</p>
-						</div>
-					</div>
-					<div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 contato-form sem-espaco">
-						<p>Solicite uma demonstração do produto, será um prazer mostrarmos como podemos melhorar a
-							gestão do portfólio de projetos da sua empresa.</p>
-						<div id="form-container">
-							<form id="form1" runat="server">
-								<input type="hidden" name="token" id="token" value="" runat="server" />
-								<div class="input-group"><input type="text" class="form-control" data-mask=""
-										placeholder="Qual o seu nome?" id="nome" name="nome" runat="server" /></div>
-								<div class="input-group"><input type="text" class="form-control" data-mask=""
-										placeholder="Qual o seu email?" id="email" name="email" runat="server" /></div>
-								<div class="input-group"><input type="text" class="form-control" data-mask=""
-										placeholder="Qual o seu telefone?" id="telefone" name="telefone"
-										runat="server" /></div>
-								<div class="input-group"><input type="text" class="form-control" data-mask=""
-										placeholder="Qual o assunto?" id="assunto" name="assunto" runat="server" />
-								</div>
-								<div class="input-group assunto-form"><textarea class="form-control" data-mask=""
-										placeholder="Escreva a sua mensagem" id="mensagem" name="mensagem"
-										runat="server" /></textarea></div>
-								<div class="erro"></div>
-								<asp:Button ID="btnEnviar" class="btn-form-enviar" runat="server" Text="Enviar mensagem"
-									OnClick="btnEnviar_Click" />
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section> -->
+	 
 
 	</asp:Content>
 	<asp:Content ID="Content5" ContentPlaceHolderID="footer" runat="Server">
