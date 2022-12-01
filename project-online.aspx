@@ -67,68 +67,150 @@
 			</div>
 		</div>
 	</section>
-	<section class="bg-clientes">
+
+	
+	<section class="bg-clientes-mlpro container">
 		<div class="row sem-espaco">
-			<div class="col-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 clientes-titulo" data-aos="fade-down" data-aos-duration="800">
-				<h2>Clientes MLPro <br />Microsoft <b>EPM</b> e <b>PPM</b></h2>
-				<button class="slide-clientes-left"></button>
-				<button class="slide-clientes-right"></button>
+			<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 clientes-titulo">
+				<h2>Clientes MLPro <span></span></h2>
+				<button class="slide-clientes-left-mlpro"></button>
+				<button class="slide-clientes-right-mlpro"></button>
 			</div>
-			<div class="col-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 clientes-espaco" data-aos="fade-down" data-aos-duration="800">
-				<div class="slide-clientes">
-					<a target="_blank" href="https://www.voeazul.com.br/"            ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/azul.jpg"               alt="Azul"                                   title="Azul"                                   /></span></a>
-					<a target="_blank" href="http://www.ibope.com.br/"               ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/ibope.jpg"              alt="Ibope"                                  title="Ibope"                                  /></span></a>
-					<a target="_blank" href="https://www.tigre.com.br/"              ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/tigre.jpg"              alt="Tigre"                                  title="Tigre"                                  /></span></a>
-					<a target="_blank" href="https://www.metrorio.com.br/"           ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/metro-rio.jpg"          alt="Metro Rio"                              title="Metro Rio"                              /></span></a>
-					<a target="_blank" href="https://www.cristalia.com.br/"          ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/cristalia.jpg"          alt="Cristalia"                              title="Cristalia"                              /></span></a>
-					<a target="_blank" href="https://www.alphavilleurbanismo.com.br/"><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/alphaville.jpg"         alt="Alphaville"                             title="Alphaville"                             /></span></a>
-					<a target="_blank" href="http://www.damha.com.br/"               ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/damha.jpg"              alt="Damha"                                  title="Damha"                                  /></span></a>
-					<a target="_blank" href="http://alta-rt.com/"                    ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/art.jpg"                alt="Alta-RT"                                title="Alta-RT"                                /></span></a>
+			<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+				<div class="slide-clientes-mlpro">
+					<a target="_blank" href="https://www.voeazul.com.br/">
+						<span class="pos-1-1">
+							<img src="/content/img/clientes-home.png" alt="Azul" />
+						</span>
+					</a>
+					<a target="_blank" href="https://www.portoseguro.com.br/">
+						<span class="pos-1-2">
+							<img src="/content/img/clientes-home.png" alt="Porto Serguro" />
+						</span>
+					</a>
+					<a target="_blank" href="http://www.ibope.com.br/">
+						<span class="pos-1-3">
+							<img src="/content/img/clientes-home.png" alt="Ibope" />
+						</span>
+					</a>
+					<a target="_blank" href="https://www.tigre.com.br/">
+						<span class="pos-1-4">
+							<img src="/content/img/clientes-home.png" alt="Tigre" />
+						</span>
+					</a>
+					<a target="_blank" href="https://www.vunesp.com.br/">
+						<span class="pos-1-5">
+							<img src="/content/img/clientes-home.png" alt="Vunesp" />
+						</span>
+					</a>
+					<a target="_blank" href="https://www.camil.com.br/">
+						<span class="pos-1-6">
+							<img src="/content/img/clientes-home.png" alt="Camil" />
+						</span>
+					</a>
 
-					<a target="_blank" href="http://www.fm.usp.br/"                  ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/medicina.jpg"           alt="Faculdade de Medicina da USP"           title="Faculdade de Medicina da USP"           /></span></a>
-					<a target="_blank" href="https://www.funcao.com.br/"             ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/funcao.jpg"             alt="Função"                                 title="Função"                                 /></span></a>
-					<a target="_blank" href="http://www.ype.ind.br/"                 ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/ype.jpg"                alt="Ype"                                    title="Ype"                                    /></span></a>
-					<a target="_blank" href="https://www.tecmon.com/"                ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/tecmon.jpg"             alt="Tecmon"                                 title="Tecmon"                                 /></span></a>
-					<a target="_blank" href="http://www.rabobank.com.br/"            ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/rabobank.jpg"           alt="Rabobank"                               title="Rabobank"                               /></span></a>
-
-					<a target="_blank" href="http://www.alfarealty.com.br/"          ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/alfa-realty.jpg"        alt="Alfa-Realty"                            title="Alfa-Realty"                            /></span></a>
-					                                                                  <span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/engesis.jpg"            alt="Engesis"                                title="Engesis"                                /></span>
-					<a target="_blank" href="https://www.gafisa.com.br/"             ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/gafisa.jpg"             alt="Gafisa"                                 title="Gafisa"                                 /></span></a>
-					<a target="_blank" href="http://lock.com.br/"                    ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/lock.jpg"               alt="Lock"                                   title="Lock"                                   /></span></a>
-					<a target="_blank" href="http://www.techint.com/"                ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/techint.jpg"            alt="Techint"                                title="Techint"                                /></span></a>
-					<a target="_blank" href="https://www.band.uol.com.br/"           ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/bandeirantes.jpg"       alt="Bandeirantes"                           title="Bandeirantes"                           /></span></a>
-					                                                                  <span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/olitel.jpg"             alt="Olitel"                                 title="Olitel"                                 /></span>
-					<a target="_blank" href="https://www.sky.com.br/"                ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/sky.jpg"                alt="Sky"                                    title="Sky"                                    /></span></a>
-					<a target="_blank" href="http://www.ccee.org.br/"                ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/ccee.jpg"               alt="CCEE"                                   title="CCEE"                                   /></span></a>
-					<a target="_blank" href="http://www.light.com.br/"               ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/light.jpg"              alt="Light"                                  title="Light"                                  /></span></a>
-					                                                                  <span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/wincor.jpg"             alt="Wincor"                                 title="Wincor"                                 /></span>
-					<a target="_blank" href="https://www1.brasilprev.com.br/"        ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/brasilprev.jpg"         alt="Brasilprev"                             title="Brasilprev"                             /></span></a>
-					<a target="_blank" href="http://www.vizca.com.br/"               ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/vizca.jpg"              alt="Vizca"                                  title="Vizca"                                  /></span></a>
-					<a target="_blank" href="http://www.cobrape.com.br/"             ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/cobrape.jpg"            alt="Cobrape"                                title="Cobrape"                                /></span></a>
-					<a target="_blank" href="https://www.avibras.com.br/"            ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/avibras.jpg"            alt="Avibras"                                title="Avibras"                                /></span></a>
-					<a target="_blank" href="https://www.royalcanin.com.br/"         ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/royal.jpg"              alt="Royal"                                  title="Royal"                                  /></span></a>
-					<a target="_blank" href="https://www.tuper.com.br/"              ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/tuper.jpg"              alt="Tuper"                                  title="Tuper"                                  /></span></a>
-					<a target="_blank" href="http://www.apdata.com/bra/pt/index"     ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/apdata.jpg"             alt="Apdata"                                 title="Apdata"                                 /></span></a>
-					<a target="_blank" href="https://cipher.com/"                    ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/cipher.jpg"             alt="Cipher"                                 title="Cipher"                                 /></span></a>
-					<a target="_blank" href="https://www.lobtec.com.br/"             ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/lobtec.jpg"             alt="Lobtec"                                 title="Lobtec"                                 /></span></a>
-					                                                                  <span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/senior.jpg"             alt="Senior"                                 title="Senior"                                 /></span>
-					<a target="_blank" href="http://www.sabesp.com.br/"              ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/sabesp.jpg"             alt="Sabesp"                                 title="Sabesp"                                 /></span></a>
-					<a target="_blank" href="http://www.policiamilitar.sp.gov.br/"   ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/policia-militar.jpg"    alt="Polícia Militar do Estado de São Paulo" title="Polícia Militar do Estado de São Paulo" /></span></a>
-					                                                                  <span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/onda-limpa.jpg"         alt="Sabesp - Programa Onda Limpa"           title="Sabesp - Programa Onda Limpa"           /></span>
-					                                                                  <span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/corrego-limpo.jpg"      alt="Sabesp - Programa Corrego Limpo"        title="Sabesp - Programa Corrego Limpo"        /></span>
-					<a target="_blank" href="https://www.sescsp.org.br/"             ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/sesc.jpg"               alt="Sesc"                                   title="Sesc"                                   /></span></a>
-					<a target="_blank" href="https://www.akatu.org.br/"              ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/akatu.jpg"              alt="Akatu"                                  title="Akatu"                                  /></span></a>
-					<a target="_blank" href="http://www.butantan.gov.br/"            ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/butantan.jpg"           alt="Butantan"                               title="Butantan"                               /></span></a>
-					<a target="_blank" href="http://extranet.ffm.br/"                ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/faculdade-medicina.jpg" alt="Fundação Faculdade de Medicina"         title="Fundação Faculdade de Medicina"         /></span></a>
-					<a target="_blank" href="http://www.ipt.br/"                     ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/ipt.jpg"                alt="IPT"                                    title="IPT"                                    /></span></a>
-					<a target="_blank" href="https://www.procknor.com.br/"           ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/procknor.jpg"           alt="Procknor"                               title="Procknor"                               /></span></a>
-					<a target="_blank" href="#"                                      ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/promon.jpg"             alt="Promon"                                 title="Promon"                                 /></span></a>
-					<a target="_blank" href="http://www.toyosetal.com/"              ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/toyo.jpg"               alt="Toyo"                                   title="Toyo"                                   /></span></a>
-					<a target="_blank" href="https://www.walmart.com.br/"            ><span class="pos"><img src="/content/img/p.gif" data-src="/content/img/clientes/walmart.jpg"            alt="Walmart"                                title="Walmart"                                /></span></a>
+					<a target="_blank" href="https://www.metrorio.com.br/">
+						<span class="pos-2-1">
+							<img src="/content/img/clientes-home.png" alt="Metro Rio" />
+						</span>
+					</a>
+					<a target="_blank" href="https://www.cristalia.com.br/">
+						<span class="pos-2-2">
+							<img src="/content/img/clientes-home.png" alt="Cristalia" />
+						</span>
+					</a>
+					<a target="_blank" href="https://www.alphavilleurbanismo.com.br/">
+						<span class="pos-2-3">
+							<img src="/content/img/clientes-home.png" alt="Alphaville" />
+						</span>
+					</a>
+					<a target="_blank" href="http://www.ype.ind.br/">
+						<span class="pos-2-4">
+							<img src="/content/img/clientes-home.png" alt="Ype" />
+						</span>
+					</a>
+					<a target="_blank" href="https://www.gocil.com.br/">
+						<span class="pos-2-5">
+							<img src="/content/img/clientes-home.png" alt="Gocil" />
+						</span>
+					</a>
 				</div>
 			</div>
 		</div>
 	</section>
+
+	<section class="bg-contato-mlpro">
+		<div class="container">
+			<div class="row sem-espaco">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 sem-espaco">
+					<div class="contato-titulo-mlpro">
+						<h2>Entre em contato</h2>
+					</div>
+					<ul class="contato-info-mlpro">
+						<li>
+							<i class="icon-telefone-mlpro"></i>
+							<p>
+								<a href="tel:+55(11)4113-4123">
+									+55 (11) 4113-4123
+								</a> 
+							</p>
+							<p>
+								<a href="https://api.whatsapp.com/send?1=BR&phone=5511994997179">
+									+55 (11) 99499-7179
+								</a>
+							</p>
+						</li>
+						<li>
+							<i class="icon-email-mlpro"></i>
+							<p class="line-one">
+								<a href="mailto:contato(a)mlpro.com.br">
+									contato(a)mlpro.com.br
+								</a>
+							</p>
+						</li>
+						<li>
+							<i class="icon-localizacao-mlpro"></i>
+							<p>Rua Restinga, 113 - Sala 1706</p>
+							<p>CEP: 03065-020 - Tatuapé - São Paulo - SP</p>
+						</li>
+					</ul>
+					 
+				</div>
+
+				<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 contato-form-mlpro sem-espaco">
+					<div id="form-container">
+						<form id="form1" runat="server">
+							<input type="hidden" name="token" id="token" value="" runat="server" />
+							<div class="input-group">
+								<i class="icon-nome-form"></i>
+								<input type="text" class="form-control" data-mask="" placeholder="Nome" id="nome" name="nome" runat="server" />
+							</div>
+							<div class="input-group">
+								<i class="icon-email-form"></i>
+								<input type="text" class="form-control" data-mask="" placeholder="Email" id="email" name="email" runat="server" />
+							</div>
+							<div class="input-group">
+								<i class="icon-telefone-form"></i>
+								<input type="text" class="form-control" data-mask="" placeholder="Telefone" id="telefone" name="telefone" runat="server" />
+							</div>
+							<div class="input-group" style="display: none">
+								<input type="text" class="form-control" data-mask="" placeholder="Qual o assunto?" id="assunto" name="assunto" runat="server" />
+							</div>
+							<div class="input-group assunto-form">
+								<i class="icon-mensagem-form"></i>
+								<textarea class="form-control" data-mask="" placeholder="Mensagem" id="mensagem" name="mensagem" runat="server" />
+								</textarea>
+							</div>
+							<div class="erro"></div>
+							<asp:Button ID="btnEnviar" class="btn-form-enviar" runat="server" Text="ENVIAR"  />
+							 
+						</form>
+					</div>
+				</div>
+			
+			</div>
+		</div>
+	</section> 
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="footer" runat="Server">
 	<script type="text/javascript">
