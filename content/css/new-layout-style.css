@@ -192,6 +192,21 @@ ul.navbar-nav li a:hover {
   background-size: 60px;
 }
 
+
+.bg-solucoes .box-slide-solucoes-mlpro .icon-missao {
+  background: url(../img/missao.png) center no-repeat;
+  background-size: 65px;
+}
+.bg-solucoes .box-slide-solucoes-mlpro .icon-visao {
+  background: url(../img/visao.png) center no-repeat;
+  background-size: 74px;
+}
+.bg-solucoes .box-slide-solucoes-mlpro .icon-valores {
+  background: url(../img/valores.png) center no-repeat;
+  background-size: 64px;
+}
+
+
 .bg-solucoes .box-slide-solucoes-mlpro {
   border: 1px solid #a5bcdf;
   height: 330px;
@@ -1133,13 +1148,12 @@ ul.navbar-nav li a:hover {
   margin-bottom: 22px;
 }
 
-.bg-project-texto-mlpro .texto-project ul li b {
-  font-family: "BwModelica-bold", Arial;
+.bg-project-texto-mlpro .texto-project ul li b,
+  .bg-project-texto-mlpro .texto-project ul li span {
+    font-family: "Montserrat";
 }
 
-.bg-project-texto-mlpro .texto-project ul li span {
-  font-family: "BwModelica-BoldItalic", Arial;
-}
+ 
 
 .bg-project-texto-mlpro .texto-project ul li i {
   background: url(../img/icon-beneficios.png) center center no-repeat;
@@ -1151,6 +1165,19 @@ ul.navbar-nav li a:hover {
   margin-top: 5px;
 }
 
+.bg-project-texto-mlpro .texto-project ul li span i {
+  background: url(../img/icon-certo.png) center;
+  width: 23px;
+  height: 23px;
+  position: relative;
+  margin-left: 38px;
+  margin-right: -28px;
+  float: left;
+  margin-top: 0;
+  margin-bottom: 0;
+  background-repeat: no-repeat;
+}
+.bg-project-texto-mlpro .texto-project ul li span {}
 
 /* ----- */
 
@@ -1162,12 +1189,12 @@ ul.navbar-nav li a:hover {
 .pg-project-contato-mlpro .titulo-project-contato h3 {
   text-align: center;
   margin-bottom: 22px;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 40px;
   line-height: 49px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .pg-project-contato-mlpro .titulo-project-contato h3::after {
   content: "";
@@ -1183,51 +1210,251 @@ ul.navbar-nav li a:hover {
 }
 
 .pg-project-contato-mlpro .titulo-project-contato p {
-	margin: 0px;
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 500;
-	font-size: 25px;
-	line-height: 39px;
-	text-align: center;
-	color: #FFFFFF;
+  margin: 0px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 39px;
+  text-align: center;
+  color: #ffffff;
 }
 
 .pg-project-contato-mlpro .titulo-project-contato p.desc {
-	text-align: justify;
+  text-align: justify;
 }
 
 .pg-project-contato-mlpro .titulo-project-contato .btn-project-contato {
-	background: transparent;
-	text-decoration: none;
-	display: block;
-	width: 200px;
-	margin: 0 auto;
-	margin-top: 35px;
-	padding: 12px 23px;
-	-webkit-transition: all 0.2s ease-out;
-	-moz-transition: all 0.2s ease-out;
-	-o-transition: all 0.2s ease-out;
-	transition: all 0.2s ease-out;
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 600;
-	font-size: 22px;
-	line-height: 27px;
-/* identical to box height */
-	text-decoration-line: underline;
-	color: #F8B04B;
-	text-transform: uppercase;
+  background: transparent;
+  text-decoration: none;
+  display: block;
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 35px;
+  padding: 12px 23px;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+  /* identical to box height */
+  text-decoration-line: underline;
+  color: #f8b04b;
+  text-transform: uppercase;
 }
 
 .pg-project-contato-mlpro .titulo-project-contato .btn-project-contato:hover {
-	opacity: 0.5;
+  opacity: 0.5;
 }
 
 .pg-project-contato-mlpro .titulo-project-contato .btn-project-contato i {
-	background: url(../img/icon-arrow-amarelo.png) center no-repeat;
-	width: 25px;
-	height: 20px;
-	float: right;
-	margin: 4px 0 0 0;
+  background: url(../img/icon-arrow-amarelo.png) center no-repeat;
+  width: 25px;
+  height: 20px;
+  float: right;
+  margin: 4px 0 0 0;
 }
+
+/* --------------- */
+
+.bg-institucional-texto-mlpro {
+  background: #e1edff;
+  padding: 110px 0 90px 0;
+}
+
+.bg-institucional-texto-mlpro .texto-institucional ul {
+  margin: 0;
+  padding: 0;
+}
+.bg-institucional-texto-mlpro .texto-institucional ul li {
+  list-style: none;
+  float: left;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 113.4%;
+/* or 18px */
+  color: #253465;
+  width: calc(50% - 7%);
+  margin: 2%;
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 22px 34px 22px 46px;
+  position: relative;
+  height: 180px;
+  display: table;
+}
+
+.bg-institucional-texto-mlpro .texto-institucional ul li div {
+ 
+vertical-align: middle;
+ 
+display: table-cell;
+}
+
+.bg-institucional-texto-mlpro .texto-institucional ul li span {
+  font-size: 18px;
+  margin-left: 35px;
+  line-height: 33px;
+}
+
+.bg-institucional-texto-mlpro .texto-institucional ul li i {
+  background: url(../img/icon-beneficios.png) center center no-repeat;
+  width: 40px;
+  height: 40px;
+  background-size: 40px;
+  position: absolute;
+  top: -15px;
+  left: 20px;
+}
+
+.bg-institucional-texto-mlpro .texto-institucional ul li span i {
+  background: url(../img/icon-certo.png) center center no-repeat;
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  margin-left: -38px;
+  margin-top: 5px;
+}
+
+.slide-missao-visao-valores-mlpro .slick-prev,
+.slide-missao-visao-valores-mlpro .slick-next {
+  width: 73px;
+  height: 73px;
+  z-index: 1;
+  top: 47%;
+  opacity: 1 !important;
+}
+
+.slide-missao-visao-valores-mlpro .slick-prev {
+  background: url("../img/icon-arrow-left.png");
+  left: -108px;
+}
+
+.slide-missao-visao-valores-mlpro .slick-prev:hover,
+.slide-missao-visao-valores-mlpro .slick-prev:focus {
+  background: url("../img/icon-arrow-left-hover.png");
+  left: -108px;
+}
+.slide-missao-visao-valores-mlpro .slick-next {
+  background: url("../img/icon-arrow-right.png");
+  right: -108px;
+}
+.slide-missao-visao-valores-mlpro .slick-next:hover,
+.slide-missao-visao-valores-mlpro .slick-next:focus {
+  background: url("../img/icon-arrow-right-hover.png");
+  right: -108px;
+}
+
+/************************/
+.bg-numeros-institucional {
+  background-color: #f5f9ff;
+  padding: 85px 0 220px 0;
+}
+
+.bg-numeros-institucional .titulo {
+  background-image: url("../img/bg-numeros.jpg");
+  background-repeat: no-repeat;
+  height: 473px;
+  padding: 88px 0 0 20%;
+}
+
+.bg-numeros-institucional .titulo h3::after {
+  content: "";
+  width: 89px;
+  height: 5px;
+  background: #5ba7f4;
+  position: absolute;
+  left: 0;
+  top: -11px;
+}
+
+.bg-numeros-institucional .titulo h3 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 37px;
+  line-height: 44px;
+  color: #ffffff;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.bg-numeros-institucional .titulo p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 37px;
+  color: #ffffff;
+}
+
+.bg-numeros-institucional ul {
+  padding: 0;
+  width: 630px;
+  margin: -56px 0 0 -160px;
+}
+.bg-numeros-institucional ul li {
+  list-style: none;
+  width: 291px;
+  height: 278px;
+  left: 941px;
+  top: 2789px;
+  background: #deebff;
+  border-radius: 8px;
+  float: left;
+  display: grid;
+  padding: 36px 0;
+  margin: 10px 12px;
+}
+.bg-numeros-institucional ul li i {
+  margin: 0 auto;
+  width: 87px;
+  height: 87px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bg-numeros-institucional ul li i.icon-suporte {
+  background-image: url("../img/icon-suporte.png");
+}
+.bg-numeros-institucional ul li i.icon-empresas {
+  background-image: url("../img/icon-empresas.png");
+}
+.bg-numeros-institucional ul li i.icon-anos {
+  background-image: url("../img/icon-anos.png");
+}
+.bg-numeros-institucional ul li i.icon-projetos-realizados {
+  background-image: url("../img/icon-projetos-realizados.png");
+}
+
+.bg-numeros-institucional ul li h4 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+  color: #253465;
+  text-align: center;
+}
+.bg-numeros-institucional ul li p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #253465;
+}
+
+.bg-numeros-institucional ul li.card-left{
+  margin-top: -288px;
+  margin-left: -302px;
+}
+/************************/

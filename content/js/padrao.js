@@ -99,6 +99,30 @@ $(document).on('ready', function () {
 			}
 		]
 	});
+
+	$(".slide-missao-visao-valores-mlpro").slick({
+		arrows: true,
+		dots: false,
+		infinite: true,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: breakpoint_1,
+				settings: {
+					slidesToShow: 1,
+					centerPadding: '0px',
+					centerMode: true
+				},
+				breakpoint: breakpoint_2 - 1,
+				settings: {
+					slidesToShow: 1,
+					centerPadding: '0px',
+					centerMode: true
+				}
+			}
+		]
+	});
 	
 
 	$(".slide-solucoes").slick({

@@ -5,13 +5,55 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="head" runat="Server">
 	<style type="text/css">
-		.principal .box-slide
-		{
-			background-repeat: no-repeat; background-size: cover; background-position-x: center;
-		}
+		.principal .box-slide {
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position-x: center;
+			}
+			.nav-item a {
+				color: #253465;
+			}
+
+			header{
+				height: 128px;
+				background: #FFFFFF;
+				box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 30%);
+				border-radius: 8px;
+			}
+			.logo {
+				box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 0%);
+			}
 	</style>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="content" runat="Server">
+
+
+	<section class="bg-project-online">
+		<div class="container">
+			<div class="row sem-espaco">
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 titulo-project">
+					<div class="pg-project">
+						<h1>Suporte ao Project<br>
+							Online e ao Project Server<br>
+							(PPM e EPM)
+						</h1>
+					</div>
+				</div>
+
+				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 titulo-project-contato">
+					<div class="bg-clientes-texto">
+						<p class="desc">A MLPro possui um <b>time de especialistas</b> para atendimento de nossos clientes e conta com um processo prático, simples e rápido para <b>maior agilidade</b> e <b>eficiência</b> no atendimento e <b>resolução dos chamados</b>.</p>
+						<p>&nbsp;</p>
+						<p class="desc">A qualidade do Atendimento da MLPro está presente em todos os nossos canais de atendimento aos nossos clientes.</p>
+						<p>&nbsp;</p>
+						<p>Nosso processo de atendimento é baseado na estrutura abaixo:</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
 	<section class="pg-project" data-aos="fade-down" data-aos-duration="500">
 		<div class="container">
 			<div class="row sem-espaco">
