@@ -782,15 +782,13 @@ ul.navbar-nav li a:hover {
   padding: 9px 0 8px 62px;
 }
 
-.contato-form-mlpro  ::placeholder {
+.contato-form-mlpro ::placeholder {
   color: white !important;
 }
 
-.contato-form-mlpro  textarea {
+.contato-form-mlpro textarea {
   height: 127px !important;
 }
-
-
 
 .contato-form-mlpro #form-container .btn-form-enviar {
   font-family: "Montserrat";
@@ -818,74 +816,70 @@ ul.navbar-nav li a:hover {
 }
 .contato-form-mlpro #form-container i.icon-email-form {
   background-image: url("../img/icon-email-form.png");
-
 }
 .contato-form-mlpro #form-container i.icon-telefone-form {
   background-image: url("../img/icon-telefone-form.png");
-
 }
 .contato-form-mlpro #form-container i.icon-mensagem-form {
   background-image: url("../img/icon-mensagem-form.png");
-
 }
 
 /* ------------ */
 
 .bg-rodape-mlpro {
-	background: #151F40;
-	padding: 35px 0px 5px 0;
+  background: #151f40;
+  padding: 35px 0px 5px 0;
 }
 
-.bg-hauze-mlpro{
-  background: #151F40;
+.bg-hauze-mlpro {
+  background: #151f40;
   /* padding: 22px 0; */
 }
 
-.bg-hauze-mlpro .border{
+.bg-hauze-mlpro .border {
   border: none !important;
   border-top: 1px solid rgba(255, 255, 255, 0.6) !important;
 }
 
- 
 .bg-hauze-mlpro p {
-	margin: 0;
-	text-align: center;
-	padding: 20px 0;
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 400;
-	font-size: 13px;
-	line-height: 29px;
-/* identical to box height, or 181% */
-	color: #FFFFFF;
+  margin: 0;
+  text-align: center;
+  padding: 20px 0;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 29px;
+  /* identical to box height, or 181% */
+  color: #ffffff;
 }
 .bg-hauze-mlpro p a {
-	color: #e9e6e6;
-	-webkit-transition: all 0.2s ease-out;
-	-moz-transition: all 0.2s ease-out;
-	-o-transition: all 0.2s ease-out;
-	transition: all 0.2s ease-out;
+  color: #e9e6e6;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 .bg-hauze-mlpro p a:hover {
-	color: #042554;
-	text-decoration: none
+  color: #042554;
+  text-decoration: none;
 }
 
 .rodape-rede-social-mlpro {
-	padding: 0px;
-	height: 35px;
-	margin-left: -9px;
-	margin-bottom: 0;
+  padding: 0px;
+  height: 35px;
+  margin-left: -9px;
+  margin-bottom: 0;
 }
 
 .rodape-rede-social-mlpro li {
-	list-style: none;
-	float: left;
-	width: 40px;
-	height: 40px;
-	background: #1C2A55;
-	border-radius: 6px;
-	margin: 0px 22px 0px 5px;
+  list-style: none;
+  float: left;
+  width: 40px;
+  height: 40px;
+  background: #1c2a55;
+  border-radius: 6px;
+  margin: 0px 22px 0px 5px;
 }
 
 .rodape-rede-social-mlpro .icon-facebook,
@@ -893,16 +887,16 @@ ul.navbar-nav li a:hover {
 .rodape-rede-social-mlpro .icon-twitter,
 .rodape-rede-social-mlpro .icon-linkedin,
 .rodape-rede-social-mlpro .icon-google {
-	width: 40px;
-	height: 40px;
-	display: block;
-	/* margin: 5px 3px; */
-	-webkit-transition: all 0.2s ease-out;
-	-moz-transition: all 0.2s ease-out;
-	-o-transition: all 0.2s ease-out;
-	transition: all 0.2s ease-out;
-	background-position: center;
-	background-repeat: no-repeat;
+  width: 40px;
+  height: 40px;
+  display: block;
+  /* margin: 5px 3px; */
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .rodape-rede-social-mlpro .icon-facebook:hover,
@@ -910,91 +904,87 @@ ul.navbar-nav li a:hover {
 .rodape-rede-social-mlpro .icon-twitter:hover,
 .rodape-rede-social-mlpro .icon-linkedin:hover,
 .rodape-rede-social-mlpro .icon-google:hover {
-	opacity: 0.3
+  opacity: 0.3;
 }
 
 .rodape-rede-social-mlpro .icon-facebook {
-	background-image: url(../img/icon-rede-facebook-rodape.png);
-	background-size: 8px;
+  background-image: url(../img/icon-rede-facebook-rodape.png);
+  background-size: 8px;
 }
 .rodape-rede-social-mlpro .icon-instagram {
-	background-image: url(../img/icon-rede-instagram-rodape.png);
-	background-size: 17px;
+  background-image: url(../img/icon-rede-instagram-rodape.png);
+  background-size: 17px;
 }
 .rodape-rede-social-mlpro .icon-twitter {
-	background-image: url(../img/icon-rede-twitter-rodape.png);
-	background-size: 15px;
+  background-image: url(../img/icon-rede-twitter-rodape.png);
+  background-size: 15px;
 }
 .rodape-rede-social-mlpro .icon-linkedin {
-	background-image: url(../img/icon-rede-linkedin-rodape.png);
-	background-size: 17px;
+  background-image: url(../img/icon-rede-linkedin-rodape.png);
+  background-size: 17px;
 }
- 
 
 .rodape-logo-mlpro {
-	padding: 53px 0px;
+  padding: 53px 0px;
 }
 
 .rodape-logo-mlpro img {
-	margin-bottom: 50px;
+  margin-bottom: 50px;
 }
-
-
 
 .rodape-contato-mlpro {
-	padding: 66px 20px;
+  padding: 66px 20px;
 }
 .rodape-contato-mlpro h2 {
-	font-family: 'Montserrat';
-font-style: normal;
-font-weight: 700;
-font-size: 18px;
-line-height: 29px;
-/* or 161% */
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 29px;
+  /* or 161% */
 
-text-transform: uppercase;
+  text-transform: uppercase;
 
-color: #F8B04B;
-
+  color: #f8b04b;
 }
 .rodape-contato-mlpro p {
-	color: #f0f0f0;
-	margin-top: 10px;
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-size: 14px;
-	line-height: 33px;
-	margin: 0;
+  color: #f0f0f0;
+  margin-top: 10px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 33px;
+  margin: 0;
 }
 
 .rodape-contato-mlpro p a {
-	text-decoration: none;
-	color: #f0f0f0;
-	-webkit-transition: all 0.2s ease-out;
-	-moz-transition: all 0.2s ease-out;
-	-o-transition: all 0.2s ease-out;
-	transition: all 0.2s ease-out;
+  text-decoration: none;
+  color: #f0f0f0;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .rodape-contato-mlpro p a:hover {
-	opacity: 0.3
+  opacity: 0.3;
 }
 
 .rodape-menu-mlpro h2 {
-	font-family: 'Montserrat';
-	font-style: normal;
-	font-weight: 700;
-	font-size: 18px;
-	line-height: 29px;
-/* or 161% */
-	text-transform: uppercase;
-	color: #F8B04B;
-	padding: 66px 0 0 10px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 29px;
+  /* or 161% */
+  text-transform: uppercase;
+  color: #f8b04b;
+  padding: 66px 0 0 10px;
 }
 
 .rodape-menu-mlpro ul {
-	padding: 0 10px;
-	margin: 0;
+  padding: 0 10px;
+  margin: 0;
 }
 
 .rodape-menu-mlpro.espaco ul {
@@ -1002,22 +992,242 @@ color: #F8B04B;
 }
 
 .rodape-menu-mlpro ul li {
-	margin-top: 3px;
-	margin-bottom: 12px;
-	list-style: none;
+  margin-top: 3px;
+  margin-bottom: 12px;
+  list-style: none;
 }
 
 .rodape-menu-mlpro ul li a {
-	font-family: 'BwModelica-Regular', Arial;
-	font-size: 13.5px;
-	color: #f0f0f0;
+  font-family: "BwModelica-Regular", Arial;
+  font-size: 13.5px;
+  color: #f0f0f0;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+.rodape-menu-mlpro ul li a:hover {
+  opacity: 0.3;
+}
+
+/* ---------- */
+
+.bg-project-online {
+  background-image: url(../img/bg-project-online.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 50%, cover;
+  height: 584px;
+  position: relative;
+}
+
+.bg-project-online .titulo-project {
+  padding: 229px 0 0px 0;
+}
+
+.bg-project-online .titulo-project h1 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 37px;
+  line-height: 40px;
+  color: #ffffff;
+  text-align: left;
+  position: relative;
+  margin-bottom: 11px;
+}
+
+.bg-project-online .titulo-project h2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 39px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.bg-project-online .titulo-project h1::after {
+  content: "";
+  width: 89px;
+  height: 5px;
+  background: #5ba7f4;
+  position: absolute;
+  left: 0;
+  top: -20px;
+}
+
+.bg-project-online .bg-clientes-texto {
+  padding: 117px 0 0 71px;
+}
+
+.bg-project-online .titulo-project-contato p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  color: #253465;
+  text-align: justify;
+}
+
+.bg-project-online::after {
+  content: "";
+  width: 145px;
+  height: 116px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #f8b04b;
+  background-blend-mode: multiply;
+}
+
+/* ----- */
+
+.bg-project-texto-mlpro {
+  background: #f5f9ff;
+  padding: 110px 0 90px 0;
+}
+
+.bg-project-texto-mlpro .img-project img {
+  height: 278px;
+  box-shadow: 0px 0 25px 0px rgba(0, 0, 0, 0.11);
+  -webkit-box-shadow: 0px 0 25px 0px rgba(0, 0, 0, 0.11);
+  -moz-box-shadow: 0px 0 25px 0px rgba(0, 0, 0, 0.11);
+  border-radius: 5px;
+  margin-bottom: 40px;
+  z-index: 2;
+  position: relative;
+  background: #ffffff;
+  box-shadow: 0px 4px 40px rgb(0 0 0 / 7%);
+  border-radius: 8px;
+  margin-left: -81px;
+}
+
+.bg-project-texto-mlpro .img-project:after {
+  content: "";
+  width: 562px;
+  position: absolute;
+  border-radius: 5px;
+  top: 100px;
+  left: -109%;
+  right: inherit;
+  height: 413px;
+  background: #148247;
+  background-blend-mode: multiply;
+}
+
+.bg-project-texto-mlpro .texto-project ul {
+  padding: 0;
+}
+.bg-project-texto-mlpro .texto-project ul li {
+  list-style: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140.4%;
+  color: #253465;
+  margin-bottom: 22px;
+}
+
+.bg-project-texto-mlpro .texto-project ul li b {
+  font-family: "BwModelica-bold", Arial;
+}
+
+.bg-project-texto-mlpro .texto-project ul li span {
+  font-family: "BwModelica-BoldItalic", Arial;
+}
+
+.bg-project-texto-mlpro .texto-project ul li i {
+  background: url(../img/icon-beneficios.png) center center no-repeat;
+  width: 40px;
+  height: 40px;
+  background-size: 40px;
+  position: absolute;
+  left: -40px;
+  margin-top: 5px;
+}
+
+
+/* ----- */
+
+.pg-project-contato-mlpro {
+  background: #253465;
+  padding: 128px 0 106px 0;
+}
+
+.pg-project-contato-mlpro .titulo-project-contato h3 {
+  text-align: center;
+  margin-bottom: 22px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 49px;
+  color: #FFFFFF;
+}
+.pg-project-contato-mlpro .titulo-project-contato h3::after {
+  content: "";
+  width: 89px;
+  height: 5px;
+  background: #5ba7f4;
+  position: absolute;
+  left: 0;
+  top: -20px;
+  right: 0;
+  display: block;
+  margin: 0 auto;
+}
+
+.pg-project-contato-mlpro .titulo-project-contato p {
+	margin: 0px;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 25px;
+	line-height: 39px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.pg-project-contato-mlpro .titulo-project-contato p.desc {
+	text-align: justify;
+}
+
+.pg-project-contato-mlpro .titulo-project-contato .btn-project-contato {
+	background: transparent;
 	text-decoration: none;
+	display: block;
+	width: 200px;
+	margin: 0 auto;
+	margin-top: 35px;
+	padding: 12px 23px;
 	-webkit-transition: all 0.2s ease-out;
 	-moz-transition: all 0.2s ease-out;
 	-o-transition: all 0.2s ease-out;
 	transition: all 0.2s ease-out;
+	font-family: 'Montserrat';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 22px;
+	line-height: 27px;
+/* identical to box height */
+	text-decoration-line: underline;
+	color: #F8B04B;
+	text-transform: uppercase;
 }
 
-.rodape-menu-mlpro ul li a:hover {
-	opacity: 0.3
+.pg-project-contato-mlpro .titulo-project-contato .btn-project-contato:hover {
+	opacity: 0.5;
+}
+
+.pg-project-contato-mlpro .titulo-project-contato .btn-project-contato i {
+	background: url(../img/icon-arrow-amarelo.png) center no-repeat;
+	width: 25px;
+	height: 20px;
+	float: right;
+	margin: 4px 0 0 0;
 }
