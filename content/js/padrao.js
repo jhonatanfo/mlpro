@@ -123,6 +123,8 @@ $(document).on('ready', function () {
 			}
 		]
 	});
+
+	 
 	
 
 	$(".slide-solucoes").slick({

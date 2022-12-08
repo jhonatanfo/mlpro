@@ -126,7 +126,7 @@ ul.navbar-nav li a:hover {
 
 .bg-solucoes {
   background: #f5f9ff;
-  padding: 100px 0;
+  padding: 100px 0 170px 0;
 }
 .bg-solucoes .titulo-solucoes h1 {
   font-family: "Montserrat", sans-serif;
@@ -192,7 +192,6 @@ ul.navbar-nav li a:hover {
   background-size: 60px;
 }
 
-
 .bg-solucoes .box-slide-solucoes-mlpro .icon-missao {
   background: url(../img/missao.png) center no-repeat;
   background-size: 65px;
@@ -206,6 +205,18 @@ ul.navbar-nav li a:hover {
   background-size: 64px;
 }
 
+.bg-solucoes .box-slide-solucoes-mlpro .icon-chamados-um-solicite {
+  background: url(../img/icon-solicite-chamado.png) center no-repeat;
+  background-size: 65px;
+}
+.bg-solucoes .box-slide-solucoes-mlpro .icon-acompanhe-chamado {
+  background: url(../img/icon-acompanhe-chamado.png) center no-repeat;
+  background-size: 74px;
+}
+.bg-solucoes .box-slide-solucoes-mlpro .icon-hora-chamado {
+  background: url(../img/icon-hora-chamado.png) center no-repeat;
+  background-size: 64px;
+}
 
 .bg-solucoes .box-slide-solucoes-mlpro {
   border: 1px solid #a5bcdf;
@@ -709,7 +720,8 @@ ul.navbar-nav li a:hover {
   background-size: cover;
   width: 100%;
   height: 491px;
-  padding: 96px 0;
+  padding: 97px 0;
+  background-color: #f5f9ff;
 }
 
 .contato-titulo-mlpro h2 {
@@ -773,6 +785,19 @@ ul.navbar-nav li a:hover {
   padding: 10px 0;
 }
 
+.contato-form-mlpro.form-assunto {
+  margin-top: -397px;
+}
+.contato-form-mlpro.form-assunto p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  color: #ffffff;
+  margin-bottom: 35px;
+}
+
 .contato-form-mlpro {
   background: #151f40;
   box-shadow: 0px 0 25px 0px rgb(0 0 0 / 11%);
@@ -834,6 +859,9 @@ ul.navbar-nav li a:hover {
 }
 .contato-form-mlpro #form-container i.icon-telefone-form {
   background-image: url("../img/icon-telefone-form.png");
+}
+.contato-form-mlpro #form-container i.icon-assunto-form {
+  background-image: url("../img/icon-assunto-form.png");
 }
 .contato-form-mlpro #form-container i.icon-mensagem-form {
   background-image: url("../img/icon-mensagem-form.png");
@@ -1046,7 +1074,7 @@ ul.navbar-nav li a:hover {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  font-size: 37px;
+  font-size: 34px;
   line-height: 40px;
   color: #ffffff;
   text-align: left;
@@ -1108,6 +1136,7 @@ ul.navbar-nav li a:hover {
 
 .bg-project-texto-mlpro .img-project img {
   height: 278px;
+  object-fit: contain;
   box-shadow: 0px 0 25px 0px rgba(0, 0, 0, 0.11);
   -webkit-box-shadow: 0px 0 25px 0px rgba(0, 0, 0, 0.11);
   -moz-box-shadow: 0px 0 25px 0px rgba(0, 0, 0, 0.11);
@@ -1119,6 +1148,45 @@ ul.navbar-nav li a:hover {
   box-shadow: 0px 4px 40px rgb(0 0 0 / 7%);
   border-radius: 8px;
   margin-left: -81px;
+}
+
+.bg-project-texto-mlpro .text-project {
+  width: 291px;
+  height: 278px;
+  object-fit: contain;
+  box-shadow: 0px 0 25px 0px rgba(0, 0, 0, 0.11);
+  -webkit-box-shadow: 0px 0 25px 0px rgba(0, 0, 0, 0.11);
+  -moz-box-shadow: 0px 0 25px 0px rgba(0, 0, 0, 0.11);
+  border-radius: 5px;
+  margin-bottom: 40px;
+  z-index: 2;
+  position: relative;
+  background: #ffffff;
+  box-shadow: 0px 4px 40px rgb(0 0 0 / 7%);
+  border-radius: 8px;
+  margin-left: -81px;
+  padding: 95px 46px;
+}
+
+.bg-project-texto-mlpro .text-project h4 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: #253465;
+  margin-bottom: 30px;
+}
+.bg-project-texto-mlpro .text-project p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 5px;
+}
+.bg-project-texto-mlpro .text-project p a {
+  color: #253465;
+  text-decoration: none;
 }
 
 .bg-project-texto-mlpro .img-project:after {
@@ -1149,11 +1217,9 @@ ul.navbar-nav li a:hover {
 }
 
 .bg-project-texto-mlpro .texto-project ul li b,
-  .bg-project-texto-mlpro .texto-project ul li span {
-    font-family: "Montserrat";
+.bg-project-texto-mlpro .texto-project ul li span {
+  font-family: "Montserrat";
 }
-
- 
 
 .bg-project-texto-mlpro .texto-project ul li i {
   background: url(../img/icon-beneficios.png) center center no-repeat;
@@ -1177,7 +1243,8 @@ ul.navbar-nav li a:hover {
   margin-bottom: 0;
   background-repeat: no-repeat;
 }
-.bg-project-texto-mlpro .texto-project ul li span {}
+.bg-project-texto-mlpro .texto-project ul li span {
+}
 
 /* ----- */
 
@@ -1273,16 +1340,16 @@ ul.navbar-nav li a:hover {
 .bg-institucional-texto-mlpro .texto-institucional ul li {
   list-style: none;
   float: left;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 113.4%;
-/* or 18px */
+  /* or 18px */
   color: #253465;
   width: calc(50% - 7%);
   margin: 2%;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 16px;
   padding: 22px 34px 22px 46px;
   position: relative;
@@ -1291,10 +1358,9 @@ ul.navbar-nav li a:hover {
 }
 
 .bg-institucional-texto-mlpro .texto-institucional ul li div {
- 
-vertical-align: middle;
- 
-display: table-cell;
+  vertical-align: middle;
+
+  display: table-cell;
 }
 
 .bg-institucional-texto-mlpro .texto-institucional ul li span {
@@ -1354,7 +1420,7 @@ display: table-cell;
 /************************/
 .bg-numeros-institucional {
   background-color: #f5f9ff;
-  padding: 85px 0 220px 0;
+  padding: 0 0 225px 0;
 }
 
 .bg-numeros-institucional .titulo {
@@ -1432,6 +1498,22 @@ display: table-cell;
 .bg-numeros-institucional ul li i.icon-projetos-realizados {
   background-image: url("../img/icon-projetos-realizados.png");
 }
+/* *** */
+.bg-numeros-institucional ul li i.icon-20-anos {
+  background-image: url("../img/icon-20-anos.png");
+}
+.bg-numeros-institucional ul li i.icon-200 {
+  background-image: url("../img/icon-200.png");
+}
+.bg-numeros-institucional ul li i.icon-225 {
+  background-image: url("../img/icon-225.png");
+}
+.bg-numeros-institucional ul li i.icon-12-mil {
+  background-image: url("../img/icon-12-mil.png");
+}
+.bg-numeros-institucional ul li i.icon-36-mil {
+  background-image: url("../img/icon-36-mil.png");
+}
 
 .bg-numeros-institucional ul li h4 {
   font-family: "Montserrat";
@@ -1453,8 +1535,82 @@ display: table-cell;
   color: #253465;
 }
 
-.bg-numeros-institucional ul li.card-left{
+.bg-numeros-institucional ul li.card-left {
   margin-top: -288px;
   margin-left: -302px;
 }
+
+.box-slide-solucoes-mlpro.titulo,
+.box-slide-solucoes-mlpro.titulo.ativo {
+  display: grid;
+  align-items: center;
+  padding: 80px 0;
+}
 /************************/
+
+.bg-project-online .bg-clientes-texto.contato-texto {
+  padding: 58px 0 0 55px;
+}
+.bg-clientes-texto.contato-texto p {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.bg-clientes-texto.contato-texto a {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-decoration-line: underline;
+  color: #253465;
+  margin-top: 27px;
+  display: block;
+}
+
+.bg-institucional-texto-img2-mlpro {
+  background: #F5F9FF;
+  padding: 100px 0 413px 0;
+}
+ 
+.bg-institucional-texto-img2-mlpro .box-numeros {
+  width: 300px;
+  padding: 20px 35px;
+  height: 440px;
+}
+.bg-institucional-texto-img2-mlpro IMG {
+  float: right;
+  z-index: 1;
+  margin-top: -40px;
+}
+.bg-institucional-texto-img2-mlpro h2 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+  /* identical to box height */
+  
+  
+  color: #FFFFFF;
+  
+}
+.bg-institucional-texto-img2-mlpro P {
+  font-family: 'Montserrat';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 24px;
+
+color: #FFFFFF;
+}
+ 
+.ng-newsletter{
+  background: #148247;
+  width: calc(100% - 410px);
+  float: right;
+  position: absolute;
+  right: 0;
+  padding-left: 446px;
+  height: 260px;
+}

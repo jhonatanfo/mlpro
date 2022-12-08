@@ -152,30 +152,34 @@
 			<div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
 				<ul>
 					<li>
-						<i class="icon-suporte"></i>
+						<i class="icon-20-anos"></i>
 						<h4>20 anos</h2>
 							<p>de implantação<br>
 								do ppm</p>
 					</li>
 					<li>
-						<i class="icon-empresas"></i>
-						<h4>+150</h2>
-							<p>empresas atendidas</p>
+						<i class="icon-200"></i>
+						<h4>+200</h2>
+							<p>de implantação<br>
+								do ppm</p>
 					</li>
 					<li>
-						<i class="icon-anos"></i>
-						<h4>20 anos</h2>
-							<p>de atuação</p>
+						<i class="icon-225"></i>
+						<h4>+225</h2>
+							<p>treinamentos<br>
+								ministrados</p>
 					</li>
 					<li>
-						<i class="icon-projetos-realizados"></i>
-						<h4>36 mil</h2>
-							<p>projetos realizados</p>
+						<i class="icon-12-mil"></i>
+						<h4>+12 mil</h2>
+							<p>usuários<br>
+								atendidos</p>
 					</li>
 					<li class="card-left">
-						<i class="icon-projetos-realizados"></i>
-						<h4>36 mil</h2>
-							<p>projetos realizados</p>
+						<i class="icon-36-mil"></i>
+						<h4>+36 mil</h2>
+							<p>projetos<br>
+								suportados</p>
 					</li>
 				</ul>
 			</div>
