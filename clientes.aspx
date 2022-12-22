@@ -6,9 +6,24 @@
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="head" runat="Server">
 	<style type="text/css">
-		.principal .box-slide
-		{
-			background-repeat: no-repeat; background-size: cover; background-position-x: center;
+
+		.principal .box-slide {
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position-x: center;
+		}
+		.nav-item a {
+			color: #253465;
+		}
+
+		header{
+			height: 128px;
+			background: #FFFFFF;
+			box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 30%);
+			border-radius: 8px;
+		}
+		.logo {
+			box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 0%);
 		}
 	</style>
 </asp:Content>
