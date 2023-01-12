@@ -9,7 +9,8 @@ $(document).on('ready', function () {
 		],
 		tam = $(window).width(),
 		breakpoint_1 = 992,
-		breakpoint_2 = 769
+		breakpoint_2 = 769,
+		breakpoint_3 = 3
 	;
 
 	if(document.location.href.indexOf("/en/") > -1) {
@@ -84,20 +85,32 @@ $(document).on('ready', function () {
 		slidesToScroll: 1,
 		responsive: [
 			{
-				breakpoint: breakpoint_1,
-				settings: {
-					slidesToShow: 1,
-					centerPadding: '0px',
-					centerMode: true
-				},
-				breakpoint: breakpoint_2 - 1,
-				settings: {
-					slidesToShow: 1,
-					centerPadding: '0px',
-					centerMode: true
-				}
+			breakpoint: 1199,
+			settings: {
+				slidesToShow: 3,
+				centerPadding: '0px',
+				centerMode: true,
 			}
+			},
+			{
+			breakpoint: 767,
+			settings: {
+				slidesToShow: 1,
+				centerPadding: '0px',
+				centerMode: true,
+			}
+			},
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 1,
+					centerPadding: '0px',
+					centerMode: true,
+				}
+				}
 		]
+		
+	 
 	});
 
 	$(".slide-missao-visao-valores-mlpro").slick({
@@ -108,19 +121,29 @@ $(document).on('ready', function () {
 		slidesToScroll: 1,
 		responsive: [
 			{
-				breakpoint: breakpoint_1,
-				settings: {
-					slidesToShow: 1,
-					centerPadding: '0px',
-					centerMode: true
-				},
-				breakpoint: breakpoint_2 - 1,
-				settings: {
-					slidesToShow: 1,
-					centerPadding: '0px',
-					centerMode: true
-				}
+			breakpoint: 1199,
+			settings: {
+				slidesToShow: 3,
+				centerPadding: '0px',
+				centerMode: true,
 			}
+			},
+			{
+			breakpoint: 767,
+			settings: {
+				slidesToShow: 1,
+				centerPadding: '0px',
+				centerMode: true,
+			}
+			},
+			{
+				breakpoint: 767,
+				settings: {
+					slidesToShow: 1,
+					centerPadding: '0px',
+					centerMode: true,
+				}
+				}
 		]
 	});
 
@@ -182,14 +205,13 @@ $(document).on('ready', function () {
 		infinite: true,
 		slidesToShow: 5,
 		slidesToScroll: 1,
-		// variableWidth: true,
 		responsive: [
 			{
 				breakpoint: breakpoint_2,
 				settings: {
 					slidesToShow: 1,
 					slidesToScroll: 1,
-					centerPadding: '20px',
+					variableWidth: true,
 					centerMode: true
 				}
 			}

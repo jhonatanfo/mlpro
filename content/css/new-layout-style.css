@@ -24,7 +24,7 @@ A .logo {
 }
 
 ul.navbar-nav {
-  margin: 42px 0 0 0;
+  margin: 42px 60px 0 0;
   text-align: center;
 }
 
@@ -51,10 +51,10 @@ ul.navbar-nav li a:hover {
   font-family: "Montserrat", sans-serif;
   font-style: inherit;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 22px;
   color: #ffffff;
-  margin: 0 7px 0 7px;
+  margin: 0 5px 0 5px;
 }
 
 /************************/
@@ -63,6 +63,7 @@ ul.navbar-nav li a:hover {
   background: url(../img/banner-principal.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   height: 781px;
   position: relative;
   display: grid;
@@ -226,7 +227,7 @@ ul.navbar-nav li a:hover {
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
-  padding: 37px 0;
+  padding: 37px 20px;
   margin: 30px 10px;
   position: relative;
 }
@@ -239,7 +240,7 @@ ul.navbar-nav li a:hover {
   -moz-box-shadow: 0px 0 25px 0px rgba(0, 0, 0, 0.11);
 
   border-radius: 8px;
-  padding: 37px 0;
+  padding: 37px 20px;
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   -o-transition: all 0.2s ease-out;
@@ -371,13 +372,15 @@ ul.navbar-nav li a:hover {
 
 .bg-beneficios-project img {
   width: 100%;
+  height: 645px;
+  object-fit: cover;
 }
 
 .bg-beneficios-project h2 {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 33px;
   line-height: 49px;
   color: #ffffff;
   margin-bottom: 40px;
@@ -392,7 +395,7 @@ ul.navbar-nav li a:hover {
   font-style: normal;
   font-weight: 400;
   color: white;
-  font-size: 20px;
+  font-size: 17px;
   line-height: 140.4%;
   cursor: pointer;
   height: 53px;
@@ -413,7 +416,7 @@ ul.navbar-nav li a:hover {
   background-color: #1c2a55;
   background-position: center center;
   border-radius: 6px;
-  margin: 4px 0 0 -63px;
+  margin: -1px 0 0 -63px;
   position: absolute;
 }
 
@@ -466,6 +469,7 @@ ul.navbar-nav li a:hover {
 .bg-beneficios-project .beneficios-texto {
   margin-top: 110px;
   padding-left: 58px;
+  padding-right: 7%;
 }
 
 /************************/
@@ -478,7 +482,7 @@ ul.navbar-nav li a:hover {
   background-image: url("../img/bg-numeros.jpg");
   background-repeat: no-repeat;
   height: 473px;
-  padding: 189px 0 0 20%;
+  padding: 189px 0 0 14%;
 }
 
 .bg-numeros .titulo h3::after {
@@ -495,11 +499,11 @@ ul.navbar-nav li a:hover {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  font-size: 37px;
-  line-height: 44px;
   color: #ffffff;
   margin-bottom: 0;
   position: relative;
+  font-size: 40px;
+  line-height: 49px;
 }
 
 .bg-numeros .titulo p {
@@ -554,7 +558,7 @@ ul.navbar-nav li a:hover {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 32px;
   line-height: 49px;
   color: #253465;
   text-align: center;
@@ -563,7 +567,7 @@ ul.navbar-nav li a:hover {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 23px;
   text-align: center;
   text-transform: uppercase;
@@ -1058,12 +1062,19 @@ ul.navbar-nav li a:hover {
 /* ---------- */
 
 .bg-project-online {
-  background-image: url(../img/bg-project-online.png);
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: 50%, cover;
   height: 584px;
   position: relative;
+}
+
+.bg-project-online::before {
+  content: "";
+  background-image: url(../img/bg-project-online.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 584px;
+  width: 50%;
+  position: absolute;
+  background-position: center;
 }
 
 .bg-project-online .titulo-project {
@@ -1644,9 +1655,13 @@ ul.navbar-nav li a:hover {
 }
 
 .devops-bg-mlpro {
-  background: url(../img/banner-principal.jpg);
+  background: url(../img/bg-devops.png);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.devops-bg-mlpro.bg-project-online::before {
+  display: none;
 }
 
 .bg-clientes-texto.devops-mlpro {
@@ -1697,7 +1712,7 @@ ul.navbar-nav li a:hover {
 }
 
 .institucional-texto-img-mlpro .left {
-  padding: 19px 485px 0 58px;
+  padding: 19px 16% 0 58px;
 }
 
 .institucional-texto-img-mlpro ul li span {
@@ -1717,7 +1732,9 @@ ul.navbar-nav li a:hover {
 
 .institucional-texto-img-mlpro img {
   width: 100%;
+  height: 545px;
   float: left;
+  object-fit: cover;
 }
 /* ******* */
 
@@ -1728,7 +1745,7 @@ ul.navbar-nav li a:hover {
 }
 
 .bg-institucional-texto-mlpro p {
-  padding: 0 188px 0 225px;
+  padding: 0 20% 0 20%;
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
@@ -1738,6 +1755,8 @@ ul.navbar-nav li a:hover {
 }
 .bg-institucional-texto-mlpro img {
   width: 100%;
+  height: 549px;
+  object-fit: cover;
 }
 
 .bg-institucional-texto-mlpro::after {
@@ -1777,7 +1796,8 @@ ul.navbar-nav li a:hover {
   border-radius: 8px;
   width: 100%;
   margin-top: -122px;
-  padding: 80px;
+  padding: 80px 50px;
+  margin-bottom: 120px;
 }
 
 .blog-conteudo-mlpro .right .border {
@@ -1845,10 +1865,64 @@ ul.navbar-nav li a:hover {
   font-size: 16px;
   line-height: 355%;
   color: #000000;
-  border-bottom: 1px solid #CFCFCF;
+  border-bottom: 1px solid #cfcfcf;
 }
 
 .blog-conteudo-mlpro .right h5 a {
   color: #000000;
+}
 
+/* ----------- */
+
+.blog-conteudo-mlpro .left h2 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 106%;
+  color: #000000;
+}
+
+.blog-conteudo-mlpro .left h2 i {
+  background-image: url(../img/icon-calendario.png);
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin: -3px 20px 0 0;
+}
+
+.blog-conteudo-mlpro .left hr {
+  margin: 50px 0;
+}
+
+.blog-conteudo-mlpro .left h3 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 29px;
+  color: #000000;
+}
+
+.blog-conteudo-mlpro .left p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+  line-height: 182.5%;
+}
+
+.blog-conteudo-mlpro .left img.float-left {
+  width: 40%;
+  margin-right: 40px;
+  margin-bottom: 23px;
+}
+
+.blog-conteudo-mlpro .left img.img-responsive {
+  width: 100%;
+}
+
+.blog-conteudo-mlpro .left .float-left {
+  float: left;
 }

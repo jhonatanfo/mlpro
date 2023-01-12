@@ -24,12 +24,28 @@
 			.logo {
 				box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 0%);
 			}
+			.lingua {
+				color: #253465;
+			}
+			.navbar-toggler:not(:disabled):not(.disabled) {
+    			background: url("/content/img/icon-menu-hover.png") center no-repeat;
+			}
+			@media (min-width: 768px) and (max-width: 991px) {
+				header {
+					height: 98px;
+				}
+			}
+			@media (min-width: 0px) and (max-width: 767px) {
+				header {
+					height: 92px;
+				}
+			}
 	</style>
 	<script src="https://www.google.com/recaptcha/api.js?render=6LdFRYIUAAAAAHE40bdXPFve0jSkUEHtEXm08oEI&amp;ver=3.0"></script>
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="content" runat="Server">
 
-	<section class="bg-project-online">
+	<section class="bg-project-online bg-contato-banner">
 		<div class="container">
 			<div class="row sem-espaco">
 				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 titulo-project">
@@ -55,9 +71,7 @@
 		</div>
 	</section>
 
-
- 
-	<section class="bg-institucional-texto-img2-mlpro">
+	<section class="bg-institucional-texto-img2-mlpro" >
  
 			<div class="row sem-espaco">
 			 
@@ -78,7 +92,7 @@
 	</section>
 
 
-	<section class="bg-contato-mlpro">
+	<section class="bg-contato-mlpro" >
 		<div class="container">
 			<div class="row sem-espaco">
 				<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 sem-espaco">

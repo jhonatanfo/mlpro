@@ -28,6 +28,22 @@
 			.logo {
 				box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 0%);
 			}
+			.lingua {
+				color: #253465;
+			}
+			.navbar-toggler:not(:disabled):not(.disabled) {
+    			background: url("/content/img/icon-menu-hover.png") center no-repeat;
+			}
+			@media (min-width: 768px) and (max-width: 991px) {
+				header {
+					height: 98px;
+				}
+			}
+			@media (min-width: 0px) and (max-width: 767px) {
+				header {
+					height: 92px;
+				}
+			}
 		</style>
 	</asp:Content>
 	<asp:Content ID="Content5" ContentPlaceHolderID="content" runat="Server">
@@ -53,7 +69,6 @@
 				</div>
 			</div>
 		</section>
-
 
 		<section class="bg-project-texto-mlpro" data-aos="fade-down" data-aos-duration="500">
 			<div class="container">
@@ -96,7 +111,8 @@
 				</div>
 			</div>
 		</section>
-		<section class="pg-project-contato-mlpro" data-aos="fade-down" data-aos-duration="500">
+
+		<section class="pg-project-contato-mlpro"  data-aos="fade-down" data-aos-duration="500">
 			<div class="container">
 				<div class="row sem-espaco">
 					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 titulo-project-contato">
@@ -108,7 +124,6 @@
 				</div>
 			</div>
 		</section>
-
 
 		<section class="bg-clientes-mlpro container">
 			<div class="row sem-espaco">

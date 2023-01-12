@@ -24,6 +24,22 @@
 			.logo {
 				box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 0%);
 			}
+			.lingua {
+				color: #253465;
+			}
+			.navbar-toggler:not(:disabled):not(.disabled) {
+    			background: url("/content/img/icon-menu-hover.png") center no-repeat;
+			}
+			@media (min-width: 768px) and (max-width: 991px) {
+				header {
+					height: 98px;
+				}
+			}
+			@media (min-width: 0px) and (max-width: 767px) {
+				header {
+					height: 92px;
+				}
+			}
 	</style>
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="content" runat="Server">
@@ -107,9 +123,9 @@
 							<i class="icon-missao"></i>
 							<h3>MISSÃO</h3>
 							<p>
-								Oferecer soluções para facilitar a<br>
-								visualização das informações dos<br>
-								projetos melhorando a gestão dos<br>
+								Oferecer soluções para facilitar a
+								visualização das informações dos
+								projetos melhorando a gestão dos
 								projetos ou portfólio.
 							</p>
 						</div>
@@ -117,7 +133,7 @@
 						<div class="box-slide-solucoes-mlpro">
 							<i class="icon-visao"></i>
 							<h3>VISÃO</h3>
-							<p>Ser referência em consultoria sobre<br>PPM no Brasil.</p>
+							<p>Ser referência em consultoria sobre PPM no Brasil.</p>
 						</div>
 
 						<div class="box-slide-solucoes-mlpro">
@@ -189,8 +205,6 @@
 		</div>
 	</section>
 
-
- 
 	<section class="bg-contato-mlpro">
 		<div class="container">
 			<div class="row sem-espaco">

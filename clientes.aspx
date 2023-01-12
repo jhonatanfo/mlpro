@@ -7,24 +7,40 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="head" runat="Server">
 	<style type="text/css">
 
-		.principal .box-slide {
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position-x: center;
-		}
-		.nav-item a {
-			color: #253465;
-		}
+.principal .box-slide {
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position-x: center;
+			}
+			.nav-item a {
+				color: #253465;
+			}
 
-		header{
-			height: 128px;
-			background: #FFFFFF;
-			box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 30%);
-			border-radius: 8px;
-		}
-		.logo {
-			box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 0%);
-		}
+			header{
+				height: 128px;
+				background: #FFFFFF;
+				box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 30%);
+				border-radius: 8px;
+			}
+			.logo {
+				box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 0%);
+			}
+			.lingua {
+				color: #253465;
+			}
+			.navbar-toggler:not(:disabled):not(.disabled) {
+    			background: url("/content/img/icon-menu-hover.png") center no-repeat;
+			}
+			@media (min-width: 768px) and (max-width: 991px) {
+				header {
+					height: 98px;
+				}
+			}
+			@media (min-width: 0px) and (max-width: 767px) {
+				header {
+					height: 92px;
+				}
+			}
 	</style>
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="content" runat="Server">

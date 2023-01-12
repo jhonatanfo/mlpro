@@ -7,24 +7,40 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="head" runat="Server">
 	<style type="text/css">
 
-		.principal .box-slide {
-			background-repeat: no-repeat;
-			background-size: cover;
-			background-position-x: center;
-		}
-		.nav-item a {
-			color: #253465;
-		}
+.principal .box-slide {
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position-x: center;
+			}
+			.nav-item a {
+				color: #253465;
+			}
 
-		header{
-			height: 128px;
-			background: #FFFFFF;
-			box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 30%);
-			border-radius: 8px;
-		}
-		.logo {
-			box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 0%);
-		}
+			header{
+				height: 128px;
+				background: #FFFFFF;
+				box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 30%);
+				border-radius: 8px;
+			}
+			.logo {
+				box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 0%);
+			}
+			.lingua {
+				color: #253465;
+			}
+			.navbar-toggler:not(:disabled):not(.disabled) {
+    			background: url("/content/img/icon-menu-hover.png") center no-repeat;
+			}
+			@media (min-width: 768px) and (max-width: 991px) {
+				header {
+					height: 98px;
+				}
+			}
+			@media (min-width: 0px) and (max-width: 767px) {
+				header {
+					height: 92px;
+				}
+			}
 	</style>
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="content" runat="Server">
@@ -61,7 +77,7 @@
 		</div>
 	</section>
 	
-	<section class="institucional-texto-img-mlpro">
+	<section class="institucional-texto-img-mlpro" >
 			<div class="row sem-espaco">
 				<div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 sem-espaco" data-aos="fade-down" data-aos-duration="500">
 					<img src="/content/img/devops-3.png" alt="PPM" title="PPM" />
@@ -84,7 +100,7 @@
 		</div>
 	</section>
 
-	<section class="bg-institucional-texto-mlpro">
+	<section class="bg-institucional-texto-mlpro" >
 			<div class="row sem-espaco">
 				<div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 sem-espaco" data-aos="fade-down" data-aos-duration="500">
 					<p class="desc">A consultoria da MLPro pode garantir a otimização de seus resultados pois atua na integração da comunicação, ferramentas utilizadas, na mudança da cultura da empresa e de seus colaboradores visando a melhoria de seus processos organizacionais.</p>
@@ -101,7 +117,7 @@
 			</div>
 	</section>
 
-	<section class="bg-contato-mlpro">
+	<section class="bg-contato-mlpro" >
 		<div class="container">
 			<div class="row sem-espaco">
 				<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 sem-espaco">
@@ -193,7 +209,7 @@
 	<section>
 		<div class="container blog-conteudo-mlpro">
 			<div class="row sem-espaco">
-				<div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 right">
+				<div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 right">
 					<h2>Posts</h2>
 					<div class="border">
 						<h3>2022</h3>
@@ -250,8 +266,108 @@
 						<h5><a href="">2014</a></h5>
 					</div>
 				</div>
-				<div class="col-8 col-sm-8 col-md-8 col-lg-8 col-xl-8">
-					<h1>Blog MLPro</h1>
+				<div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 left" >
+					<h2><i class=""></i>31 de agosto de 2022</h2>
+					<hr>
+					<h3>Como Gerenciar Problemas no Project Online</h3>
+					<p>
+						Leandro Lima, Nathalia Souza e Ricardo Sabino.<br>
+						15/09/2022
+					</p>
+
+					<img src="/content/img/blog-01.png" class="float-left">
+					
+					<p>
+						É natural que uma empresa tenha que lidar com problemas e imprevistos. Logo, registrá-los é uma tarefa essencial para manter todos os envolvidos no projeto cientes da situação atual e garantir a resolução do problema o mais rápido possível, evitando comprometer o andamento e prazo do projeto. No nosso último artigo falamos sobre como gerenciar riscos no Project Online. Porém, e quando o risco realmente acontece ou quando um problema inesperado  surge, o que fazer? Neste artigo iremos ensinar como cadastrar e gerenciar os problemas do seu projeto no Project Online.
+					</p>
+					<p>
+						O PWA disponibiliza uma lista nativa de problemas dentro do site do projeto (Sharepoint) para o registro e monitoramento dos problemas. Além disso, a MLPro oferece relatórios personalizados possibilitando melhor visualização das informações com gráficos e de forma mais dinâmica, sendo fundamentais para um gerenciamento mais eficiente e um projeto de sucesso.
+					</p>
+
+					<p><b>A origem dos problemas</b></p>
+					<p>
+						<b>Quando já havia um risco cadastrado:</b> Um problema pode ser criado a partir de um risco já identificado e cadastrado anteriormente. Quando o risco acontece, é necessário fechá-lo e cadastrá-lo como um novo problema. A grande diferença neste caso é que provavelmente ele já possui um plano de ação e vai ser solucionado mais rápido, já que não será uma surpresa e os colaboradores do projeto já haviam previsto a possibilidade de acontecer.
+					</p>
+					<p>
+						<b>Quando não havia um risco cadastrado:</b> Nem todo problema pode ter sido identificado anteriormente como um risco e cadastrado com antecedência. Ele pode acontecer sem previsões e neste caso, o problema deve ser cadastrado e os colaboradores devem definir se ele é grave e qual o impacto gera sobre o projeto, para então desenvolver um plano de ação adequado.
+					</p>
+					<p><b>Como registrar e gerenciar os problemas no Project Online</b></p>
+					<p><b>Para registrar os riscos:</b></p>
+					<p>Entre na Central de Projetos > Site do Projeto. Nessa tela, você consegue ter uma breve visualização de quantos problemas estão cadastrados no projeto e quantos deles estão em aberto.</p>
+					
+					<br>
+
+					<img src="/content/img/blog-02.png" class="img-responsive">
+
+					<br>
+					<br>
+					<br>
+
+					<p>Ao clicar em “Problemas” no Menu lateral, irá aparecer todos os problemas cadastrados no seu projeto. Para criar um, clique em “Novo Item”.</p>
+					
+					<br>
+
+					<img src="/content/img/blog-03.png" class="img-responsive">
+
+					<br>
+					<br>
+					<br>
+
+					<p>Em seguida, a tela para cadastro do problema irá abrir, basta preencher conforme as características do problema.</p>
+					
+					<br>
+					<br>
+
+					<img src="/content/img/blog-04.png" class="img-responsive">
+
+					<br>
+					
+					<p><b>Plano de ação:</b> O problema pode ter um plano de ação já cadastrado ou não. Se não houver, é recomendado que a equipe se reúna e para o desenvolvimento de um plano ideal para este problema, dependendo do seu nível de gravidade.</p>
+					
+					<p>
+						<b>
+							Relatórios da MLPro para gestão de problemas<br>
+							Dashboard Easy
+						</b>
+					</p>
+
+					<p>Esse relatório permite uma ótima visualização dos problemas em seus projetos, sendo eles: atrasados, em andamento, resolvidos, cancelados, abertos ou fechados. É extremamente útil pois os números e gráficos ajudam a identificar se o andamento do projeto e as ações para eliminar ou mitigar estes problemas estão sendo efetivas, tudo com uma visão em nível gerencial.</p>
+
+					<br>
+					
+					<img src="/content/img/blog-05.png" class="img-responsive">
+					<br>
+					<br>
+					<br>
+
+					
+					 <p><b>Dashboard de Projetos</b><br>Esse relatório mostra todos os seus projetos (podendo selecionar apenas um para visualização) com colunas como a de “problemas” que contém símbolos representando se há problema e se ele está ativo atrasado ou dentro do prazo, facilitando também a visualização de como está o andamento do projeto de forma geral.</p>
+				
+					<br>
+
+					<br>
+
+					 
+
+					 <img src="/content/img/blog-06.png" class="img-responsive">
+					<br>
+					<br>
+					<br>
+
+					 
+					 <p><b>E-mail automatizado de Relatório de Status do Projeto</b><br>
+						A MLPro desenvolveu um relatório que é enviado por e-mail de forma automatizada e permite a visualização de todos os pontos importantes do seu projeto. No quadro de “Problemas em Aberto” por exemplo, há a descrição dos problemas existentes. Isso além de possibilitar fácil visualização, é extremamente útil para manter os envolvidos sempre cientes de como está o projeto, e o melhor, sem que eles precisem consultar manualmente no Sharepoint.</p>	
+				
+					<br>
+
+					<img src="/content/img/blog-07.png" class="img-responsive">
+					
+					<br>
+					<br>
+
+					<p>Lembre-se que um bom gerente de projetos deve realizar um bom gerenciamento de problemas! Em caso de dúvidas ou interesse, entre em contato com a MLPro preenchendo o formulário de 1º contato.</p>
+						
+				
 				</div>
 			</div>
 		</div>

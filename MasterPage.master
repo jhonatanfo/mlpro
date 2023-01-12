@@ -49,10 +49,15 @@
 	<link rel="stylesheet" type="text/css" href="/content/slick/slick-theme.min.css" />
 	<link rel="stylesheet" type="text/css" href="/content/slick/slick-animation.min.css" />
 	<!--//SLICK-->
+	
+
 	<link rel="stylesheet" type="text/css" href="/content/dist/aos.min.css" />
 	<link rel="stylesheet" type="text/css" href="/content/css/style.css" />
-	<!-- <link rel="stylesheet" type="text/css" href="/content/css/style.min.css" />-->
+	
 	<link rel="stylesheet" type="text/css" href="/content/css/new-layout-style.css" /> 
+	<link rel="stylesheet" type="text/css" href="/content/css/new-mobile-layout.css" /> 
+
+	<!-- <link rel="stylesheet" type="text/css" href="/content/css/style.min.css" />-->
 	<link rel="stylesheet" type="text/css" href="/content/css/mobile.min.css" />
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -89,13 +94,15 @@
 	<!-- Google Tag Manager (noscript) -->
 	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PH9SR6S" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<!-- End Google Tag Manager (noscript) -->
-	<header id="headermaster" class="" runat="server">
+	<header id="headermaster" class="new-header" runat="server">
 		<!--Menu-->
 		<nav class="navbar navbar-expand-lg">
 			<div class="container">
+				
 				<a class="logo" href="/" id="logo-link">
 					<img src="/content/img/mlpro-ppm.png" id="logo" title="MLPro - PPM e EPM (Project Server e Project Online)" alt="MLPro - PPM e EPM (Project Server e Project Online)" title="MLPro - PPM e EPM (Project Server e Project Online)" width="262" height="76" />
 				</a>
+				
 				<asp:ContentPlaceHolder ID="linguaContent" runat="server">
 				<div class="lingua">
 					Idioma
@@ -105,9 +112,12 @@
 					</ul>
 				</div>
 				</asp:ContentPlaceHolder>
+				
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
 					<span class="navbar-toggler-icon"></span>
 				</button>
+
+
 				<div class="collapse navbar-collapse justify-content-end" id="conteudoNavbarSuportado" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
 					<ul class="navbar-nav">
 						<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
@@ -120,17 +130,18 @@
 						<li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
 					</ul>
 				</div>
+
 			</div>
 		</nav>
 		<!--Menu-->
 	</header>
 	<asp:ContentPlaceHolder ID="content" runat="server"></asp:ContentPlaceHolder>
 	<asp:ContentPlaceHolder ID="footer" runat="server"></asp:ContentPlaceHolder>
-	<footer itemscope="itemscope" itemtype="https://schema.org/WPFooter">
+	<footer class="new-footer" itemscope="itemscope" itemtype="https://schema.org/WPFooter">
 		<div class="bg-rodape-mlpro">
 			<div class="container">
 				<div class="row sem-espaco" itemscope="itemscope" itemtype="https://schema.org/Person">
-					<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 rodape-logo-mlpro">
+					<div class="col-xs-12 col-sm-6 col-md-4 rodape-logo-mlpro">
 						<img src="/content/img/logo-rodape.png" alt="MLPro - Soluções PPM" title="MLPro - Soluções PPM" width="180"  />
 						
 						<ul class="rodape-rede-social-mlpro">
@@ -140,7 +151,7 @@
 							<li><a href="https://twitter.com/MLProPPM"><i class="icon-twitter"></i></a></li>
 						</ul>
 					</div>
-					<div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 rodape-contato-mlpro">
+					<div class="col-xs-12 col-sm-6 col-md-4 rodape-contato-mlpro">
 						<h2>CONTATO</h2>
 						<p itemprop="telephone">
 							<a href="tel:+55(11)4113-4123">
@@ -167,7 +178,7 @@
 							</a>
 						</p>
 					</div>
-					<div class="col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2 rodape-menu-mlpro">
+					<div class="col-xs-12 col-sm-6 col-md-2 rodape-menu-mlpro">
 						<h2>INSTITUCIONAL</h2>
 						<ul>
 							<li><a href="/">Home</a></li>
@@ -176,9 +187,7 @@
 							<li><a href="/clientes/">Clientes</a></li>
 						</ul>
 					</div>
-					<div class="col-12 col-sm-12 col-md-6 col-lg-2 col-xl-2 rodape-menu-mlpro espaco">
-						
-
+					<div class="col-xs-12 col-sm-6 col-md-2 rodape-menu-mlpro espaco">
 						<ul>
 							<li><a href="/suporte/">Suporte</a></li>
 							<li><a href="/contato/">Contato</a></li>
@@ -194,11 +203,8 @@
 				<div class="row sem-espaco">
 					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sem-espaco">
 						<p>
-							<nobr>Desenvolvido por <a target="_blank" href="http://homebrasil.com/">HomeBrasil</a></nobr>
-							|
-							<nobr>Parceria por <a target="_blank" href="https://www.melicontrol.com.br/">Melicontrol – Gerenciador de vendas do Mercado Livre</a></nobr>
+							Desenvolvido por <a target="_blank" href="http://homebrasil.com/">HomeBrasil</a> | Parceria por <a target="_blank" href="https://www.melicontrol.com.br/">Melicontrol</a> – Gerenciador de vendas do Mercado Livre
 						</p>
-						
 					</div>
 				</div>
 			</div>

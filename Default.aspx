@@ -17,6 +17,8 @@
 	</asp:Content>
 	<asp:Content ID="Content4" ContentPlaceHolderID="content" runat="Server">
 
+ 
+
 		<section>
 			<div class="bg-banner-principal">
 				<div class="container">
@@ -92,8 +94,7 @@
 			</div>
 		</section>
 
-
-		<section class="bg-beneficios-project" id="beneficios">
+		<section  class="bg-beneficios-project" id="beneficios">
 			<div class="row sem-espaco">
 
 				<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 sem-espaco">
@@ -104,10 +105,16 @@
 				<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 beneficios-texto">
 					<h2>Benefícios do Project Online</h2>
 					<ul>
-						<li><i class="icon-economia"></i>Economia de 45 minutos por semana do Gerente de<br>Projetos na
-							geração de Relatórios do Projeto;</li>
-						<li><i class="icon-aumento"></i>Aumento do número de projetos em 14% pelos Gerentes
-							de<br>Projetos;</li>
+						<li>
+							<i class="icon-economia"></i>
+							Economia de 45 minutos por semana do Gerente de Projetos na
+							geração de Relatórios do Projeto;
+						</li>
+						<li>
+							<i class="icon-aumento"></i>
+							Aumento do número de projetos em 14% pelos Gerentes
+							de Projetos;
+						</li>
 						<li><i class="icon-melhoria"></i>Melhoria na produtividade de 13% dos recursos do Projeto;</li>
 						<li><i class="icon-reducao"></i>Redução do estouro no orçamento do projeto em 5%.</li>
 					</ul>
@@ -117,9 +124,7 @@
 			</div>
 		</section>
 
-
-
-		<section class="bg-numeros">
+		<section  class="bg-numeros">
 			<div class="row sem-espaco">
 
 				<div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 sem-espaco titulo">
@@ -156,9 +161,7 @@
 			</div>
 		</section>
 
-
-
-		<section class="bg-clientes-mlpro container">
+		<section  class="bg-clientes-mlpro container">
 			<div class="row sem-espaco">
 				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 clientes-titulo">
 					<h2>Clientes MLPro <span></span></h2>
@@ -227,7 +230,6 @@
 				</div>
 			</div>
 		</section>
-
 
 
 		<!-- 
@@ -439,7 +441,7 @@
 			</div>
 		</section> -->
 
-		<section class="bg-contato-mlpro">
+		<section  class="bg-contato-mlpro">
 			<div class="container">
 				<div class="row sem-espaco">
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 sem-espaco">

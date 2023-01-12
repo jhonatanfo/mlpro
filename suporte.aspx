@@ -23,6 +23,22 @@
 			.logo {
 				box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 0%);
 			}
+			.lingua {
+				color: #253465;
+			}
+			.navbar-toggler:not(:disabled):not(.disabled) {
+    			background: url("/content/img/icon-menu-hover.png") center no-repeat;
+			}
+			@media (min-width: 768px) and (max-width: 991px) {
+				header {
+					height: 98px;
+				}
+			}
+			@media (min-width: 0px) and (max-width: 767px) {
+				header {
+					height: 92px;
+				}
+			}
 	</style>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="content" runat="Server">
