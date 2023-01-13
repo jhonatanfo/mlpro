@@ -16,6 +16,10 @@
 				color: #253465;
 			}
 
+			.navbar-collapse.show .nav-item a {
+				color: #FFFFFF;
+			}
+
 			header{
 				height: 128px;
 				background: #FFFFFF;
@@ -28,8 +32,11 @@
 			.lingua {
 				color: #253465;
 			}
+			.navbar-toggler.collapsed:not(:disabled):not(.disabled) {
+    			background: url("/content/img/icon-menu-hover.png") center no-repeat !important;
+			}
 			.navbar-toggler:not(:disabled):not(.disabled) {
-    			background: url("/content/img/icon-menu-hover.png") center no-repeat;
+    			background: url("/content/img/icon-menu.png") center no-repeat;
 			}
 			@media (min-width: 768px) and (max-width: 991px) {
 				header {

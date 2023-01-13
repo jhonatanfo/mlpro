@@ -16,6 +16,10 @@
 				color: #253465;
 			}
 
+			.navbar-collapse.show .nav-item a {
+				color: #FFFFFF;
+			}
+
 			header{
 				height: 128px;
 				background: #FFFFFF;
@@ -28,8 +32,11 @@
 			.lingua {
 				color: #253465;
 			}
+			.navbar-toggler.collapsed:not(:disabled):not(.disabled) {
+    			background: url("/content/img/icon-menu-hover.png") center no-repeat !important;
+			}
 			.navbar-toggler:not(:disabled):not(.disabled) {
-    			background: url("/content/img/icon-menu-hover.png") center no-repeat;
+    			background: url("/content/img/icon-menu.png") center no-repeat;
 			}
 			@media (min-width: 768px) and (max-width: 991px) {
 				header {
@@ -49,7 +56,7 @@
 		<div class="container">
 			<div class="row sem-espaco">
 				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 titulo-project">
-					<div class="pg-project">
+					<div class="pg-project" data-aos="fade-down">
 						<h1>DevOps</h1>
 						<h2>MLPro - Solução PPM</h2>
 					</div>
@@ -58,7 +65,7 @@
 		</div>
 	</section>
  
-	<section class="bg-clientes-texto devops-mlpro" data-aos="fade-down" data-aos-duration="650">
+	<section class="bg-clientes-texto devops-mlpro">
 		<div class="container">
 			<div class="row sem-espaco">
 				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 titulo-project-contato" data-aos="fade-down" data-aos-duration="500">
@@ -68,9 +75,9 @@
 					<p>&nbsp;</p>
 					<p><img src="/content/img/mlpro-devops.png" width="567" height="340" alt="MLPro - DevOps" title="MLPro - DevOps" class="mx-auto d-block img-fluid" data-aos="fade-down" data-aos-duration="500" /></p>
 					<p>&nbsp;</p>
-					<p class="desc">As soluções da MLPro são construídas com base em sua ampla experiência em gestão de projetos, implantações de PPM e customizações realizadas mais de 125 soluções em diversos segmentos.</p>
+					<p class="desc" data-aos="fade-down">As soluções da MLPro são construídas com base em sua ampla experiência em gestão de projetos, implantações de PPM e customizações realizadas mais de 125 soluções em diversos segmentos.</p>
 					<p>&nbsp;</p>
-					<p class="desc">Além das implementações de soluções de PPM a MLPRO presta serviço de <b>consultoria</b> e <b>implementação</b> de <b>DevOps</b> voltadas para empresas que desejam reduzir despesas, otimizar o desenvolvimento de sistemas, ganhar maior agilidade em suas customizações, integrar sua equipe e melhorar a comunicação dos seus times de desenvolvimento e operações.</p>
+					<p class="desc" data-aos="fade-down">Além das implementações de soluções de PPM a MLPRO presta serviço de <b>consultoria</b> e <b>implementação</b> de <b>DevOps</b> voltadas para empresas que desejam reduzir despesas, otimizar o desenvolvimento de sistemas, ganhar maior agilidade em suas customizações, integrar sua equipe e melhorar a comunicação dos seus times de desenvolvimento e operações.</p>
 					<p>&nbsp;</p>
 				</div>
 			</div>
@@ -79,11 +86,11 @@
 	
 	<section class="institucional-texto-img-mlpro" >
 			<div class="row sem-espaco">
-				<div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 sem-espaco" data-aos="fade-down" data-aos-duration="500">
-					<img src="/content/img/devops-3.png" alt="PPM" title="PPM" />
+				<div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 sem-espaco"  >
+					<img src="/content/img/devops-3.png"  data-aos="fade-down" alt="PPM" title="PPM" />
 				</div>
 
-				<div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 left sem-espaco" data-aos="fade-down" data-aos-duration="500">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 left sem-espaco"  data-aos="fade-down">
 				 
 					<p class="desc">Com a competição cada vez mais acirrada entre os concorrentes, cada vez mais é necessário atuar de forma ágil e para isso é preciso que seu time atue de forma colaborativa mantendo uma comunicação eficiente e eficaz.</p>
 					<p class="desc">Os principais benefícios da implantação do DevOps são:
@@ -112,7 +119,7 @@
 					<p class="desc">Para saber mais sobre a implementação de DevOps em sua empresa entre em contato conosco.</p>
  				</div>
 				<div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5 sem-espaco">
-					<img src="/content/img/devops-4.png" alt="PPM" title="PPM" />
+					<img src="/content/img/devops-4.png"  data-aos="fade-down" alt="PPM" title="PPM" />
 				</div>
 			</div>
 	</section>
@@ -121,11 +128,11 @@
 		<div class="container">
 			<div class="row sem-espaco">
 				<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 sem-espaco">
-					<div class="contato-titulo-mlpro">
+					<div class="contato-titulo-mlpro"  data-aos="fade-down">
 						<h2>Entre em contato</h2>
 					</div>
 					<ul class="contato-info-mlpro">
-						<li>
+						<li  data-aos="fade-down">
 							<i class="icon-telefone-mlpro"></i>
 							<p>
 								<a href="tel:+55(11)4113-4123">
@@ -138,7 +145,7 @@
 								</a>
 							</p>
 						</li>
-						<li>
+						<li  data-aos="fade-down">
 							<i class="icon-email-mlpro"></i>
 							<p class="line-one">
 								<a href="mailto:contato(a)mlpro.com.br">
@@ -146,7 +153,7 @@
 								</a>
 							</p>
 						</li>
-						<li>
+						<li  data-aos="fade-down">
 							<i class="icon-localizacao-mlpro"></i>
 							<p>Rua Restinga, 113 - Sala 1706</p>
 							<p>CEP: 03065-020 - Tatuapé - São Paulo - SP</p>
@@ -155,7 +162,7 @@
 
 				</div>
 
-				<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 contato-form-mlpro sem-espaco">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 contato-form-mlpro sem-espaco"  data-aos="fade-down">
 					<div id="form-container">
 						<form id="form1" runat="server">
 							<input type="hidden" name="token" id="token" value="" runat="server" />
@@ -200,7 +207,7 @@
 		<div class="container">
 			<div class="row sem-espaco">
 				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-					<h1>Blog MLPro</h1>
+					<h1  data-aos="fade-down">Blog MLPro</h1>
 				</div>
 			</div>
 		</div>
@@ -209,7 +216,7 @@
 	<section>
 		<div class="container blog-conteudo-mlpro">
 			<div class="row sem-espaco">
-				<div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 right">
+				<div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 right"  data-aos="fade-down">
 					<h2>Posts</h2>
 					<div class="border">
 						<h3>2022</h3>
@@ -266,7 +273,7 @@
 						<h5><a href="">2014</a></h5>
 					</div>
 				</div>
-				<div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 left" >
+				<div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 left"  data-aos="fade-down">
 					<h2><i class=""></i>31 de agosto de 2022</h2>
 					<hr>
 					<h3>Como Gerenciar Problemas no Project Online</h3>

@@ -15,6 +15,10 @@
 				color: #253465;
 			}
 
+			.navbar-collapse.show .nav-item a {
+				color: #FFFFFF;
+			}
+
 			header{
 				height: 128px;
 				background: #FFFFFF;
@@ -27,8 +31,11 @@
 			.lingua {
 				color: #253465;
 			}
+			.navbar-toggler.collapsed:not(:disabled):not(.disabled) {
+    			background: url("/content/img/icon-menu-hover.png") center no-repeat !important;
+			}
 			.navbar-toggler:not(:disabled):not(.disabled) {
-    			background: url("/content/img/icon-menu-hover.png") center no-repeat;
+    			background: url("/content/img/icon-menu.png") center no-repeat;
 			}
 			@media (min-width: 768px) and (max-width: 991px) {
 				header {
@@ -48,14 +55,14 @@
 		<div class="container">
 			<div class="row sem-espaco">
 				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 titulo-project">
-					<div class="pg-project">
+					<div class="pg-project" data-aos="fade-down">
 						<h1>Institucional</h1>
 						<h2>MLPro - Solução PPM</h2>
 					</div>
 				</div>
 
 				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 titulo-project-contato">
-					<div class="bg-clientes-texto">
+					<div class="bg-clientes-texto" data-aos="fade-down">
 						<p class="desc">Está no DNA da MLPro proporcionar para seus clientes as <b>melhores soluções</b> para otimizar os processos de <b>gestão de seus projetos</b> de forma más <b>ágil</b>, <b>prática</b> e <b>customizada</b> permitindo a <b>visualização rápida</b> dos <b>indicadores</b> dos projetos de sua empresa, melhorando a agilidade na <b>tomada de decisões</b>.</p>
 						<p>&nbsp;</p>
 						<p class="desc">A implementação das <b>soluções</b> da <b>MLPro</b> permite que sua empresa tenha <b>melhor visibilidade na gestão de seus projetos</b>, podendo identificar rapidamente o <b>ponto de situação</b> dos projetos identificando com <b>maior agilidade</b>, atrasos, desvios de orçamento e outras <b>informações estratégicas de seus projetos</b>.</p>	
@@ -65,11 +72,11 @@
 		</div>
 	</section>
 	
-	<section class="bg-institucional-texto-mlpro">
+	<section class="bg-institucional-texto-mlpro espaco">
 		<div class="container">
 			<div class="row sem-espaco">
 				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 texto-institucional">
-					<ul data-aos="fade-down" data-aos-duration="900">
+					<ul data-aos="fade-down">
 						<li>
 							<div>
 							<i></i>A <b>MLPro</b> é uma consultoria especializada em <b>Soluções PPM</b> (Project and Portfolio Management) que:<br /><br />
@@ -118,7 +125,7 @@
 			<div class="row">
 				 
 				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sem-espaco">
-					<div class="slide-missao-visao-valores-mlpro">
+					<div class="slide-missao-visao-valores-mlpro" data-aos="fade-down">
 						<div class="box-slide-solucoes-mlpro ativo">
 							<i class="icon-missao"></i>
 							<h3>MISSÃO</h3>
@@ -158,40 +165,40 @@
 	<section class="bg-numeros-institucional">
 		<div class="row sem-espaco">
 
-			<div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 sem-espaco titulo">
-				<h3>A MLPro<br>
+			<div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 sem-espaco titulo" >
+				<h3 data-aos="fade-down">A MLPro<br>
 					em números. </h3>
 			 
 			</div>
 
 
 			<div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
-				<ul>
-					<li>
+				<ul >
+					<li data-aos="fade-down">
 						<i class="icon-20-anos"></i>
 						<h4>20 anos</h2>
 							<p>de implantação<br>
 								do ppm</p>
 					</li>
-					<li>
+					<li data-aos="fade-down">
 						<i class="icon-200"></i>
 						<h4>+200</h2>
 							<p>de implantação<br>
 								do ppm</p>
 					</li>
-					<li>
+					<li data-aos="fade-down">
 						<i class="icon-225"></i>
 						<h4>+225</h2>
 							<p>treinamentos<br>
 								ministrados</p>
 					</li>
-					<li>
+					<li data-aos="fade-down">
 						<i class="icon-12-mil"></i>
 						<h4>+12 mil</h2>
 							<p>usuários<br>
 								atendidos</p>
 					</li>
-					<li class="card-left">
+					<li data-aos="fade-down" class="card-left">
 						<i class="icon-36-mil"></i>
 						<h4>+36 mil</h2>
 							<p>projetos<br>
@@ -209,11 +216,11 @@
 		<div class="container">
 			<div class="row sem-espaco">
 				<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 sem-espaco">
-					<div class="contato-titulo-mlpro">
+					<div class="contato-titulo-mlpro" data-aos="fade-down">
 						<h2>Entre em contato</h2>
 					</div>
 					<ul class="contato-info-mlpro">
-						<li>
+						<li data-aos="fade-down">
 							<i class="icon-telefone-mlpro"></i>
 							<p>
 								<a href="tel:+55(11)4113-4123">
@@ -226,7 +233,7 @@
 								</a>
 							</p>
 						</li>
-						<li>
+						<li data-aos="fade-down">
 							<i class="icon-email-mlpro"></i>
 							<p class="line-one">
 								<a href="mailto:contato(a)mlpro.com.br">
@@ -234,7 +241,7 @@
 								</a>
 							</p>
 						</li>
-						<li>
+						<li data-aos="fade-down">
 							<i class="icon-localizacao-mlpro"></i>
 							<p>Rua Restinga, 113 - Sala 1706</p>
 							<p>CEP: 03065-020 - Tatuapé - São Paulo - SP</p>
@@ -243,7 +250,7 @@
 
 				</div>
 
-				<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 contato-form-mlpro sem-espaco">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 contato-form-mlpro sem-espaco" data-aos="fade-down">
 					<div id="form-container">
 						<form id="form1" runat="server">
 							<input type="hidden" name="token" id="token" value="" runat="server" />

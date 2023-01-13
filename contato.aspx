@@ -15,6 +15,10 @@
 				color: #253465;
 			}
 
+			.navbar-collapse.show .nav-item a {
+				color: #FFFFFF;
+			}
+
 			header{
 				height: 128px;
 				background: #FFFFFF;
@@ -27,8 +31,11 @@
 			.lingua {
 				color: #253465;
 			}
+			.navbar-toggler.collapsed:not(:disabled):not(.disabled) {
+    			background: url("/content/img/icon-menu-hover.png") center no-repeat !important;
+			}
 			.navbar-toggler:not(:disabled):not(.disabled) {
-    			background: url("/content/img/icon-menu-hover.png") center no-repeat;
+    			background: url("/content/img/icon-menu.png") center no-repeat;
 			}
 			@media (min-width: 768px) and (max-width: 991px) {
 				header {
@@ -49,14 +56,14 @@
 		<div class="container">
 			<div class="row sem-espaco">
 				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 titulo-project">
-					<div class="pg-project">
+					<div class="pg-project" data-aos="fade-down">
 						<h1>Contato e Localização</h1>
 						<h2>Entre em contato conosco, será um prazer atendê-lo!</h2>
 					</div>
 				</div>
 
 				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 titulo-project-contato">
-					<div class="bg-clientes-texto contato-texto">
+					<div class="bg-clientes-texto contato-texto" data-aos="fade-down">
 						<p class="desc">A MLPro está sempre em busca de soluções para <b>facilitar a visualização das informações de seus projetos</b> permitindo maior agilidade no controle e gestão do portfólio de projetos de sua empresa. </p>
 						<p>&nbsp;</p>
 						<p class="desc">Para isso, conta com uma equipe especializada em implantação de PPM, configuração, customização, integração, treinamento, administração e suporte técnico.</p>
@@ -75,9 +82,9 @@
  
 			<div class="row sem-espaco">
 			 
-				<img src="/content/img/bg-newsletter.png">
+				<img src="/content/img/bg-newsletter.png" data-aos="fade-down">
 				 
-				<div class="ng-newsletter">
+				<div class="ng-newsletter" data-aos="fade-down">
 					<div data-aos="fade-down" data-aos-duration="500">
 						<h2>NEWSLETTER</h2>
 						<p>Cadastre agora mesmo seu e-mail</p>
@@ -96,11 +103,11 @@
 		<div class="container">
 			<div class="row sem-espaco">
 				<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 sem-espaco">
-					<div class="contato-titulo-mlpro">
+					<div class="contato-titulo-mlpro" data-aos="fade-down">
 						<h2>Entre em contato</h2>
 					</div>
 					<ul class="contato-info-mlpro">
-						<li>
+						<li data-aos="fade-down">
 							<i class="icon-telefone-mlpro"></i>
 							<p>
 								<a href="tel:+55(11)4113-4123">
@@ -113,7 +120,7 @@
 								</a>
 							</p>
 						</li>
-						<li>
+						<li data-aos="fade-down">
 							<i class="icon-email-mlpro"></i>
 							<p class="line-one">
 								<a href="mailto:contato(a)mlpro.com.br">
@@ -121,7 +128,7 @@
 								</a>
 							</p>
 						</li>
-						<li>
+						<li data-aos="fade-down">
 							<i class="icon-localizacao-mlpro"></i>
 							<p>Rua Restinga, 113 - Sala 1706</p>
 							<p>CEP: 03065-020 - Tatuapé - São Paulo - SP</p>
@@ -130,7 +137,7 @@
 
 				</div>
 
-				<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 contato-form-mlpro form-assunto sem-espaco">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 contato-form-mlpro form-assunto sem-espaco" data-aos="fade-down">
 					<div id="form-container">
 						<form id="form1" runat="server">
 							<p>Solicite uma demonstração do produto, será um prazer mostrarmos como podemos melhorar a gestão do portfólio de projetos da sua empresa.</p>

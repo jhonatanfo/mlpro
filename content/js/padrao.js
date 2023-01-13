@@ -35,6 +35,11 @@ $(document).on('ready', function () {
 	AOS.init({
 		easing: 'ease-in-out-sine'
 	});
+	
+	document.addEventListener("mousemove", e => {
+        AOS.init();
+        AOS.refresh();
+    });
 
 	$('.nav-item a[href^="#"], .box-slide a[href^="#"]').on('click', function(e) {
 		e.preventDefault();

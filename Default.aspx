@@ -17,26 +17,29 @@
 	</asp:Content>
 	<asp:Content ID="Content4" ContentPlaceHolderID="content" runat="Server">
 
- 
-
 		<section>
 			<div class="bg-banner-principal">
 				<div class="container">
 					<div class="row">
 						<div class="col-md-9">
-							<h2 data-animation-in="bounceInLeft">Implantação, Consultoria e Suporte ao <b>Project
-									Online</b></h2>
-							<p data-animation-in="bounceInUp">A MLPro nas etapas de implementação do PPM, Project Server
+							<h2 data-aos="fade-down">
+								Implantação, Consultoria e Suporte ao <b>Project Online</b>
+							</h2>
+							<p data-aos="fade-down">
+								A MLPro nas etapas de implementação do PPM, Project Server
 								e Project Online nos processos de: Consultoria, Implantação, Configuração, Customização,
-								Integração, Treinamento, Administração e Suporte...</p>
-							<a href="/project-online/" data-animation-in="bounceInUp" class="btn-veja">veja mais</a>
+								Integração, Treinamento, Administração e Suporte...
+							</p>
+							<a href="/project-online/" data-aos="fade-down" class="btn-veja">
+								veja mais
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="logo-microsoft-partner-2022">
 				<div class="container">
-					<img src="/content/img/logo-microsoft-partner-2022.png">
+					<img src="/content/img/logo-microsoft-partner-2022.png" data-aos="fade-down"  >
 				</div>
 			</div>
 		</section>
@@ -44,48 +47,43 @@
 		<section class="bg-solucoes">
 			<div class="container">
 				<div class="row">
-					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 titulo-solucoes" data-aos="fade-down"
-						data-aos-duration="500">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 titulo-solucoes" data-aos="fade-down"  >
 						<h1>Soluções MLPro</h1>
 					</div>
 					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sem-espaco">
-						<div class="slide-solucoes-mlpro">
+						<div class="slide-solucoes-mlpro" data-aos="fade-down">
 							<div class="box-slide-solucoes-mlpro ativo">
 								<i class="icon-instalacao-configuracao-ppm"></i>
-								<h3>Instalação e<br />Configuração do<br />Microsoft PPM:</h3>
-								<p>Implantação e Consultoria,<br />garantindo a aplicação das<br />melhores práticas
-									do<br />mercado.</p>
+								<h3>Instalação e Configuração do Microsoft PPM:</h3>
+								<p>Implantação e Consultoria, garantindo a aplicação das melhores práticas do mercado.</p>
 								<a href="/project-online/" class="btn-saiba-solucoes">Saiba mais</a>
 							</div>
 
 							<div class="box-slide-solucoes-mlpro">
 								<i class="icon-solucoes-exclusivas-mlpro"></i>
-								<h3>Soluções<br />Exclusivas MLPro</h3>
-								<p>Visando atender às melhores<br />práticas de gerenciamento de<br />projetos</p>
+								<h3>Soluções Exclusivas MLPro</h3>
+								<p>Visando atender às melhores práticas de gerenciamento de projetos</p>
 								<a href="/project-online/" class="btn-saiba-solucoes">Saiba mais</a>
 							</div>
 
 							<div class="box-slide-solucoes-mlpro">
 								<i class="icon-consultoria-ppm"></i>
 								<h3>Consultoria PPM</h3>
-								<p>Aplicação prática da ferramenta<br />em projetos do cliente,<br />assegurando que a
-									empresa<br />obtenha resultados de forma<br />mais rápida </p>
+								<p>Aplicação prática da ferramenta em projetos do cliente, assegurando que a empresa obtenha resultados de forma mais rápida </p>
 								<a href="/project-online/" class="btn-saiba-solucoes">Saiba mais</a>
 							</div>
 
 							<div class="box-slide-solucoes-mlpro">
 								<i class="icon-treinamento-ppm"></i>
 								<h3>Treinamento PPM</h3>
-								<p>Treinamento em Project<br />Online, Project Server, Project<br />Professional e no
-									SharePoint.</p>
+								<p>Treinamento em Project Online, Project Server, Project Professional e no SharePoint.</p>
 								<a href="/project-online/" class="btn-saiba-solucoes">Saiba mais</a>
 							</div>
 
 							<div class="box-slide-solucoes-mlpro">
 								<i class="icon-treinamento-ppm"></i>
 								<h3>Treinamento PPM</h3>
-								<p>Treinamento em Project<br />Online, Project Server, Project<br />Professional e no
-									SharePoint.</p>
+								<p>Treinamento em Project Online, Project Server, Project Professional e no SharePoint.</p>
 								<a href="/project-online/" class="btn-saiba-solucoes">Saiba mais</a>
 							</div>
 						</div>
@@ -103,8 +101,8 @@
 
 
 				<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 beneficios-texto">
-					<h2>Benefícios do Project Online</h2>
-					<ul>
+					<h2 data-aos="fade-down">Benefícios do Project Online</h2>
+					<ul data-aos="fade-down">
 						<li>
 							<i class="icon-economia"></i>
 							Economia de 45 minutos por semana do Gerente de Projetos na
@@ -118,7 +116,7 @@
 						<li><i class="icon-melhoria"></i>Melhoria na produtividade de 13% dos recursos do Projeto;</li>
 						<li><i class="icon-reducao"></i>Redução do estouro no orçamento do projeto em 5%.</li>
 					</ul>
-					<a href="/project-online/">Saiba mais</a>
+					<a href="/project-online/" data-aos="fade-down">Saiba mais</a>
 				</div>
 
 			</div>
@@ -128,29 +126,29 @@
 			<div class="row sem-espaco">
 
 				<div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 sem-espaco titulo">
-					<h3>Números falam mais<br>do que palavras. </h3>
-					<p>Veja os nossos.</p>
+					<h3 data-aos="fade-down">Números falam mais<br>do que palavras. </h3>
+					<p data-aos="fade-down">Veja os nossos.</p>
 				</div>
 
 
 				<div class="col-12 col-sm-12 col-md-12 col-lg-5 col-xl-5">
 					<ul>
-						<li>
+						<li data-aos="fade-down">
 							<i class="icon-suporte"></i>
 							<h4>12 mil</h2>
 								<p>usuários recebendo<br>suporte</p>
 						</li>
-						<li>
+						<li data-aos="fade-down">
 							<i class="icon-empresas"></i>
 							<h4>+150</h2>
 								<p>empresas atendidas</p>
 						</li>
-						<li>
+						<li data-aos="fade-down">
 							<i class="icon-anos"></i>
 							<h4>20 anos</h2>
 								<p>de atuação</p>
 						</li>
-						<li>
+						<li data-aos="fade-down">
 							<i class="icon-projetos-realizados"></i>
 							<h4>36 mil</h2>
 								<p>projetos realizados</p>
@@ -163,13 +161,13 @@
 
 		<section  class="bg-clientes-mlpro container">
 			<div class="row sem-espaco">
-				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 clientes-titulo">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 clientes-titulo" data-aos="fade-down">
 					<h2>Clientes MLPro <span></span></h2>
 					<button class="slide-clientes-left-mlpro"></button>
 					<button class="slide-clientes-right-mlpro"></button>
 				</div>
 				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-					<div class="slide-clientes-mlpro">
+					<div class="slide-clientes-mlpro" data-aos="fade-down">
 						<a target="_blank" href="https://www.voeazul.com.br/">
 							<span class="pos-1-1">
 								<img src="/content/img/clientes-home.png" alt="Azul" />
@@ -287,7 +285,7 @@
 		<!-- <section class="bg-ml-solucoes">
 		<div class="container">
 			<div class="row sem-espaco">
-				<div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 bg-titulo-solucoes" data-aos="fade-down" data-aos-duration="500">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 bg-titulo-solucoes" data-aos="fade-down"  >
 					<h1>MLPro <span>Soluções</span> <b>PPM</b></h1>
 					<button class="slide-solucoes-left"></button>
 					<button class="slide-solucoes-right"></button>
@@ -331,7 +329,7 @@
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 beneficios-texto">
 						<h2 data-aos="fade-down" data-aos-duration="300">Benefícios do <br /><b>Project Online</b></h2>
 						<ul>
-							<li data-aos="fade-down" data-aos-duration="500"><i></i>Economia de 45 minutos por semana do
+							<li data-aos="fade-down"  ><i></i>Economia de 45 minutos por semana do
 								Gerente de Projetos na geração de Relatórios do Projeto;</li>
 							<li data-aos="fade-down" data-aos-duration="800"><i></i>Aumento do número de projetos em 14%
 								pelos Gerentes de Projetos;</li>
@@ -343,7 +341,7 @@
 						<a href="/project-online/" data-aos="fade-down" data-aos-duration="1400">Saiba mais <i></i></a>
 					</div>
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 beneficios-img" data-aos="fade-down"
-						data-aos-duration="500">
+						 >
 						<img src="/content/img/ppm.png" alt="PPM" title="PPM" width="473" height="466" />
 					</div>
 				</div>
@@ -353,7 +351,7 @@
 		<!-- <section class="bg-produtos" id="produtos">
 			<div class="container">
 				<div class="row sem-espaco">
-					<div class="produtos-titulo" data-aos="fade-down" data-aos-duration="500">
+					<div class="produtos-titulo" data-aos="fade-down"  >
 						<h2>Produtos para o <br /><b>Microsoft PPM</b> e <b>EPM</b></h2>
 						<p>Project Online ou Project Server</p>
 					</div>
@@ -445,11 +443,11 @@
 			<div class="container">
 				<div class="row sem-espaco">
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 sem-espaco">
-						<div class="contato-titulo-mlpro">
+						<div class="contato-titulo-mlpro" data-aos="fade-down">
 							<h2>Entre em contato</h2>
 						</div>
 						<ul class="contato-info-mlpro">
-							<li>
+							<li data-aos="fade-down">
 								<i class="icon-telefone-mlpro"></i>
 								<p>
 									<a href="tel:+55(11)4113-4123">
@@ -462,7 +460,7 @@
 									</a>
 								</p>
 							</li>
-							<li>
+							<li data-aos="fade-down">
 								<i class="icon-email-mlpro"></i>
 								<p class="line-one">
 									<a href="mailto:contato(a)mlpro.com.br">
@@ -470,7 +468,7 @@
 									</a>
 								</p>
 							</li>
-							<li>
+							<li data-aos="fade-down">
 								<i class="icon-localizacao-mlpro"></i>
 								<p>Rua Restinga, 113 - Sala 1706</p>
 								<p>CEP: 03065-020 - Tatuapé - São Paulo - SP</p>
@@ -479,7 +477,7 @@
 						 
 					</div>
 
-					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 contato-form-mlpro sem-espaco">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 contato-form-mlpro sem-espaco" data-aos="fade-down">
 						<div id="form-container">
 							<form id="form1" runat="server">
 								<input type="hidden" name="token" id="token" value="" runat="server" />

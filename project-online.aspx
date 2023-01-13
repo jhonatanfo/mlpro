@@ -19,6 +19,10 @@
 				color: #253465;
 			}
 
+			.navbar-collapse.show .nav-item a {
+				color: #FFFFFF;
+			}
+
 			header{
 				height: 128px;
 				background: #FFFFFF;
@@ -31,8 +35,11 @@
 			.lingua {
 				color: #253465;
 			}
+			.navbar-toggler.collapsed:not(:disabled):not(.disabled) {
+    			background: url("/content/img/icon-menu-hover.png") center no-repeat !important;
+			}
 			.navbar-toggler:not(:disabled):not(.disabled) {
-    			background: url("/content/img/icon-menu-hover.png") center no-repeat;
+    			background: url("/content/img/icon-menu.png") center no-repeat;
 			}
 			@media (min-width: 768px) and (max-width: 991px) {
 				header {
@@ -52,14 +59,14 @@
 			<div class="container">
 				<div class="row sem-espaco">
 					<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 titulo-project">
-						<div class="pg-project">
+						<div class="pg-project" data-aos="fade-down">
 							<h1>Project Online e Project<br>Server</h1>
 							<h2>Microsoft PPM e EPM</h2>
 						</div>
 					</div>
 	
 					<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 titulo-project-contato">
-						<div class="bg-clientes-texto">
+						<div class="bg-clientes-texto" data-aos="fade-down">
 							<p class="desc">A MLPro é expert no Microsoft Project Online, no Microsoft Project, no EPM - Enterprise Project Management e no PPM - Project and Portfólio Management. A MLPro atua nas etapas de implementação do PPM, Project Server e Project Online nos processos de: Consultoria, Implantação, Configuração, Customização, Integração, Treinamento, Administração e Suporte.</p>
 							<p>&nbsp;</p>
 							<p class="desc">A MLPro implementa soluções que permitirão que a sua empresa otimize o trabalho do escritório de projetos, garantindo mais agilidade nas tomadas de decisões, redução de eventuais desvios de prazo ou custo no cronograma.</p>
@@ -70,7 +77,7 @@
 			</div>
 		</section>
 
-		<section class="bg-project-texto-mlpro" data-aos="fade-down" data-aos-duration="500">
+		<section class="bg-project-texto-mlpro" >
 			<div class="container">
 				<div class="row sem-espaco">
 					
@@ -87,8 +94,8 @@
 							class="segundo-img-project" data-aos="fade-down" data-aos-duration="500" />
 					</div>
 
-					<div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 texto-project">
-						<ul>
+					<div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 texto-project" data-aos="fade-down">
+						<ul > 
 							<li><i></i>A MLPro é certificada <b><span>Microsoft Gold Partner</span></b> no
 								<b><span>Project and Portfólio Management</span></b>.</li>
 							<li><i></i><b>Consultoria</b> no <b>Project Server</b> e no <b>Project Online</b>,
@@ -112,10 +119,10 @@
 			</div>
 		</section>
 
-		<section class="pg-project-contato-mlpro"  data-aos="fade-down" data-aos-duration="500">
+		<section class="pg-project-contato-mlpro" >
 			<div class="container">
 				<div class="row sem-espaco">
-					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 titulo-project-contato">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 titulo-project-contato" data-aos="fade-down">
 						<h3>Microsoft PPM e EPM</h3>
 						<p>Solicite uma demonstração do produto, será um prazer<br />mostrarmos como podemos melhorar
 							a gestão do portfólio de<br />projetos da sua empresa.</p>
@@ -125,15 +132,15 @@
 			</div>
 		</section>
 
-		<section class="bg-clientes-mlpro container">
+		<section  class="bg-clientes-mlpro container">
 			<div class="row sem-espaco">
-				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 clientes-titulo">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 clientes-titulo" data-aos="fade-down">
 					<h2>Clientes MLPro <span></span></h2>
 					<button class="slide-clientes-left-mlpro"></button>
 					<button class="slide-clientes-right-mlpro"></button>
 				</div>
 				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-					<div class="slide-clientes-mlpro">
+					<div class="slide-clientes-mlpro" data-aos="fade-down">
 						<a target="_blank" href="https://www.voeazul.com.br/">
 							<span class="pos-1-1">
 								<img src="/content/img/clientes-home.png" alt="Azul" />
@@ -195,15 +202,17 @@
 			</div>
 		</section>
 
+		
+
 		<section class="bg-contato-mlpro">
 			<div class="container">
 				<div class="row sem-espaco">
 					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 sem-espaco">
-						<div class="contato-titulo-mlpro">
+						<div class="contato-titulo-mlpro" data-aos="fade-down">
 							<h2>Entre em contato</h2>
 						</div>
 						<ul class="contato-info-mlpro">
-							<li>
+							<li data-aos="fade-down">
 								<i class="icon-telefone-mlpro"></i>
 								<p>
 									<a href="tel:+55(11)4113-4123">
@@ -216,7 +225,7 @@
 									</a>
 								</p>
 							</li>
-							<li>
+							<li data-aos="fade-down">
 								<i class="icon-email-mlpro"></i>
 								<p class="line-one">
 									<a href="mailto:contato(a)mlpro.com.br">
@@ -224,7 +233,7 @@
 									</a>
 								</p>
 							</li>
-							<li>
+							<li data-aos="fade-down">
 								<i class="icon-localizacao-mlpro"></i>
 								<p>Rua Restinga, 113 - Sala 1706</p>
 								<p>CEP: 03065-020 - Tatuapé - São Paulo - SP</p>
@@ -233,7 +242,7 @@
 
 					</div>
 
-					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 contato-form-mlpro sem-espaco">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 contato-form-mlpro sem-espaco" data-aos="fade-down">
 						<div id="form-container">
 							<form id="form1" runat="server">
 								<input type="hidden" name="token" id="token" value="" runat="server" />

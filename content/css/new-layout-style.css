@@ -103,7 +103,8 @@ ul.navbar-nav li a:hover {
   width: 343px;
   height: 54px;
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.1);
+  background: transparent;
+
   border: 1px solid #ffffff;
   backdrop-filter: blur(5px);
   display: block;
@@ -111,6 +112,12 @@ ul.navbar-nav li a:hover {
   padding: 13px 0;
   text-decoration: none;
   text-transform: uppercase;
+  transition: 0.2s;
+}
+
+.bg-banner-principal .btn-veja:hover {
+  background: rgba(255, 255, 255, 0.1);
+
 }
 
 .logo-microsoft-partner-2022 {
@@ -247,6 +254,8 @@ ul.navbar-nav li a:hover {
   transition: all 0.2s ease-out;
 }
 
+ 
+
 .bg-solucoes .box-slide-solucoes-mlpro.ativo::after {
   content: "";
   width: 70px;
@@ -259,10 +268,10 @@ ul.navbar-nav li a:hover {
   margin-left: -10px;
   z-index: -1;
   margin-top: -10px;
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
+  -webkit-transition: all 0.8s ease-out;
+  -moz-transition: all 0.8s ease-out;
+  -o-transition: all 0.8s ease-out;
+  transition: all 0.8s ease-out;
 }
 
 .bg-solucoes .box-slide-solucoes-mlpro h3 {
@@ -465,7 +474,15 @@ ul.navbar-nav li a:hover {
   text-transform: uppercase;
   border-radius: 0;
   margin-left: 71px;
+  transition: 0.2s;
 }
+
+
+.bg-beneficios-project .beneficios-texto a:hover {
+  background: #ffffff;
+  color: #042554;
+}
+
 .bg-beneficios-project .beneficios-texto {
   margin-top: 110px;
   padding-left: 58px;
@@ -845,6 +862,13 @@ ul.navbar-nav li a:hover {
   height: 54px;
   border: 1px solid #ffffff;
   background: transparent;
+  transition: 0.2s;
+  opacity: 1;
+}
+
+.contato-form-mlpro #form-container .btn-form-enviar:hover {
+  background: #ffffff;
+  color: #00193e;
 }
 
 .contato-form-mlpro #form-container i {
@@ -1142,7 +1166,7 @@ ul.navbar-nav li a:hover {
 
 .bg-project-texto-mlpro {
   background: #f5f9ff;
-  padding: 110px 0 90px 0;
+  padding: 110px 0 0px 0;
 }
 
 .bg-project-texto-mlpro .img-project img {
@@ -1326,7 +1350,7 @@ ul.navbar-nav li a:hover {
 }
 
 .pg-project-contato-mlpro .titulo-project-contato .btn-project-contato:hover {
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 .pg-project-contato-mlpro .titulo-project-contato .btn-project-contato i {
@@ -1338,6 +1362,12 @@ ul.navbar-nav li a:hover {
 }
 
 /* --------------- */
+
+
+.bg-institucional-texto-mlpro.espaco {
+ 
+  padding: 110px 0 0px 0;
+}
 
 .bg-institucional-texto-mlpro {
   background: #e1edff;
@@ -1577,6 +1607,11 @@ ul.navbar-nav li a:hover {
   color: #253465;
   margin-top: 27px;
   display: block;
+  transition: 0.2s;
+}
+
+.bg-clientes-texto.contato-texto a:hover {
+  opacity: 0.2;
 }
 
 .bg-institucional-texto-img2-mlpro {
@@ -1740,7 +1775,7 @@ ul.navbar-nav li a:hover {
 
 .bg-institucional-texto-mlpro {
   background: #f5f9ff;
-  padding: 200px 0 215px 0;
+  padding: 92px 0 145px 0px;
   position: relative;
 }
 
@@ -1856,6 +1891,10 @@ ul.navbar-nav li a:hover {
 
 .blog-conteudo-mlpro .right p a {
   color: #b1b1b1;
+  transition: 0.2s;
+}
+.blog-conteudo-mlpro .right p a:hover {
+  color: #0e83b3;
 }
 
 .blog-conteudo-mlpro .right h5 {

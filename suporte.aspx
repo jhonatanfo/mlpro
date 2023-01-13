@@ -14,6 +14,10 @@
 				color: #253465;
 			}
 
+			.navbar-collapse.show .nav-item a {
+				color: #FFFFFF;
+			}
+
 			header{
 				height: 128px;
 				background: #FFFFFF;
@@ -26,8 +30,11 @@
 			.lingua {
 				color: #253465;
 			}
+			.navbar-toggler.collapsed:not(:disabled):not(.disabled) {
+    			background: url("/content/img/icon-menu-hover.png") center no-repeat !important;
+			}
 			.navbar-toggler:not(:disabled):not(.disabled) {
-    			background: url("/content/img/icon-menu-hover.png") center no-repeat;
+    			background: url("/content/img/icon-menu.png") center no-repeat;
 			}
 			@media (min-width: 768px) and (max-width: 991px) {
 				header {
@@ -48,7 +55,7 @@
 		<div class="container">
 			<div class="row sem-espaco">
 				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 titulo-project">
-					<div class="pg-project">
+					<div class="pg-project" data-aos="fade-down">
 						<h1>Suporte ao Project<br>
 							Online e ao Project Server<br>
 							(PPM e EPM)
@@ -57,7 +64,7 @@
 				</div>
 
 				<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 titulo-project-contato">
-					<div class="bg-clientes-texto">
+					<div class="bg-clientes-texto" data-aos="fade-down">
 						<p class="desc">A MLPro possui um <b>time de especialistas</b> para atendimento de nossos clientes e conta com um processo prático, simples e rápido para <b>maior agilidade</b> e <b>eficiência</b> no atendimento e <b>resolução dos chamados</b>.</p>
 						<p>&nbsp;</p>
 						<p class="desc">A qualidade do Atendimento da MLPro está presente em todos os nossos canais de atendimento aos nossos clientes.</p>
@@ -73,9 +80,9 @@
 		<div class="container">
 			<div class="row sem-espaco">
 				<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 img-project">
-					<img src="/content/img/microsoft-project-server-project-online.jpg" alt="Microsoft Project Server e Microsoft Project Online"                                                      title="Microsoft Project Server e Microsoft Project Online"           width="288" height="232" class="institucional-img-project" data-aos="fade-down" data-aos-duration="1600" />
+					<img src="/content/img/microsoft-project-server-project-online.jpg" alt="Microsoft Project Server e Microsoft Project Online"                                                      title="Microsoft Project Server e Microsoft Project Online"           width="288" height="232" class="institucional-img-project" data-aos="fade-down" />
 					 
-					<div class="text-project">
+					<div class="text-project" data-aos="fade-down">
 						<h4>Contato de Suporte:</h4>
 						<p><a href="tel:+55(11)4113-4123">+55 (11) 4113-4123</a></p>
 						<p><a href="mailto:suporte(a)mlpro.com.br">suporte(a)mlpro.com.br</a></p>
@@ -102,7 +109,7 @@
 			<div class="row">
 				 
 				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sem-espaco">
-					<div class="slide-missao-visao-valores-mlpro">
+					<div class="slide-missao-visao-valores-mlpro" data-aos="fade-down">
 						<a href="https://mlproepm.sharepoint.com/sites/Suporte/Lists/Chamados/NewForm.aspx" target="_blank" class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 link-deco">
 							<div class="box-slide-solucoes-mlpro ativo titulo">
 								<i class="icon-chamados-um-solicite"></i>
@@ -134,11 +141,11 @@
 		<div class="container">
 			<div class="row sem-espaco">
 				<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 sem-espaco">
-					<div class="contato-titulo-mlpro">
+					<div class="contato-titulo-mlpro" data-aos="fade-down">
 						<h2>Entre em contato</h2>
 					</div>
 					<ul class="contato-info-mlpro">
-						<li>
+						<li data-aos="fade-down">
 							<i class="icon-telefone-mlpro"></i>
 							<p>
 								<a href="tel:+55(11)4113-4123">
@@ -151,7 +158,7 @@
 								</a>
 							</p>
 						</li>
-						<li>
+						<li data-aos="fade-down">
 							<i class="icon-email-mlpro"></i>
 							<p class="line-one">
 								<a href="mailto:contato(a)mlpro.com.br">
@@ -159,7 +166,7 @@
 								</a>
 							</p>
 						</li>
-						<li>
+						<li data-aos="fade-down">
 							<i class="icon-localizacao-mlpro"></i>
 							<p>Rua Restinga, 113 - Sala 1706</p>
 							<p>CEP: 03065-020 - Tatuapé - São Paulo - SP</p>
@@ -168,7 +175,7 @@
 
 				</div>
 
-				<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 contato-form-mlpro sem-espaco">
+				<div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 contato-form-mlpro sem-espaco" data-aos="fade-down">
 					<div id="form-container">
 						<form id="form1" runat="server">
 							<input type="hidden" name="token" id="token" value="" runat="server" />
