@@ -1,0 +1,2520 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FrameWork.WebControls</name>
+    </assembly>
+    <members>
+        <member name="T:FrameWork.WebControls.ClassDisplay">
+            <summary>
+            Gera HTML de exibição/Edição baseado na estrutura de uma classe
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.ClassDisplay.AllFields">
+            <summary>
+            Configura para ecibir todos os campos (por padrão verdadeiro)
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.ClassDisplay.id">
+            <summary>
+            ID para a TAG html a ser criada, sera usado o nome da classe se for omitido
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.ClassDisplay.htmlClassStart">
+            <summary>
+            HTML de inicialização de exibição da classe
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.ClassDisplay.htmlClassEnd">
+            <summary>
+            HTML de finalização de exibição da classe
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.ClassDisplay.dateFormat">
+            <summary>
+            Mascara de formatação padrão para campos 'data'
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.ClassDisplay.doubleFormat">
+            <summary>
+            Mascara de formatação padrão para campos 'double'
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.ClassDisplay.showEmpty">
+            <summary>
+            configura se é para exibir campos Nulos/vazios
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.ClassDisplay.onTitle">
+            <summary>
+            Nome de um metodo para redefinir os titulos
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.ClassDisplay.htmlFieldFormat">
+            <summary>
+            HTML com a String de Formatação com a linha de exibição do Titulo: Valor
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.ClassDisplay.htmlFieldFormatAlter">
+            <summary>
+            HTML com a String de Formatação com a linha de exibição do Titulo: Valor para as linhas alternadas (impares: iniciando por zero)
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.ClassDisplay.ShowOnlyFields">
+            <summary>
+            Exibe somente os campos expecificados finalizados sempre por "," sem espaçoes
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.ClassDisplay.HideFields">
+            <summary>
+            Oculta alguns campos especificados
+            </summary>public string ShowOnlyFields
+        </member>
+        <member name="M:FrameWork.WebControls.ClassDisplay.#ctor">
+            <summary>
+            Construtora padrão: ClassDisplay(false)
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.ClassDisplay.#ctor(System.Boolean)">
+            <summary>
+            Pré-configura uma renderização com esquema de cores alternadas para linhas pares/impares
+            </summary>
+            <param name="lAlterColor">True - Ativa 2 classes diferentes pré configuradas para diferentes linhas</param>
+        </member>
+        <member name="M:FrameWork.WebControls.ClassDisplay.MakeHTML(System.Object,System.String)">
+            <summary>
+            Gera o HTML para o contexto de saida
+            </summary>
+            <param name="obj">Instancia da Classe com os dados</param>
+            <param name="cLegenda">Legenda de titulo</param>
+            <returns>HTML Formatado</returns>
+        </member>
+        <member name="T:FrameWork.WebControls.IClassDisplay">
+            <summary>
+            Configura os metodos de personalização de exibição
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.IClassDisplay.RenderItemDisplay(System.String,FrameWork.WebControls.ClassDisplay,System.Text.StringBuilder,System.Int32@,System.String@,System.String@)">
+            <summary>
+            Personaliza a linha de exibição
+            </summary>
+            <param name="cField">Nome do campo a ser renderizado</param>
+            <param name="cd">Instacia atual do ClassDisplay</param>
+            <param name="cOut">Instancia da saida StringBuilder atual de saida</param>
+            <param name="i">index 'i' do contador de linha atual</param>
+            <param name="cTitulo">Titulo Atual</param>
+            <param name="cValor">Valor Atual</param>
+            <returns>Retorne VERDADEIRO (true) se você não desejar que o componente adicione qualquer outra informação na saida, ou falso para adicionar</returns>
+        </member>
+        <member name="T:FrameWork.WebControls.ClassMenu">
+            <summary>
+            Define para uma classe que esta deverá fazer parte de um menu
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.ClassMenu.#ctor(FrameWork.WebControls.MenuNivel,System.String,System.String)">
+            <summary>
+            Cria e configura os prncipais campos para a geração de menu por meio de atribute de classe
+            </summary>
+            <param name="_Nivel">Nivel de exibição do menu<see cref="T:FrameWork.WebControls.MenuNivel"/></param>
+            <param name="_PaiID">Código do Identificados único do menu Pai (se houver), se for menu raiz, usar "0" (Zero)<see cref="P:FrameWork.WebControls.ClassMenu.PaiID"/></param>
+            <param name="_Text">Texto a ser escrito no menu</param>
+        </member>
+        <member name="P:FrameWork.WebControls.ClassMenu.ClientID">
+            <summary>
+            Identificador único do menu, que será usado como nome do controle "LI" a ser criado (webcontrol)
+            </summary>
+            <remarks>
+            Este parametro é opcional, e por padrão será o nome da classe com o atributo
+            O código a ser usado como referencia no banco de dados está na propriedade ID
+            </remarks>
+            <see cref="!:ID"/>
+        </member>
+        <member name="P:FrameWork.WebControls.ClassMenu.Nivel">
+            <summary>
+            Nivel do menu na "arvore" de menu, indica se o item estará na menu raiz, ou sera um menu filho, ou um submenu de um menu filho
+            </summary>
+            <seealso cref="T:FrameWork.WebControls.MenuNivel"/>
+        </member>
+        <member name="P:FrameWork.WebControls.ClassMenu.PaiID">
+            <summary>
+            Informa o código ID do "MenuPai", informe '0' (zero) quando for um item do menu raiz (root)
+            </summary>
+            <seealso cref="T:FrameWork.WebControls.MenuNivel"/>
+        </member>
+        <member name="P:FrameWork.WebControls.ClassMenu.Sequencia">
+            <summary>
+            É a sequencia de aparição do item no menu
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.ClassMenu.Text">
+            <summary>
+            Texto opcional que será exibido no menu, se não for especificado será usado o 'Title' do ClassControl, se existir
+            </summary>
+            <remarks>
+            Para não exibir nenhum texto, e usar somente imagem, defina o texto como: Texto=""
+            </remarks>
+        </member>
+        <member name="P:FrameWork.WebControls.ClassMenu.URL">
+            <summary>
+            URL de destino ao ser clicado no menu, se iniciar com "http://" será adicionado como target=_blank
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.ClassMenu.LoadFromAssembly(System.String,System.Data.DataTable@)">
+            <summary>
+            Carrega os menus definidos dentro de uma DLL (assemby), usando o nome da DLL
+            </summary>
+            <param name="cAssemblyName">Nome da DLL a ser usada</param>
+        </member>
+        <member name="M:FrameWork.WebControls.ClassMenu.LoadFromAssembly(System.Reflection.Assembly,System.Data.DataTable@)">
+            <summary>
+            Carrega os menus definidos dentro de uma DLL (assemby)
+            </summary>
+            <param name="asm">Instancia da Assemby carregada</param>
+        </member>
+        <member name="M:FrameWork.WebControls.ClassMenu.MakeMenu(System.Data.DataTable,FrameWork.WebControls.PageMenu)">
+            <summary>
+            Monta o menu baseado em tabela de itens de menus
+            </summary>
+            <param name="tb">Instancia da tabela</param>
+            <param name="menu">Controle PageMenu de saida</param>
+        </member>
+        <member name="M:FrameWork.WebControls.ClassMenu.MakeMenu(System.Data.DataTable,System.Web.UI.Control)">
+            <summary>
+            Monta o menu
+            </summary>
+            <param name="tb">Tabela contendo os itens</param>
+            <param name="menuUL">controle UL, já adicionado em na página</param>
+        </member>
+        <member name="T:FrameWork.WebControls.MenuNivel">
+            <summary>
+            Enumerador de niveis de menu
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.MenuNivel.Root">
+            <summary>
+            Define menu de nizel '0' (raiz/root)
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.MenuNivel.Menu">
+            <summary>
+            Define menu de nivel '1' (menu filho de um item da raiz/root)
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.MenuNivel.SubMenu">
+            <summary>
+            Define menu de nive '2' (sub-menu de um menu filho)
+            </summary>
+        </member>
+        <member name="T:FrameWork.WebControls.ClassRight">
+            <summary>
+            Define os direitos e as funcionalidades de uma Classe
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.ClassRight.ID">
+            <summary>
+            Retorna o ID unico de referencia da classe (direitos)
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.ClassRight.Funcs">
+            <summary>
+            Retorna as funcionalidades dispoíveis da classe, separadas por virgula
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.ClassRight.Description">
+            <summary>
+            Descrição resumida que identifica a classe para a montagem da tabela de direitos de usuários
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.ClassRight.Group">
+            <summary>
+            Define um nome de Grupo para organizar a tabela de direitos
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.ClassRight.Order">
+            <summary>
+            É a sequencia de aparição do direito durante a mentagem da tabela de edição
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.ClassRight.#ctor(System.Int32,System.String,System.String)">
+            <summary>
+            define os direitos de uma classe e suas funcionalidades
+            </summary>
+            <param name="ID">ID unico de referencia para o grupo de funcionalidades</param>
+            <param name="Funcs">Funcionalidades para a classe, separadas por virgula, ex: A,I,E</param>
+            <param name="Description">Descrição resumida que identifica a classe para a montagem da tabela de direitos de usuários</param>
+        </member>
+        <member name="M:FrameWork.WebControls.ClassRight.LoadRights(System.String,System.Type)">
+            <summary>
+            Lê todas as classes com o Atributo ClassRight dos Assemblys especificados.
+            </summary>
+            <param name="cAssemblys">Lista dos Assemblys, separados por virgula</param>
+            <param name="eFuncs">Enumerado que define as funcionalidades</param>
+        </member>
+        <member name="T:FrameWork.WebControls.ClassToControl`1">
+            <summary>
+            Cria um 'Control' baseado em uma classe
+            </summary>
+            <see cref="!:http://msdn.microsoft.com/en-us/library/512aeb7t(VS.80).aspx"/>
+            <see cref="!:http://www.codeproject.com/KB/recipes/phSharpTree.aspx"/>
+        </member>
+        <member name="P:FrameWork.WebControls.ClassToControl`1._ItemIDpref">
+            <summary>
+            retorna o prefixo do ItemID
+            </summary> 
+        </member>
+        <member name="P:FrameWork.WebControls.ClassToControl`1.ItemIDSeq">
+            <summary>
+            retorna o prefixo numero sequencial do ItemID
+            </summary> 
+        </member>
+        <member name="P:FrameWork.WebControls.ClassToControl`1.ItemID">
+            <summary>
+            Retorna o nome completo do Item ID (prefixo+sequencia)
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.ClassToControl`1.ValueID">
+            <summary>
+            retorna o valor o ItemID do objeto
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.ClassToControl`1.objRef">
+            <summary>
+            retorna a referencia do objeto de trabalho
+            </summary>
+        </member>
+        <member name="T:FrameWork.WebControls.ClassToControl`1.CassToControlItem">
+            <summary>
+            Assinatura para o evento de criação do item quancdo necessário
+            </summary>
+            <param name="sender"></param>
+            <param name="ctc"></param>
+        </member>
+        <member name="E:FrameWork.WebControls.ClassToControl`1.OnItemInit">
+            <summary>
+            Evento para validar/configurar o item antes de ser criado (Obrigatório para listas usando o LoadBind)
+            colocando o visible=False o item não será criado!
+            </summary>
+        </member>
+        <member name="E:FrameWork.WebControls.ClassToControl`1.OnItemCreated">
+            <summary>
+            Evento para configurar o item apos ser criado (se em OnItemInit for colocado Visible=False, este não será inicializado)
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.ClassToControl`1.#ctor(`0,System.String,System.Int32,System.String)">
+            <summary>
+            Cria um controle com um ID especifico para uma Classe(T)
+            </summary>
+            <param name="Obj">Objeto com os atributos de ClassControl e FieldControl desejado</param>
+            <param name="cItemIDpref">PREFIXO do ID do controle a ser gerado</param>
+            /// <param name="nItemIDSeq">SEQUENCIA do ID do controle a ser gerado</param>
+            <param name="cValueID">Valor do ID de referencia unica</param>
+        </member>
+        <member name="M:FrameWork.WebControls.ClassToControl`1.OnInit(System.EventArgs)">
+            <summary>
+            Inicializa a criação do 'ControlLayout' e 'Bind'
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="T:FrameWork.WebControls.UserInfo">
+            <summary>
+            Estrutura com os dados do usuário conectado
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.UserInfo.UserID">
+            <summary>
+            Obtem o ID do usuário => session("_uiUserID")
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.UserInfo.ExtraID">
+            <summary>
+            Obtem um ID extra do usuário logado => session("_uiExtraID")
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.UserInfo.TypeID">
+            <summary>
+            Tipo de usuário
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.UserInfo.User">
+            <summary>
+            Obtem o usuário/Login de Acesso => session("_uiUser")
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.UserInfo.Name">
+            <summary>
+            Obtem o Nome do Usuário => session("_uiNome")
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.UserInfo.Rights">
+            <summary>
+            Obtem a String de direitos => session("_uiRights")
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.UserInfo.Admin">
+            <summary>
+            flag que sinaliza se o usuário é um administrador => session("_uiAdmin")
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.UserInfo.CheckRight(System.Int32)">
+            <summary>
+            Verifica se o usuário atual contem um certo direito de acesso
+            </summary>
+            <param name="nID">Código do direito de Acesso</param>
+            <returns>Verdadeiro se o usuário tiver acesso, ou se for administrador</returns>
+        </member>
+        <member name="M:FrameWork.WebControls.UserInfo.CheckRight(System.Int32,System.String,System.Boolean)">
+            <summary>
+            Verifica se o usuário tem direitos sobre um determinado ID em uma espefífica função
+            </summary>
+            <param name="nID">Código do direito</param>
+            <param name="cFunc">Tipo de função</param>
+            <param name="lAdmin">Liberar para Adminsitrador ? (padrão SIM: true)</param>
+            <returns>Verdadeiro se for admin, ou se tiver direitos</returns>
+        </member>
+        <member name="M:FrameWork.WebControls.UserInfo.CheckUserRight(System.Web.UI.Page,System.Int32)">
+            <summary>
+            Verifica se a Instancia de uma acesso a uma Pagina 'pg' possue o direito 'nright'
+            </summary>
+            <param name="pg"></param>
+            <param name="nRights">Direito a ser verificado</param>
+            <returns>Verdadeito se tiver o direito ou for administrador</returns>
+        </member>
+        <member name="M:FrameWork.WebControls.UserInfo.CheckUserRight(System.Web.UI.Page,System.Int32,System.String,System.Boolean)">
+            <summary>
+            Testa os direitos de um usuário para um especifico id e função
+            </summary>
+            <param name="pg">Instancia da página</param>
+            <param name="nRights">ID do direito</param>
+            <param name="cFunc">função específica</param>
+            <returns>Verdadeiro, se admin, ou se tiver o direito</returns>
+        </member>
+        <member name="T:FrameWork.WebControls.BreadCrumb">
+            <summary>
+            Cria uma lista de páginas em pilha
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.BreadCrumb.Clear">
+            <summary>
+            Limpa toda a pilha
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.BreadCrumb.Clear(System.Web.UI.Page)">
+            <summary>
+            Limpa toda a pilha
+            </summary>
+            <param name="pg">Instancia da página atual para acessar a session</param>
+        </member>
+        <member name="M:FrameWork.WebControls.BreadCrumb.Push(System.String,System.String)">
+            <summary>
+            Adiciona a pilha a página para onde se deve voltar (não pode ser a mesma)
+            se for uma já existente ele reposiciona a pilha
+            </summary>
+            <param name="urlBack">url de retorno para o link</param>
+            <param name="cTitle">titulo da página</param>
+        </member>
+        <member name="M:FrameWork.WebControls.BreadCrumb.Push(System.Web.UI.Page,System.String,System.String)">
+            <summary>
+            Adiciona a pilha a página para onde se deve voltar (não pode ser a mesma)
+            se for uma já existente ele reposiciona a pilha
+            </summary>
+            <param name="urlBack">url de retorno para o link</param>
+            <param name="cTitle">titulo da página</param>
+            <param name="pg">Pagina atual</param>
+        </member>
+        <member name="M:FrameWork.WebControls.BreadCrumb.ClearPush(System.Web.UI.Page)">
+            <summary>
+            Apaga a lista e Inclui a página atual no BreadCrumb
+            </summary>
+            <param name="pg">instancia da página atual (será usado o titulo da página para a descrição)</param>
+        </member>
+        <member name="M:FrameWork.WebControls.BreadCrumb.Push(System.Web.UI.Page)">
+            <summary>
+            Inclui a página atual no BreadCrumb
+            </summary>
+            <param name="pg">instancia da página atual (será usado o titulo da página para a descrição)</param>
+        </member>
+        <member name="M:FrameWork.WebControls.BreadCrumb.GetPos(System.Web.UI.Page)">
+            <summary>
+            Obtem a posição da pilha de links
+            </summary>
+            <param name="pg">Instancia da página</param>
+            <returns></returns>
+        </member>
+        <member name="M:FrameWork.WebControls.BreadCrumb.PopBack">
+            <summary>
+            Obtem a página para onde deve-se voltar, e reajusta a pilha
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FrameWork.WebControls.BreadCrumb.List">
+            <summary>
+            Retorna um Array com a URL e o titulo das páginas na pilha
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FrameWork.WebControls.BreadCrumb.Fill(System.Web.UI.HtmlControls.HtmlGenericControl)">
+            <summary>
+            Preenche um controle UL com a lista de links
+            </summary>
+            <param name="ul">Instancia de um delimitador de lista 'UL'</param>
+        </member>
+        <member name="T:FrameWork.WebControls.PageSkinXHTML">
+            <summary>
+            Classe de Layout (Skin) para XHTML e ClassMenu
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.PageSkinXHTML.Menu">
+            <summary>
+            Nome do Assembly, que contem as classes que serão usadas para a montagem do menu principal
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.PageSkinXHTML.Options">
+            <summary>
+            Nome do Assembly, que contem as classes que serão usadas para a montagem do menu de opções
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.PageSkinXHTML.Help">
+            <summary>
+            /// Nome do Assembly, que contem as classes que serão usadas para a montagem do menu de ajuda
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.PageSkinXHTML.ulBeforeAli">
+            <summary>
+            Indica se os UL serão inseridos antes do links existentes nos LI
+            (Padrão: 'falso')
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.PageSkinXHTML.PageLayout">
+            <summary>
+            Retorna a instancia da PageLayout atual (page)
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.PageSkinXHTML.Top">
+            <summary>
+            Retorna o topo da página (Logo+Menu)
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.PageSkinXHTML.Bottom">
+            <summary>
+            Retorna o rodapé da Página (Copyrights+Versão)
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.PageSkinXHTML.ImageSufixo">
+            <summary>
+            PageSkinXHTML, não usa 'ImageSufixo' para gerenciamento de layout, o uso desta propriedade resultará em NULL
+            </summary>
+            <exception cref="T:System.NotImplementedException">O Layout deve ser gerenciado apenas por folha de estilo</exception>
+        </member>
+        <member name="M:FrameWork.WebControls.PageSkinXHTML.SkinXHTML(FrameWork.WebControls.PageLayout)">
+            <summary>
+            configurador, Statico padrão para usar o Skin: 'PageSkinXHTML' 
+            </summary>
+            <param name="pgl">Instancia da Página (PageLayout)</param>
+        </member>
+        <member name="M:FrameWork.WebControls.PageSkinXHTML.#ctor(FrameWork.WebControls.PageLayout)">
+            <summary>
+            Construtora de inicialização da Classe PageSkinXHTML
+            </summary>
+            <param name="pgl"></param>
+        </member>
+        <member name="M:FrameWork.WebControls.PageSkinXHTML.PageSkin(FrameWork.WebControls.PageLayout)">
+            <summary>
+            Metodo de criação dos controles principais que definirão o layout
+            </summary>
+            <param name="pgl">instancia da Página (PageLayout)</param>
+        </member>
+        <member name="M:FrameWork.WebControls.PageSkinXHTML.RenderPage">
+            <summary>
+            Finaliza a renderização, iserindo o DisplayMessage quando necessário
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.PageSkinXHTML.RenderMenu(System.Web.UI.HtmlTextWriter,FrameWork.WebControls.PageMenu)">
+            <summary>
+            renderiza os menus
+            </summary>
+            <param name="writer"></param>
+            <param name="mnuList"></param>
+        </member>
+        <member name="M:FrameWork.WebControls.PageSkinXHTML.RenderSubMenu(System.Web.UI.HtmlTextWriter,FrameWork.WebControls.PageMenuItem,System.Int32)">
+            <summary>
+            Renderiza os submenus hierarquicamente
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.PageSkinXHTML.RenderTab(FrameWork.WebControls.Tab,System.Web.UI.WebControls.Table,System.String,System.Collections.SortedList)">
+            <summary>
+            Renderiza as 'Tabs' padrão
+            </summary>
+            <param name="sender">Tabs a ser renderizadas</param>
+            <param name="tbAbas">Table com as Abas a serem renderizadas</param>
+            <param name="cCurrent">TabCurrent a ser renderizada</param>
+            <param name="pnls">Paineis com os contrudos (controles)</param>
+        </member>
+        <member name="M:FrameWork.WebControls.PageSkinXHTML.RenderGrid(System.Object,System.EventArgs)">
+            <summary>
+            Configura as cored default dos datagrids, inserindo as informações de classes Css
+            </summary>
+            <param name="sender">DataGrid  a ser configurado</param>
+            <param name="e">Eventos de Parametros</param>
+            <remarks>
+            Este Metodo é para use rusado no evento pre_render od datagrid, e funciona configurando as seguintes propriedades, conforme o código abaixo
+            <code>
+            DataGrid dtg = (DataGrid)sender;
+            dtg.CssClass = "Grid";
+            dtg.ItemStyle.CssClass = "GridItem";
+            dtg.AlternatingItemStyle.CssClass = "GridItemAlter";
+            dtg.HeaderStyle.CssClass = "GridHeader";
+            dtg.FooterStyle.CssClass = "GridFooter";
+            dtg.PagerStyle.CssClass = "GridPager";
+            </code>
+            </remarks>
+        </member>
+        <member name="M:FrameWork.WebControls.PageSkinXHTML.RenderDataControl(FrameWork.WebControls.DataControl)">
+            <summary>
+            Configura o layout do DataControl (Não usado)
+            </summary>
+            <param name="ctrl">Instancia do Datacontrol</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:FrameWork.WebControls.PageSkinXHTML.GetSepContainer(System.String)" -->
+        <member name="M:FrameWork.WebControls.CriptHEX.Encript(System.String)">
+            <summary>
+            Criptografa em Valor retornando a sequencia HEXA deste
+            </summary>
+            <param name="cValor">Valor a ser Criptografado</param>
+            <returns>Retorna sequncia Hexadecimal criptografada</returns>
+        </member>
+        <member name="M:FrameWork.WebControls.Google.Login(System.String,System.String)">
+            <summary> 
+            Simple client login. 
+            </summary> 
+            <param name="username"></param> 
+            <param name="password"></param> 
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:FrameWork.WebControls.Google.ExecuteQuery(System.String)" -->
+        <member name="T:FrameWork.WebControls.LoginsValidateDelegate">
+            <summary>
+            Delegate responsável pela rotina de validação de logins
+            </summary>
+            <param name="sender">Objeto que chamou a rotina (button login)</param>
+            <param name="cUser">Usuário (digitado no campo usuário)</param>
+            <param name="cPassword">Senha (digitado no campo senha)</param>
+            <returns>A rotina precisa retornar uma instancia de UserInfo com os dados validados para serem gradavos na session</returns>
+        </member>
+        <member name="T:FrameWork.WebControls.LoginsValidDelegate">
+            <summary>
+            Delegate responsável pela rotina que será chamada para inicializar um usuário apos o login ser efetivado
+            </summary>
+            <param name="sender">Objeto que chamou a rotina (this:Logins)</param>
+            <param name="ui">Informações em 'UserInfo' do usuário autenticado</param>
+        </member>
+        <member name="T:FrameWork.WebControls.Logins">
+            <summary>
+            Classe responsável pela tela de interface de login
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.Logins.Login(System.Object,System.EventArgs)">
+            <summary>
+            Efetua o login (click do botão)
+            </summary>
+            <param name="sender">instancia do botão de login</param>
+            <param name="e">Paramentros do evento</param>
+        </member>
+        <member name="M:FrameWork.WebControls.Logins.DeleteLogin">
+            <summary>
+            Esclui as informações do login do cookie
+            </summary>
+        </member>
+        <member name="T:FrameWork.WebControls.MktTags">
+            <summary>
+            Contabiliza estatisticas de marketing tags baseado no texto
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.MktTags.#ctor(System.String,System.Boolean)">
+            <summary>
+            Contabiliza estatisticas de marketing tags baseado no texto
+            </summary>
+            <param name="cTexto">Texto/HTML a ser analizado</param>
+            <param name="lClearHTML">Informe se o conteudo é um HTML</param>
+        </member>
+        <member name="M:FrameWork.WebControls.MktTags.GetBestKeywords">
+            <summary>
+            Retorna a lista das 40 melhores palavras relevantes
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:FrameWork.WebControls.MktTags.MakeHTMLTags">
+            <summary>
+            Retorna um texto/HTML com as palavras mais relevantes escritas maiores que as menos relevantes
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:FrameWork.WebControls.Translate">
+            <summary>
+            Classe responsável pela tradução em tempo real dos textos
+            </summary>
+        </member>
+        <member name="E:FrameWork.WebControls.Translate.GetTranslate">
+            <summary>
+            Define o evento de tratamento para tradução
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.Translate.Get(System.String,System.Object,System.Type,System.Object)">
+            <summary>
+            Obtem a Tradução de um texto
+            </summary>
+            <param name="cTitle">Texto atual</param>
+            <param name="oRender">Instancia da Classe de renderização</param>
+            <param name="oInstance">Instancia da classe analizada para a renderização</param>
+            <returns>Texto traduzido</returns>
+        </member>
+        <member name="M:FrameWork.WebControls.Translate.Configure(System.Object,System.Type,System.Object)">
+            <summary>
+            Configura as propriedades Texto de acordo com uma tradução
+            </summary>
+            <param name="oRender">Instancia da Classe de renderização</param>
+            <param name="oInstance">Instancia da classe analizada para a renderização</param>
+        </member>
+        <member name="T:FrameWork.WebControls.WebUtil">
+            <summary>
+            Funções para Web
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.WebUtil.ErrorHTML">
+            <summary>
+            Texto HTML da mensagem de erro padrão
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.GetAppException(System.Object,System.Exception@)">
+            <summary>
+            Obtem a Exception de erro da aplicação e coleta algumas informações adicionais
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.RenderAppException(System.Object,System.Exception,System.Boolean)">
+            <summary>
+            renderiza em tela o erro!
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.WebUtil.UserAgent">
+            <summary>
+            UserAgent padrão para as chamadas de GetResponseHtml
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.WebUtil.DefaultEncoding">
+            <summary>
+            Encoding Default
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.GetDownload(System.String,System.String,System.String,System.String,System.String@)">
+            <summary>
+            Obtem uma streaming de uma URL
+            </summary>
+            <param name="cURL">URL da a ser obtida</param>
+            <param name="cAccept">Codificadores aceitos (GZIP,DEFLATE)</param>
+            <param name="cMethod">Metodo de chamada (padrão GET se null)</param>
+            <param name="cData">Dados para PUT/POST</param>
+            <returns>Instancia WebResponse obtida</returns>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.GetResponseHtml(System.String,System.Boolean)">
+            <summary>
+            Obtem o conteudo HTML de uma página (URL)
+            (padrão: ASCIIEncoding.UTF7)
+            </summary>
+            <param name="cURL">URL da página a ser obtida</param>
+            <param name="lThrow">Indica sé é para gerar uma Exception se o tempo estourar, ou acontecer algum outro erro</param>
+            <returns>Conteudo HTML da URL informada</returns>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.GetResponseXml(System.String,System.Boolean)">
+            <summary>
+            Obtem o conteudo XML de uma página (URL)
+            </summary>
+            <param name="cURL">URL da página a ser obtida</param>
+            <param name="lThrow">Indica sé é para gerar uma Exception se o tempo estourar, ou acontecer algum outro erro</param>
+            <returns>Conteudo XmlDocument da URL informada</returns>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.GetResponseHtml(System.String,System.Boolean,System.Text.Encoding,System.String,System.String,System.String@)">
+            <summary>
+            Obtem o conteudo HTML de uma página (URL)
+            </summary>
+            <param name="cURL">URL da página a ser obtida</param>
+            <param name="lThrow">Indica sé é para gerar uma Exception se o tempo estourar, ou acontecer algum outro erro</param>
+            <param name="encoder">Codificação de leitura</param>
+            <param name="cMethod">Metodo de requisição</param>
+            <param name="cData">Dados para POST/PUT</param>
+            <returns>Conteudo HTML da URL informada</returns>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.GetImageDownload(System.String)">
+            <summary>
+            Obtem a imagem de uma URL
+            </summary>
+            <param name="cURL">URL da imagem a ser obtida</param>
+            <returns>Instancia da imagem obtida</returns>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.GetTextCIAIlower(System.String)">
+            <summary>
+            Obtem o texto em minusculo sem acentos
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.GetPageName(System.String)">
+            <summary>
+            Remove os acentos e preposições de um texto gerando um nome de página otimizado
+            </summary>
+            <param name="cName">Nome de um conteudo</param>
+            <returns>nome de página</returns>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.GetETagFile(System.IO.FileInfo)">
+            <summary>
+            Gera uma Etag baseada nos dados de um arquivo
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.GetETagID(System.DateTime,System.Int32)">
+            <summary>
+            Gera uma ETag baseada em uma data e ID
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.ConditionalGET(System.Web.HttpContext,System.String,System.DateTime,System.Int32)">
+            <summary>
+            Verifica e valida uma requisição HTTP para permitir ou não usar o CACHE local
+            </summary>
+            <param name="context"></param>
+            <param name="cETag"></param>
+            <param name="dLastModify">Data da ultima modificação</param>
+            <param name="nExpiry">Numero de dias para expirar</param>
+            <returns></returns>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.GetURLIDFormat(System.Web.UI.Page)">
+            <summary>
+            Retorna a URL
+            </summary>
+            <param name="pg"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.RedLoadDataSet(System.Reflection.Assembly,System.String)">
+            <summary>
+            Le um arquivo XML contendo o DataSet de um recurso dentro de um Assembly
+            </summary>
+            <param name="asm"></param>
+            <param name="cResorceName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.Right(System.String,System.Int32)">
+            <summary>
+            Alinha uma string contendo digitos a direita, preenchendo a parte esquerda com zeros, forçando ser uma string com um numero exato de digitos
+            </summary>
+            <param name="cValor">Valor a ser completado, ex: "123"</param>
+            <param name="nSize">Tamanho desejado ex: 5</param>
+            <returns>Nova string completada com zeros ex: "00123"</returns>
+        </member>
+        <member name="E:FrameWork.WebControls.WebUtil.onVarSave">
+            <summary>
+            Evento para delegar uma rotina que le e salva as informações da sessiom e requests em banco de dados
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.GetKeyVar(System.String)">
+            <summary>
+            Dada uma string do tipo: "variavel=valor,outra=outro" retorna uam lista sortida de valores.
+            Use ",," quando quiser que a virgula apareça dentro do parametro
+            </summary>
+            <param name="cKeyVarList">Variável a ser convertida</param>
+            <returns></returns>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.GetDate(System.Object,System.DateTime)">
+            <summary>
+            Transforma um texto em huma hora, caso não consiga retorna um valor predeterminado em 'dDefault'
+            </summary>
+            <param name="oValue">String a ser convertida em Data</param>
+            <param name="dDefault">Valor Default, em caso de erro</param>
+            <returns>Data da string, ou default</returns>
+        </member>
+        <member name="T:FrameWork.WebControls.WebUtil.VarSaveDelegate">
+            <summary>
+            Assinatura para a rotina que permite salvar e ler, variáveis de sessão em bando de dados, ou outro tipo de arquivo, dependendo do numero de parametros passados
+            </summary>
+            <param name="page">Instancia da Página em execução</param>
+            <param name="cArgs">Argumentos para gravação, (Variavel) ou (Variavel,Valor)</param>
+            <returns>A varialvel salva, se existir</returns>
+            <example>
+            Em geral:
+            1 parametro, indica que é para obter o valor da variável especificada pelo parametro
+            2 parametros, o primeiro indica o nome da variável, e o segundo o valor da variável, a ser gravada
+            </example>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.GetVar(System.Web.UI.Page,System.String,System.String)">
+            <summary>
+            Obtem uma variável da session, ou de um banco de dados
+            </summary>
+            <param name="page">Instancia da página atual</param>
+            <param name="cVar">Nome da Variável</param>
+            <param name="cDefault">Valor defaul, caso esta variável ainda não exista em nenhum lugar</param>
+            <returns>O valor da variável, ou Default, se ainda não tiver sido definida</returns>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.SetVar(System.Web.UI.Page,System.String,System.String)">
+            <summary>
+            Define uma variável de sessão, que pode ou não ser persistida pelo evento 'onVarSave'
+            </summary>
+            <param name="page">Instancia atual da página</param>
+            <param name="cVar">Nome da variável</param>
+            <param name="cValor">Valor da Variável</param>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.TableSetValue(System.Web.UI.WebControls.Table,System.Int32,System.Int32,System.Object)">
+            <summary>
+            Define, insere um objeto (Web.UI.Control) em um objeto WebControl.Table
+            </summary>
+            <param name="tb">Instancia da Tabela</param>
+            <param name="row">Numero da linha, (TR) se não existir, esta será criada</param>
+            <param name="col">Numero da coluna (celula-TD), se não existir, esta será criada</param>
+            <param name="obj">Web.UI.Control a ser inserido nos controles da celula de destino</param>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.TableSetValue(System.Web.UI.WebControls.Table,System.Int32,System.Int32,System.Object[])">
+            <summary>
+            Define, insere um array de objetos (Web.UI.Control[]) em um objeto WebControl.Table
+            </summary>
+            <param name="tb">Instancia da Tabela</param>
+            <param name="row">Numero da linha, (TR) se não existir, esta será criada</param>
+            <param name="col">Numero da coluna (celula-TD), se não existir, esta será criada</param>
+            <param name="obj">Web.UI.Control a ser inserido nos controles da celula de destino</param>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.FormataFrase(System.Web.UI.WebControls.DropDownList)">
+            <summary>
+            Formata os itens de DropDown usando o 'FormataFrase'
+            </summary>
+            <param name="ddl">Intancia de uma DropDowm</param>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.FormataFrase(System.String)">
+            <summary>
+            Formata textos (frases) no padrão Portugues-Brasil, deixando captalizado sem considerar preposições
+            </summary>
+            <param name="str">String 'Frase' a ser formatada</param>
+            <returns>String 'Frase' formatada</returns>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.LoadText(System.String)">
+            <summary>
+            Le um arquivo o texto de um arquivo texto especifiado
+            </summary>
+            <param name="cFile">Nome do arquivo Texto</param>
+            <returns></returns>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.Bind(System.Object,System.Web.UI.Control,FrameWork.WebControls.ContainerUpdateTypes,System.String)">
+            <summary>
+            Sincroniza objetos, colocar os campos de uma classe em controles e vice versa
+            </summary>
+            <param name="obj">Instancia de um objeto onde há os campos</param>
+            <param name="ctrl">Control Container com campos</param>
+            <param name="updt">Direção da atualização: Controle para Dados, ou Dados para controle</param>
+            <param name="cPrefixo">Caso nescessário ter um prefixo nos campos</param>
+            <remarks>Crie sempre os nomes dos controles exatamente com o meno nome dos campos, inclusive maiusculas e minusculas</remarks>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.RamdomizeTable(System.Data.DataTable,System.Int32)">
+            <summary>
+            Obtem "nRecords" registros aleatórios de uma tabela "tb" em uma outra tablea com a mesma extrutura
+            </summary>
+            <param name="tb">Tabela de origem</param>
+            <param name="nRecords">Numero de registros</param>
+            <returns>Tabela com os registros selecionados</returns>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.CheckBoxValues(System.Web.UI.WebControls.CheckBoxList,System.String)">
+            <summary>
+            Obtem os multiplos valores de um chklist, selecionados no formato: {12}{321}{12312}
+            </summary>
+            <param name="ckl">Instancia do CheckboxList</param>
+            <param name="cItens">Valor de itens ocultos e outros a serem adicionados no resultado final</param>
+            <returns>Uma string no formato {n1}{n2}</returns>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.GetTableEnum(System.Enum)">
+            <summary>
+            ontem de um enumerado uma tabela equivalente
+            </summary>
+            <param name="en">Type do enumerador</param>
+            <returns></returns>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.SplitArray(System.String)">
+            <summary>
+            Converte uma cadeia sring do tipo '{2}{5}{34}{42}', em um arrai de inteiros {2,5,34,42}
+            </summary>
+            <param name="cIN">Cadeia original</param>
+            <returns>array de inteiros que representa a entrada original</returns>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.ExistItemArray(System.Int32[],System.Int32[])">
+            <summary>
+            Dado 2 array de mesmo tipo int[] será procurado item a item a existencia de pelo menos uma coincidencia a[n]=b[i]
+            </summary>
+            <returns>Verdadeiro, se houver pelo menos uma coincidencia</returns>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.LogDisplay(System.String,System.String)">
+            <summary>
+            Exibe o log de alterações de uma string XML de histórico
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.LogDisplay(System.String,System.String,System.String)">
+            <summary>
+            Exisbe o histórico de atualizações somente de um unica campo especificado
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.ExcelSave(System.Web.HttpContext,System.Data.DataTable,System.String)">
+            <summary>
+            Salva uma tabela (DataTable) como saida de arquivo para download (Exporta para excel)
+            </summary>
+            <param name="context">contexto de saida</param>
+            <param name="tb">tabela de origem</param>
+            <param name="cFileOut">nome do arquivo de saida sugerido</param>
+        </member>
+        <member name="M:FrameWork.WebControls.WebUtil.GetTextFromHtml(System.String)">
+            <summary>
+            Obtem o código TEXTO de um HTML (os 10 ultimos resultados ficam em cache)
+            </summary>
+            <param name="cHTML">String HTML</param>
+            <returns>Texto resultante</returns>
+        </member>
+        <member name="T:FrameWork.WebControls.CellLayout">
+            <summary>
+            Summary description for PanelLayout.
+            </summary>
+        </member>
+        <member name="T:FrameWork.WebControls.FieldAJAX">
+            <summary>
+            Permite manipular dinamicamente os controles relacionados a FieldControls
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.FieldAJAX.#ctor">
+            <summary>
+            Atributo personalizado para AJAX
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.FieldAJAX.#ctor(FrameWork.Services.AJAXVars)">
+            <summary>
+            Copia o UniqueID do controle a ser criado para uma variável do AJAX
+            </summary>
+            <param name="var">Variável que conterá o UniqueId do controle a que será criado</param>
+        </member>
+        <member name="P:FrameWork.WebControls.FieldAJAX.Var">
+            <summary>
+            Seleciona/especifica o campos a uma das váriáveis internas do AJAX
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.FieldAJAX.Type">
+            <summary>
+            Type do Objeto que será criado pelo Ajax em tempo de execução
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.FieldAJAX.Method">
+            <summary>
+            Nome do Metodo que será invocado do Objeto 'Type' definido. Este metodo deve ter a assinatura: Method(object,string)
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.FieldAJAX.Parmeter">
+            <summary>
+            Parametro opcional que será enviado a 'Method' do 'Type' pela assimatura Method(object,string)
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.FieldAJAX.SelectedValue">
+            <summary>
+            Valor inicial selecionado
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.FieldAJAX.SQL">
+            <summary>
+            SELECT SQL que será criado para obtenção dos dados
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.FieldAJAX.OnChange">
+            <summary>
+            Nome do controle do Tipo DropdownList a ser monitorado para a ccarda dos itens.
+            Deve ser o nome completo do controle a ser monitorado incluindo a classe base, ex: Classe_Campo.
+            Para carregar um AJAX por meio de um exento customizado chame: AJAXOnChangeDropDownList(this,'Class_Field');
+            </summary>
+        </member>
+        <member name="T:FrameWork.WebControls.Grid">
+            <summary>
+            Summary description for Grid.
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.Grid.HideColumnByHeader(System.Web.UI.WebControls.DataGrid,System.String)">
+            <summary>
+            Oculta uma coluna baseado no Header
+            </summary>
+            <param name="dtg">DataGrid</param>
+            <param name="cHeader">Nome dos Header separados por virgula (sem espaços)</param>
+        </member>
+        <member name="M:FrameWork.WebControls.Grid.HideColumnByField(System.Web.UI.WebControls.DataGrid,System.String)">
+            <summary>
+            Oculta uma coluna baseado no nome do Campo
+            </summary>
+            <param name="dtg">DataGrid</param>
+            <param name="cHeader">Nome dos Header separados por virgula (sem espaços)</param>
+        </member>
+        <member name="F:FrameWork.WebControls.MultiFieldDataColumn.FieldList">
+            <summary>
+            Lista dos campos (separados por virgula: nome,endereco)
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.MultiFieldDataColumn.FormatString">
+            <summary>
+            Mascara StrinfFormat padrão na sequencia dos campos informados ({0},{1})
+            </summary>
+        </member>
+        <member name="T:FrameWork.WebControls.List">
+            <summary>
+            Summary description for List.
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.List.Select(System.String,System.Object)">
+            <summary>
+            retorna o resultado de um SQL em uma tabela utilizando um objeto de referencia para obtenção dos dados
+            </summary>
+            <param name="cSQL">STRING com o comendo SQL SELECT a ser executado</param>
+            <param name="obj">Instancia de um objeto ObjectData</param>
+            <returns></returns>
+        </member>
+        <member name="M:FrameWork.WebControls.List.MakeListItens(System.Web.UI.Control,System.String,System.String,System.Object)">
+            <summary>
+            Prenche um WebControl, com os dados provenientes, de um SELECT, Enumerador, Objeto, ou Texto
+            </summary>
+            <param name="ctrl">Controle a ser preenchido</param>
+            <param name="cListItens">SELECT * FROM, .Enumerador/Type, Texto MultiLine</param>
+            <param name="cSelected">Item/Itens Selecionados</param>
+            <param name="obj">Objeto parametro de referencia para a criação do objeto</param>
+        </member>
+        <member name="T:FrameWork.WebControls.ClassControl">
+            <summary>
+            Classe para controle de criação dos campos em forma de componente
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.ClassControl.#ctor">
+            <summary>
+            Classe para controle de criação dos campos em forma de componente
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.ClassControl.CheckSessionApp">
+            <summary>
+            Informa em qual daviável da session deverá ser procudada o nome da variável da Application que contem o nomes das classes permitidas para a sessão corrente
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.ClassControl.RegisterAppType(System.Object,System.String,System.Type[])">
+            <summary>
+            
+            </summary>
+            <param name="pg">Intancia da página</param>
+            <param name="cAppVarName">Variável a ser registrada, para armazenar os tipos</param>
+            <param name="Types">'Types' permitidos</param>
+        </member>
+        <member name="P:FrameWork.WebControls.ClassControl.LogXML">
+            <summary>
+            Nome do Campo que contem as informações de Log de alterações em XML em cada campo
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.ClassControl.Rights">
+            <summary>
+            Leitura, Alteração, Inclusão, Exclusão
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.ClassControl.DataSource">
+            <summary>
+            Especifica o nome de um metodo do tipo (Sender as object,SQL as string) que irá interceptar o comando de seleção de dados
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.ClassControl.GridOrderDefault">
+            <summary>
+            Define a ordem default inicial de exibição dos dados nos datagrid
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.ClassControl.Check(System.Object,FrameWork.WebControls.UserInfo)">
+            <summary>
+            Valida se um usuário representado por um UserInfo 'UI' pode criar o objeto de acordo com os direitos dados ao atributo ClassControl
+            </summary>
+            <param name="obj">Instancia do objeto para pre-configuração</param>
+            <param name="ui">Direitos específicos</param>
+            <returns>Verdadeiro se valido ou se for Administrador</returns>
+        </member>
+        <member name="M:FrameWork.WebControls.ClassControl.Check(System.Object,System.Type,System.Object,FrameWork.WebControls.UserInfo)">
+            <summary>
+            Valida se a Sessão pode acessar um especifico 'Type' e se o usuário tem os direito de 'Acesso', para isso configure a propriedade 'Public' para Falso
+            </summary>
+            <param name="pg">Instancia da página atual, para obter os objetos da Application e Session Configuradas</param>
+            <param name="tp">'Type' da instancia que será criada</param>
+            <param name="obj">Instancia a criada, ou null se ainda não foi criada</param>
+            <param name="ui">Direitos de acesso do Usuário</param>
+            <returns>Verdadeiro se for autorizado, pela variável especificada pela statica (CheckSessionApp)</returns>
+        </member>
+        <member name="M:FrameWork.WebControls.ClassControl.BindDataSource(System.Object,System.Object,System.String)">
+            <summary>
+            Metodo especial para interceptar a criação do resultado de uma instrução SQL 'SELECT' para poder ser customizado
+            </summary>
+            <param name="sender">Objeto que nessecita dos dados (ex: DataGrid)</param>
+            <param name="obj">Instancia do Objeto que tem os dados (ex: Classe de dados que deriva de ObjectData)</param>
+            <param name="cSQL">Instrução SQL completa, ou macro pre compilada de SQL</param>
+        </member>
+        <member name="T:FrameWork.WebControls.DataControlMode">
+            <summary>
+            Summary description for DataControl.
+            </summary>
+        </member>
+        <member name="T:FrameWork.WebControls.FieldColumn">
+            <summary>
+            Summary description for FieldColumn.
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.FieldColumn.intHalign">
+            <summary>
+            Define o alinhamento padrão para colunas numericas (int/integer)
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.FieldControl.TextHTMLType">
+            <summary>
+            Define o tipo do editor HTML
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.FieldControl.Check(System.Reflection.FieldInfo,System.Object,FrameWork.WebControls.ClassControl,FrameWork.WebControls.UserInfo,System.Int32)">
+            <summary>
+            Valida o controle
+            </summary>
+            <param name="fi">Instancia do campo</param>
+            <param name="obj">Instancia do Objeto que contem o campo</param>
+            <param name="cc">Instancia do ClassControl Atual</param>
+            <param name="ui">Direitos de Acesso do usuário atual</param>
+            <param name="nCategory">Categoria</param>
+            <returns>Verdadeiro se o controle pode ser criado</returns>
+        </member>
+        <member name="M:FrameWork.WebControls.FieldControl.MaskIncludeJavaScript(System.Web.UI.Page)">
+            <summary>
+            Inclui a referencia da include contendo o javascript para controle da mascara
+            </summary>
+            <param name="pg">Instancia objeto Page que conterá o script</param>
+        </member>
+        <member name="M:FrameWork.WebControls.FieldControl.SetMask(System.Web.UI.WebControls.TextBox,System.String)">
+            <summary>
+            Define uma mascara de javascript para um campo (textbox)
+            </summary>
+            <param name="txt">WebControl.TextBox a ser inserido a mascara</param>
+            <param name="cMask">Mascara a ser utilizada</param>
+        </member>
+        <member name="T:FrameWork.WebControls.ControlLayout">
+            <summary>
+            Summary description for ControlLayout.
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.ControlLayout.Bind(System.Object,System.Int32[])">
+            <summary>
+            Baseado na instancia de um objeto já definido e com os campos preenchidos
+            Será criado so controles para esitar os campos
+            </summary>
+            <param name="obj">Instancia do objeti</param>
+            <param name="ExtraCategory">Outras categorias adicionais alem da padão</param>
+        </member>
+        <member name="M:FrameWork.WebControls.ControlLayout.Update">
+            <summary>
+            Atualiza o objeto de referencia passado em Bind() com os dados digitado nos controles
+            Retorna Verdadeiro se foi executado (ou falso se foi ignorado por recursividade)
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.FieldFilterTypes.DataSelect">
+            <summary>
+            Informe XX/XX/XXXX para o sistema usar a data atual como defalt, ou -//XX/XXXX para ignorar o diae selecionar somente mês e ano
+            </summary>
+        </member>
+        <member name="T:FrameWork.WebControls.FieldFilter">
+            <summary>
+            Efetua filtros para buscas nas listagens por MakeGrid/ObjectEdit
+            </summary>
+            <example>
+            
+            Exemplo de Código para busca de Estado, Cidade e Bairro em cascata:
+            <code>
+            [FieldFilter(FieldFilterTypes.DropDownList, 
+                         Text = "Selecione o Estado:",
+                         Load = "SELECT UF,Estado FROM Estados Order by Estado add:(todos)|0", 
+                         Empty="0")]
+            public string Estado;
+            
+            [FieldFilter(FieldFilterTypes.DropDownList, 
+                         Text = "Selecione a Cidade:",
+                         Load = "SELECT CidadeID,Cidade FROM Cidades WHERE UF = '{#ddlEstado}' Order by Cidade add:(todas)|0", 
+                         Empty = "0")]
+            public int CidadeID;
+            
+            [FieldFilter(FieldFilterTypes.DropDownList, 
+                         Text = "Selecione o Bairro:",
+                         Load = "SELECT BairroID,Bairro FROM Bairros WHERE CidadeID = {#ddlCidadeID} AND CidadeID IN (SELECT CidadeID FROM Cidades WHERE UF = '{#ddlEstado}') Order by Bairro add:(todos)|0",
+                         Empty = "0")]
+            public int BairroID;
+            </code>
+                    
+            </example>
+        </member>
+        <member name="F:FrameWork.WebControls.FieldFilter.StartYear">
+            <summary>
+            Ano inicial do filtro de seleção por data (padrão 2006)
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.FieldFilter.Default">
+            <summary>
+            Nos campos data informe "-" para ocultar uma parte do campo e "X" para vir selecionado Qualquer
+            Exemplo: -/0/0 => Sem dia, e qualquer me e ano
+            XX/MM/YYYY => XX indica que não será adicionado o item (0-Qualquer)
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.FieldFilter.Execute">
+            <summary>
+            Informe o nome de um metodo a ser executado, ou uma mascara de sring pata busca
+            </summary>
+            <example>
+            {0} => gera um 'Field LIKE %{0}%'
+            ID>{0} (campo fixo>valor)
+            {1}>{0} (campo>valor)
+            </example>
+        </member>
+        <member name="M:FrameWork.WebControls.FieldFilter.InsertFilterInTable(System.String,System.Web.UI.WebControls.Table,System.Int32@,System.Int32@,System.Reflection.FieldInfo,System.Object)">
+            <summary>
+            Insere um campo de filtro em uma especifica tabela
+            </summary>
+            <param name="otb">Tabela de destino</param>
+            <param name="nRow">Linha</param>
+            <param name="nCol">Coluna</param>
+            <param name="fi">Informação do Campo da Classe Obj</param>
+            <param name="obj">Objeto que contem o Campo</param>
+        </member>
+        <member name="M:FrameWork.WebControls.FieldFilter.MakeFilters(System.Web.UI.Control,System.Object)">
+            <summary>
+            Adiciona os controle de filtros em um local especificado por ctrl
+            </summary>
+            <param name="ctrl">controle de destino que receberá os controles de filtragem</param>
+            <param name="obj">objeto de referencia para filtragem</param>
+        </member>
+        <member name="M:FrameWork.WebControls.FieldFilter.MakeFilters(System.Web.UI.Control,System.Object,System.String)">
+            <summary>
+            Adiciona os controle de filtros em um local especificado por ctrl
+            </summary>
+            <param name="ctrl">controle de destino que receberá os controles de filtragem</param>
+            <param name="obj">objeto de referencia para filtragem</param>
+            <param name="cNameID">Nome ID para prefixo do controles a serem criados</param>
+        </member>
+        <member name="T:FrameWork.WebControls.FieldTitle">
+            <summary>
+            Summary description for FieldTitle.
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.FieldTitle.GetTitle(System.Enum)">
+            <summary>
+            Obtem o Titulo descrito no Atributo FieldTitle do item do enumerador atualmente selecionado
+            </summary>
+            <param name="en">Instancia de um enumerador</param>
+            <returns>A descrição, ou o nome do item, ou Nulo</returns>
+        </member>
+        <member name="M:FrameWork.WebControls.FieldTitle.GetTitle(System.Enum,System.String)">
+            <summary>
+            Obtem o Titulo descrito no Atributo FieldTitle do item do enumerador atualmente selecionado
+            </summary>
+            <param name="en">Instancia de um enumerador</param>
+            <param name="cValue">Um valor para redefinir o enumerador</param>
+            <returns>A descrição, ou o nome do item, ou Nulo</returns>
+        </member>
+        <member name="T:FrameWork.WebControls.IDataControl">
+            <summary>
+            Summary description for IObjectControl.
+            </summary>
+        </member>
+        <member name="T:FrameWork.WebControls.IObjectControl">
+            <summary>
+            Summary description for IObjectControl.
+            </summary>
+        </member>
+        <member name="T:FrameWork.WebControls.IObjectEditLoad">
+            <summary>
+            Interface para fazer a chamada em um metodo LOAD apos os objetos de controle de edição do ObjectEdit serem criados
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.IObjectEditLoad.ControlInit(FrameWork.WebControls.ObjectEdit)">
+            <summary>
+            Executado logo apos o ObjectEdit ser adicionado como controle, ainda dentro do Init do controle
+            </summary>
+            <param name="oe">Instancia do ObjectEdit</param>
+            <param name="cID">ID a ser lido, ou grid se for nulo</param>
+        </member>
+        <member name="M:FrameWork.WebControls.IObjectEditLoad.ControlLoadComplete(FrameWork.WebControls.ObjectEdit)">
+            <summary>
+            Metodo a ser executado apos a carga e configuração dos objetos (tando grid ou edições)
+            </summary>
+            <param name="oe">Instancia do ObjectEdit atual</param>
+        </member>
+        <member name="M:FrameWork.WebControls.IObjectEditLoad.ContainerAdd(FrameWork.WebControls.ObjectEdit)">
+            <summary>
+            Executado somente quando é criado uma tela de edição/inclusão/exclusão
+            </summary>
+            <param name="oe"></param>
+        </member>
+        <member name="M:FrameWork.WebControls.IObjectEditLoad.GridAdd(FrameWork.WebControls.ObjectEdit)">
+            <summary>
+            Metodo a ser executado apos a grid ter sido criada e o datasource definido
+            </summary>
+            <remarks>
+            Use para customizar colunas e reconfigurar o grid
+            você pode redefinir o DataSource do Grid, mas nao é recomendado
+            Utilise o SelecWhere no metodo ControlInit caso queira fazer SELECTs customizados com parametros especiais
+            </remarks>
+            <param name="oe">Instancia do ObjectEdit atual</param>
+        </member>
+        <member name="T:FrameWork.WebControls.ObjectControl">
+            <summary>
+            Classe responsável pela criação e gerenciamento da interface de usuário que permite, consulta, edição, exclusão e inclusão
+            </summary>
+        </member>
+        <member name="T:FrameWork.WebControls.ObjectEdit">
+            <summary>
+            Summary description for ObjectList.
+            </summary>
+        </member>
+        <member name="T:FrameWork.WebControls.ObjectEdit.ObjectEditComplete">
+            <summary>
+            Assinatura para o Evento LoadComplete
+            </summary>
+            <param name="oe">Instancia do Objeto e controle de Listagem e Edição</param>
+        </member>
+        <member name="E:FrameWork.WebControls.ObjectEdit.LoadComplete">
+            <summary>
+            Evento que será chamado apos o Objeto de Listagem e Edição for completamente Carregado e configurado
+            </summary>
+        </member>
+        <member name="T:FrameWork.WebControls.ObjectEdit.ObjectEditLoadDataGridMake">
+            <summary>
+            Delegate a ser usado para DataGridMake
+            </summary>
+            <param name="dtg"></param>
+        </member>
+        <member name="E:FrameWork.WebControls.ObjectEdit.DataGridMake">
+            <summary>
+            Evento a ser executado apos a criação das colunas e antes do Databind()
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.ObjectEdit.Ctrl">
+            <summary>
+            Retorna o objeto DataControl criado pelo controle
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.ObjectEdit.lEdit">
+            <summary>
+            Define se permite edição ou não
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.ObjectEdit.DataGrid">
+            <summary>
+            Obtem o DataGrid criado em modo de Listagem
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.ObjectEdit.IDtoLoad">
+            <summary>
+            Edita um ID especifico, ignorando o valor do request("ID")
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.ObjectEdit.#ctor(System.Object)">
+            <summary>
+            Cria todos os controles nescessários para realizar uma listagem com busca, e depois as telas de edição os campos marcados com FieldControl()
+            </summary>
+            <param name="obj">Objeto que contem todos os atributosm fieldColum() e fieldControl() nescessários</param>
+        </member>
+        <member name="M:FrameWork.WebControls.ObjectEdit.#ctor(System.Object,FrameWork.WebControls.PageContainer)">
+            <summary>
+            Cria um Objeto de Listagem e edição
+            </summary>
+            <param name="obj">objeto de referencia</param>
+            <param name="pgc">Instancia do PageContainer em que será incluido</param>
+        </member>
+        <member name="M:FrameWork.WebControls.ObjectEdit.#ctor(System.Object,FrameWork.WebControls.PageContainer,System.Boolean)">
+            <summary>
+            Cria um Objeto de Listagem e edição
+            </summary>
+            <param name="obj">objeto de referencia</param>
+            <param name="pgc">Instancia do PageContainer em que será incluido</param>
+            <param name="lEditCheck">Se o objeto permitira edição, oi será só consulta (desabilita botões: inserir, alterar, e excluir)</param>
+        </member>
+        <member name="M:FrameWork.WebControls.ObjectEdit.Make(System.Object,FrameWork.WebControls.PageContainer)">
+            <summary>
+            Cria uma instancia de ObjectEdit e já a carrega imediatamente no container atual
+            </summary>
+            <param name="obj">Instancia do objeto a ser utilizado</param>
+            <param name="pgc">Instancia do Pagecontainer atual</param>
+            <returns>Instancia do Object Edit Criado</returns>
+            <remarks>User esta rotina para criar Lista/editores entro de outros controles (controllayout)</remarks>
+            <example>
+            VB:
+            <code>Dim oe As ObjectEdit = ObjectEdit.Make(obj, Me.Container)</code>
+            C#
+            <code>ObjectEdit objedt = ObjectEdit.Make(obj, this.Container);</code>
+            </example>
+            <seealso cref="M:FrameWork.WebControls.ObjectEdit.ControlLoad(System.Int32)"/>
+            <see cref="T:FrameWork.WebControls.ObjectEdit"/>
+        </member>
+        <member name="M:FrameWork.WebControls.ObjectEdit.ControlLoad(System.Int32)">
+            <summary>
+            Metodo a ser executado quando o controle é acrregado
+            </summary>
+            <param name="nCategoria">Informa uma categoria de campos</param>
+        </member>
+        <member name="M:FrameWork.WebControls.ObjectEdit.ControlLoadComplete">
+            <summary>
+            Quando o grid ou a edição está carregada pode-se adicionar/modificar componentes
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.ObjectEdit.Save">
+            <summary>
+            Salva o objeto em edição
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.ObjectEdit.Delete">
+            <summary>
+            Deleta o objeto em edição
+            </summary>
+        </member>
+        <member name="T:FrameWork.WebControls.ObjectList">
+            <summary>
+            Summary description for ObjectList.
+            </summary>
+        </member>
+        <member name="T:FrameWork.WebControls.IPageSkin">
+            <summary>
+            Summary description for IPageSkin.
+            </summary>
+        </member>
+        <member name="T:FrameWork.WebControls.ContainerUpdateTypes">
+            <summary>
+            Tipo de atualização de dados
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.ContainerUpdateTypes.ControlToData">
+            <summary>
+            Copia as informações dos controles (página) para os campos da classe (dados)
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.ContainerUpdateTypes.DataToControl">
+            <summary>
+            Copia os dados dos campos da classe (dados) e preenche os controles da página
+            </summary>
+        </member>
+        <member name="T:FrameWork.WebControls.PageContainer">
+            <summary>
+            Contariner de conteudo para PageLayout
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.PageContainer.Tabs">
+            <summary>
+            Retorna a instancia do controle Tab, ou TabContainer, se UseAjaxControlToolKit=true
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.PageContainer.ListWhereAdd(System.String)">
+            <summary>
+            Adiciona uma string Where a ser adicionada no proximo 'select' para datgrids (usado em filedfilter)
+            </summary>
+            <param name="cWhere">SQL contendo as confições</param>
+        </member>
+        <member name="M:FrameWork.WebControls.PageContainer.AddEditObject(System.Object)">
+            <summary>
+            Lista, edita, altera e exclui itens de uma tabela representada por uma classe
+            </summary>
+            <param name="obj">instancia do objeto a ser controlado</param>
+            <returns>Retorna uma instancia do ObjectEdit</returns>
+        </member>
+        <member name="M:FrameWork.WebControls.PageContainer.AddTab(System.String)">
+            <summary>
+            Adiciona uma nova Tab, com o nome informado
+            </summary>
+            <param name="cTabName">Nome da Tab a ser criada</param>
+            <returns>O numero atual de Tabs</returns>
+        </member>
+        <member name="M:FrameWork.WebControls.PageContainer.AddTab(System.Object,System.Int32)">
+            <summary>
+            Adiciona uma nova Tab, com um objeto, e um filtro de categoria
+            </summary>
+            <param name="obj">objeto a ser adicionado</param>
+            <param name="nCategoria">categoria de filtragem</param>
+            <returns>O numero atual de Tabs</returns>
+        </member>
+        <member name="M:FrameWork.WebControls.PageContainer.TabContinue(System.Int32,System.Object)">
+            <summary>
+            Continua a inclusão de objetos em uma tab específica
+            </summary>
+            <param name="nTab">Numero (index) da tab a ser usada</param>
+            <param name="obj">Objeto a ser inserido</param>
+        </member>
+        <member name="M:FrameWork.WebControls.PageContainer.TabContinue(System.Int32,System.Object,System.Int32)">
+            <summary>
+            Continua inserindo controles dentro de um painel de uma Tab
+            </summary>
+            <param name="nTab">Numero da Tab (base zero) que se deseja inserir</param>
+            <param name="obj">Objeto a ser inserido</param>
+            <param name="nCategory">Categoria para filtro</param>
+        </member>
+        <member name="M:FrameWork.WebControls.PageContainer.ClearTableClassTab(System.Int32)">
+            <summary>
+            Limpa as classes das Tabelas em uma especifica TAB
+            </summary>
+            <param name="nTab">Numero da TAB</param>
+        </member>
+        <member name="M:FrameWork.WebControls.PageContainer.Add(System.Object)">
+            <summary>
+            Adiciona um novo objeto (controle) no container
+            </summary>
+            <param name="obj">Instancia do objeto a adicionar</param>
+        </member>
+        <member name="M:FrameWork.WebControls.PageContainer.Add(System.Object,System.Int32)">
+            <summary>
+            Adiciona um novo objeto (controle) no container, usando um específico filtro por categoria
+            </summary>
+            <param name="obj">Instancia do objeto a adicionar</param>
+            <param name="nCategoria">Categoria de filtragem</param>
+        </member>
+        <member name="T:FrameWork.WebControls.PageLayoutLoad">
+            <summary>
+            Assinatura para o evento de leitura de layout
+            </summary>
+            <param name="pgl"></param>
+        </member>
+        <member name="T:FrameWork.WebControls.PageLayout">
+            <summary>
+            Página ASPX base
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.PageLayout.IconPath">
+            <summary>
+            Caminho para os icones (padrão: "Icon/")
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.PageLayout.SkinPath">
+            <summary>
+            Caminho dos componentes do skin (padrão: "Skin/")
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.PageLayout.ImagesPath">
+            <summary>
+            Caminho das imagens (padrão: "Imagens/")
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.PageLayout.TelasPath">
+            <summary>
+            Caminho com telas de Fomulários pré-definidas (login)
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.PageLayout.HelpPath">
+            <summary>
+            Diretório padrão dos links de ajuda quando houver!
+            (será procurado arquivos com o nome da classe .htm!
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.PageLayout.HelpIcon">
+            <summary>
+            Caminho completo para a imagem de ajuda
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.PageLayout.Compress">
+            <summary>
+            Status de compressão das páginas PageLayout
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.PageLayout.RegUserInfo(System.Web.HttpContext,FrameWork.WebControls.UserInfo)">
+            <summary>
+            Registra corretamente um Usuário na Sessão de um contexto
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.PageLayout.CurrentModule">
+            <summary>
+            Define o nome do modulo corrente, utilizado para criar menus hierarquicos
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.PageLayout.CurrentMenu">
+            <summary>
+            Define o nome do menu Pai selecionado
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.PageLayout.AddLogPage(System.String)">
+            <summary>
+            Adiciona informações de Log na página, e exibe se estiver em mdo de debug!
+            </summary>
+            <param name="cInfo"></param>
+        </member>
+        <member name="M:FrameWork.WebControls.PageLayout.DisplayStackBack(System.Web.UI.HtmlControls.HtmlGenericControl)">
+            <summary>
+            Exibe a pilha de página de retorno
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.PageLayout.MenuAddObjects(System.String,System.String)">
+            <summary>
+            Adiciona o Menu Hierárquico com opções, baseado na regra de 'Menu: Opcção', obtendo tudo diretamente das classes de um assembly
+            </summary>
+            <param name="cAssembly">FullName do Assembly a ser carregado</param>
+            <param name="cUrl">Mascara principal para criação do menu: sugestão: 'default.aspx?t={0}'</param>
+        </member>
+        <member name="M:FrameWork.WebControls.PageLayout.DisplayError(System.Exception)">
+            <summary>
+            Exibe as informações de uma Exception, e suas respectivas Exception internas, com todo o Stack Trace, formatado em HTML
+            </summary>
+            <param name="ex">Exception a ser exibida</param>
+        </member>
+        <member name="M:FrameWork.WebControls.PageLayout.RedirectAnddisplayMessage(System.String,System.String)">
+            <summary>
+            Redireciona para uma página específica e exibe uma mensagem quando esta página for exibida
+            </summary>
+            <param name="cURL">URL de destino</param>
+            <param name="cMessage">Mensagem a ser exibida</param>
+        </member>
+        <member name="M:FrameWork.WebControls.PageLayout.CheckUserRight(System.Int32)">
+            <summary>
+            Verifica se o usuário atual tem o direito determindo em 'nRight'
+            </summary>
+            <param name="nRights">Direito a ser verificado</param>
+            <returns>Verdadeito se tiver o direito ou for administrador</returns>
+        </member>
+        <member name="M:FrameWork.WebControls.PageLayout.CheckUserRight(System.Int32,System.String,System.Boolean)">
+            <summary>
+            Verifica se o usuário atual tem os devidos direitos em classe/função
+            </summary>
+            <param name="nRights">Direito a verifica</param>
+            <param name="cFunc">Função pertecente ao direito</param>
+            <returns></returns>
+        </member>
+        <member name="M:FrameWork.WebControls.PageLayout.FormValidatorAdd(System.String)">
+            <summary>
+            Adiciona condições no script de validação de formulário
+            </summary>
+            <param name="cForm">Script de validação a ser incluso</param>
+        </member>
+        <member name="M:FrameWork.WebControls.PageLayout.RegisterScript(System.String,System.String)">
+            <summary>
+            Registra um Script para ser utilizado em pagina
+            </summary>
+            <param name="cKey">Nome da Chave de referencia exclusiva a ser utilizada</param>
+            <param name="cScript">script a ser incluido</param>
+        </member>
+        <member name="M:FrameWork.WebControls.PageLayout.RegisterScriptFile(System.String,System.String)">
+            <summary>
+            Registra um Script contido em um arquivo externo
+            </summary>
+            <param name="cKey">Nome da Chave de referencia exclusiva a ser utilizada</param>
+            <param name="cFileJS">path e nome do arquivo script a ser incluido</param>
+        </member>
+        <member name="P:FrameWork.WebControls.PageLayout.ContextPage">
+            <summary>
+            Obtem o contexto corrente
+            </summary>
+        </member>
+        <member name="T:FrameWork.WebControls.PageMenuItem">
+            <summary>
+            Itens de menu/submenus
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.PageMenuItem.FindID(System.String)">
+            <summary>
+            Busca por um menu baseado no ID
+            </summary>
+            <param name="cID">Nome 'ID' do item a ser buscado</param>
+            <returns></returns>
+        </member>
+        <member name="T:FrameWork.WebControls.PageMenu">
+            <summary>
+            WebControle de Menu
+            </summary>
+        </member>
+        <member name="T:FrameWork.WebControls.PanelLayout">
+            <summary>
+            Summary description for PanelLayout.
+            </summary>
+        </member>
+        <member name="T:FrameWork.WebControls.PageSkinDefault">
+            <summary>
+            Summary description for PageSkin.
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.PageSkinDefault.ltr1">
+            <summary>
+            O literal 1 e 2 irão criar a tabela e o menu, o literal 3 fecha a tabela
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.PageSkinDefault.ltr2">
+            <summary>
+            O literal 1 e 2 irão criar a tabela e o menu, o literal 3 fecha a tabela
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.PageSkinDefault.ltr3">
+            <summary>
+            O literal 1 e 2 irão criar a tabela e o menu, o literal 3 fecha a tabela
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.PageSkinDefault.PageLayout">
+            <summary>
+            Retorna a instancia da PageLayout atual (page)
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.PageSkinDefault.ImageSufixo">
+            <summary>
+            Define o sufixo das imagens que serão usadas
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.PageSkinDefault.Top">
+            <summary>
+            Obtem o controle (TABELA: TABLE) que está sendo usado como topo da página
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.PageSkinDefault.SetTop">
+            <summary>
+            Define o topo da página (obrigatoriamente deverá ser uma TABELA: TABLE)
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.PageSkinDefault.Bottom">
+            <summary>
+            Obtem o controle de rodapé da página, veja 'SetBottom' para definir o rodapé
+            </summary>
+            <seealso cref="!:SetBottom"/>
+        </member>
+        <member name="M:FrameWork.WebControls.PageSkinDefault.SkinDefault(FrameWork.WebControls.PageLayout)">
+            <summary>
+            Construtor padrão que cria uma nova instancia da classe PageSkinDefault
+            </summary>
+            <remarks>Este metodo estatico pode ser configurado diretamente no global.asax para inicializar o skin padrão</remarks>
+            <param name="pgl"></param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:FrameWork.WebControls.PageSkinDefault.#ctor(FrameWork.WebControls.PageLayout)" -->
+        <member name="F:FrameWork.WebControls.PageSkinDefault.SetSepContainerFormat">
+            <summary>
+            Configura uma "String.Format" que será usada para gerar os separadores quando for adicionado uma string no container
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.PageSkinDefault.GetSepContainer(System.String)">
+            <summary>
+            Executa a formatação de um separador usando a strinf cTitle, aplicada conta a mascara de formato padrão em 'SetSepContainerFormat'
+            </summary>
+            <param name="cTitle">Padramento {0} a ser usado</param>
+            <returns></returns>
+        </member>
+        <member name="M:FrameWork.WebControls.PageSkinDefault.RenderDataControl(FrameWork.WebControls.DataControl)">
+            <summary>
+            Configura o layout do controle de dados (datagrid)
+            </summary>
+            <param name="ctrl"></param>
+        </member>
+        <member name="T:FrameWork.WebControls.TableLayout">
+            <summary>
+            Summary description for TableLayout.
+            </summary>
+        </member>
+        <member name="T:FrameWork.WebControls.MonthCalendar">
+            <summary>
+            Classe de controle para montar um calendário grande em tela
+            </summary>
+        </member>
+        <member name="T:FrameWork.WebControls.HTMLEdit">
+            <summary>
+            Summary description for HTMLEdit.
+            </summary>
+        </member>
+        <member name="F:FrameWork.WebControls.HTMLEdit.uploadHTML">
+            <summary>
+            HTML contento a funcionalidade de upload do toolbar
+            </summary>
+        </member>
+        <member name="T:FrameWork.WebControls.CheckBoxGrid">
+            <summary>
+            Casse de controle de dados bidimencionais por checkbox
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.CheckBoxGrid.#ctor">
+            <summary>
+            Construtora da classe da manipulação bidimensional
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.CheckBoxGrid.OnLoad(System.EventArgs)">
+            <summary>
+            Inicializa a classe
+            </summary>
+            <param name="e">Argumento de evento</param>
+        </member>
+        <member name="M:FrameWork.WebControls.CheckBoxGrid.RenderContents(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            Renderiza o controle na tela
+            </summary>
+            <param name="output"></param>
+        </member>
+        <member name="P:FrameWork.WebControls.CheckBoxGrid.Vertical">
+            <summary>
+            opções são as páginas que serão gerenciadas
+            </summary> 
+        </member>
+        <member name="P:FrameWork.WebControls.CheckBoxGrid.Horizontal">
+            <summary>
+            Horizontal são os tipos de acesso para cada página
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.CheckBoxGrid.Itens">
+            <summary>
+            São os Itens (Vertical/Horizontal) habilitados, especifique o nome do item: Vertical_Horizontal
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.CheckBoxGrid.HorizontalMask">
+            <summary>
+            Mascara para a exibição dos itens Horizontais
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.CheckBoxGrid.VerticalMask">
+            <summary>
+            Mascara para a exibição dos itens Horizontais
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.CheckBoxGrid.ItensActive">
+            <summary>
+            Lê ou Define os itens ativos
+            </summary>
+        </member>
+        <member name="M:FrameWork.WebControls.CheckBoxGrid.Bind(System.Type)">
+            <summary>
+            Cria os itens verticvais e horizontais baseados em 3 enumerados previamente criados
+            </summary>
+            <param name="tpItens">Um ENUMERADO (Enum) com a estrutura dos itens disponíveis, este deve ser formado pelo nome de outros 2 enumerados existentes separados por '_' (undeline)</param>
+            <example>
+            'em VB
+            
+            Public Enum Rights
+               Usuarios
+               Faturamento
+            End Enum
+            
+            Public Enum Acessos
+               Read
+               Write
+            End Enum
+            
+            Public Enum Right_Acessos
+               Usuarios_Read = 2
+               'Cada variavel será uma permição individual para garantir compatibilidade
+               Faturamento_Write = 4
+            End Enum
+            </example>
+        </member>
+        <member name="M:FrameWork.WebControls.CheckBoxGrid.GetItensActive">
+            <summary>
+            Obem uma string no formato {n1}{n2} com os itens ativos
+            </summary>
+            <returns>string de {n1}{n2} do enumerado, dos itens marcados</returns>
+        </member>
+        <member name="M:FrameWork.WebControls.CheckBoxGrid.GetEnumNames(System.Type,System.String)">
+            <summary>
+            Obtem uma lista de nome das propriedades de um enumarados
+            </summary>
+            <param name="tp">Enumerado</param>
+            <param name="cList">Lista (valores) separados por '|'(pipe)</param>
+            <returns>Retorna uma lista do nome de propriedades relacionada aos valores</returns>
+        </member>
+        <member name="T:FrameWork.WebControls.TableAZ">
+            <summary>
+            Summary description for TableAZ.
+            </summary>
+        </member>
+        <member name="T:FrameWork.WebControls.TagFormat">
+            <summary>
+            Casse de controle de dados bidimencionais por checkbox
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.TagFormat.Format">
+            <summary>
+            Especifica o padrão da reformatação para o Pre-Render!
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.TagFormat.Text">
+            <summary>
+            Texto a ser renderizado separado poelos separadores de linha definidos em 'TextSep' (padrão CR)
+            </summary>
+        </member>
+        <member name="P:FrameWork.WebControls.TagFormat.Tag">
+            <summary>
+            Especifica a TAG de renderização
+            </summary>
+        </member>
+        <member name="T:FrameWork.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:FrameWork.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:FrameWork.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:FrameWork.Properties.Resources._atompub">
+             <summary>
+               Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+            &lt;service xmlns=&quot;http://www.w3.org/2007/app&quot; xmlns:atom=&quot;http://www.w3.org/2005/Atom&quot;&gt;
+              &lt;workspace&gt;
+                &lt;atom:title&gt;Impactro Framework&lt;/atom:title&gt;
+                &lt;collection href=&quot;http://localhost/TestLib/Atom.axd?t=entry&quot;&gt;
+                  &lt;atom:title&gt;News MPC&lt;/atom:title&gt;
+                  &lt;accept&gt;application/atom+xml;type=entry&lt;/accept&gt;
+                  &lt;categories fixed=&quot;no&quot;&gt;
+                  &lt;/categories&gt;
+                &lt;/collection&gt;
+                &lt;xcollection href=&quot;http://localhost/TestLib/Atom.axd?t=entry&quot;&gt;
+                  &lt;atom:title&gt; [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="P:FrameWork.Properties.Resources._feed">
+             <summary>
+               Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+            &lt;feed xmlns=&quot;http://www.w3.org/2005/Atom&quot;&gt;
+              &lt;id&gt;urn:uuid:92a94eeb-f170-5e62-9bfd-a81955e8ff69&lt;/id&gt;
+              &lt;title&gt;News Fabio&lt;/title&gt;
+              &lt;link rel=&quot;alternate&quot; type=&quot;application/xhtml+xml&quot; href=&quot;http://localhost/AtomPubSample/newsitem.aspx&quot; /&gt;
+              &lt;author&gt;
+                &lt;name&gt;Fabio Ferreira / John Doe&lt;/name&gt;
+                &lt;uri&gt;http://localhost/AtomPubSample&lt;/uri&gt;
+              &lt;/author&gt;
+              &lt;rights&gt;Copyright 2010 John Doe&lt;/rights&gt;
+              &lt;updated&gt;2000-01-01T00:00:00-02:00&lt;/updated&gt;
+              &lt;generator&gt;JH Software [rest of string was truncated]&quot;;.
+             </summary>
+        </member>
+        <member name="T:FrameWork.Services.AJAX">
+            <summary>
+            Implementa chamadas assincronas a XML por meio de JavaScript
+            </summary>
+        </member>
+        <member name="F:FrameWork.Services.AJAX.AJAXImpactroServices">
+            <summary>
+            Caminho e nome completo do web services de obtenção de dados '/wsUtil.asmx'
+            </summary>
+        </member>
+        <member name="M:FrameWork.Services.AJAX.AJAXIncludeJavaScript(System.Web.UI.Page)">
+            <summary>
+            Verifica e Adiciona as biblioteclas de AJAX na página de saida
+            </summary>
+            <param name="pg">Página de saida</param>
+        </member>
+        <member name="M:FrameWork.Services.AJAX.AddVar(FrameWork.Services.AJAXVars,System.Int32,System.String,System.Web.UI.Page)">
+            <summary>
+            Define/Adiciona uma variável AJAX no HTML final a ser renderizado.
+            </summary>
+            <param name="var">Variável AJAX disponível</param>
+            <param name="Value">Valor para a váriavel</param>
+            <param name="pg">Página de saida</param>
+        </member>
+        <member name="M:FrameWork.Services.AJAX.AddVar(FrameWork.Services.AJAXVars,System.Int32,System.Web.UI.WebControls.WebControl)">
+            <summary>
+            Adiciona uma variável obtida por meio de um WebControl
+            </summary>
+            <param name="var">Variável AJAX</param>
+            <param name="index">Indexador de vetor, -1 para não indexar</param>
+            <param name="ctrl">Controle a ser capturado pela variável</param>
+        </member>
+        <member name="M:FrameWork.Services.AJAX.DropDownLoadAsync(System.Web.UI.WebControls.DropDownList,System.Type,System.String)">
+            <summary>
+            Preenche um dropdown assincronamente com as informações retornadas de um Metodo(cMethod) de um Tipo(tp)
+            </summary>
+            <param name="ddl">DropDownList a ser preenchido</param>
+            <param name="tp">Type da classe que contem o Metodo (cMethod)</param>
+            <param name="cMethod">Metodo que retorna um array de string, onde cada string é separada pelo caracter '|' serparando assim: Value|Text</param>
+        </member>
+        <member name="M:FrameWork.Services.AJAX.DropDownLoadAsync(System.Web.UI.WebControls.DropDownList,System.Type,System.String,System.String)">
+            <summary>
+            Preenche um dropdown assincronamente com as informações retornadas de um Metodo(cMethod) de um Tipo(tp), passando entre cliente e servidor um parametro
+            </summary>
+            <param name="ddl">DropDownList a ser preenchido</param>
+            <param name="tp">Type da classe que contem o Metodo (cMethod)</param>
+            <param name="cMethod">Metodo que retorna um array de string, onde cada string é separada pelo caracter '|' serparando assim: Value|Text</param>
+            <param name="cParmeter">Parametro adicional a ser passado entre cliente e servidor</param>
+        </member>
+        <member name="M:FrameWork.Services.AJAX.DropDownLoadAsync(System.Web.UI.WebControls.DropDownList,System.Type,System.String,System.String,System.String)">
+            <summary>
+            Preenche um dropdown assincronamente com as informações retornadas de um Metodo(cMethod) de um Tipo(tp), passando entre cliente e servidor um parametro, e pre selecionando um item
+            </summary>
+            <param name="ddl">DropDownList a ser preenchido</param>
+            <param name="tp">Type da classe que contem o Metodo (cMethod)</param>
+            <param name="cMethod">Metodo que retorna um array de string, onde cada string é separada pelo caracter '|' serparando assim: Value|Text</param>
+            <param name="cParmeter">Parametro adicional a ser passado entre cliente e servidor</param>
+            <param name="cSelectedValue">Item a ser selecionado quando a dropdown for carregada completamente</param>
+        </member>
+        <member name="M:FrameWork.Services.AJAX.DropDownLoadAsync(System.Web.UI.WebControls.DropDownList,System.String)">
+            <summary>
+            Preenche um DropDownList com os dados retornados por uma instrução SQL SELECT
+            </summary>
+            <param name="ddl">DropDownList a ser preenchido</param>
+            <param name="cSQL">Comando SQL a ser excutado no load assincrono</param>
+            <remarks>Esta rotina utiliza o Metodo "DataSelect"</remarks>
+        </member>
+        <member name="M:FrameWork.Services.AJAX.DropDownLoadAsync(System.Web.UI.WebControls.DropDownList,System.String,System.String)">
+            <summary>
+            Preenche um DropDownList com os dados retornados por uma instrução SQL SELECT
+            </summary>
+            <param name="ddl">DropDownList a ser preenchido</param>
+            <param name="cSQL">Comando SQL a ser excutado no load assincrono</param>
+            <param name="cSelectedValue">Item a ser selecionado quando a dropdown for carregada completamente</param>
+            <remarks>Esta rotina utiliza o Metodo "DataSelect"</remarks>
+        </member>
+        <member name="M:FrameWork.Services.AJAX.DropDownLoadAsyncOnChange(System.Web.UI.WebControls.DropDownList,System.Web.UI.WebControls.DropDownList,System.Type,System.String,System.String)">
+            <summary>
+            Carrega uma DropDownList, no momento que outra DropDownList é alterada (onchange) passando para esta segunda um parametro informado o item selecionado
+            </summary>
+            <param name="ddlChange">DropDownList a ser monitorado (onchange)</param>
+            <param name="ddlTarget">DropDownList a ser carreganda quando o "onchange" da outra DropDownList for executado</param>
+            <param name="tp">Type da classe que contem o Metodo (cMethod)</param>
+            <param name="cMethod">Metodo que retorna um array de string, onde cada string é separada pelo caracter '|' serparando assim: Value|Text</param>
+            <param name="cParmeter">Parametro adicional a ser passado entre cliente e servidor</param>
+        </member>
+        <member name="M:FrameWork.Services.AJAX.DropDownLoadAsyncOnChange(System.Web.UI.WebControls.DropDownList,System.Web.UI.WebControls.DropDownList,System.Type,System.String,System.String,System.String)">
+            <summary>
+            Carrega uma DropDownList, no momento que outra DropDownList é alterada (onchange) passando para esta segunda um parametro informado o item selecionado
+            </summary>
+            <param name="ddlChange">DropDownList a ser monitorado (onchange)</param>
+            <param name="ddlTarget">DropDownList a ser carreganda quando o "onchange" da outra DropDownList for executado</param>
+            <param name="tp">Type da classe que contem o Metodo (cMethod)</param>
+            <param name="cMethod">Metodo que retorna um array de string, onde cada string é separada pelo caracter '|' serparando assim: Value|Text</param>
+            <param name="cParmeter">Parametro adicional a ser passado entre cliente e servidor</param>
+            <param name="cSelectedValue">Item a ser selecionado quando a dropdown for carregada completamente</param>
+        </member>
+        <member name="M:FrameWork.Services.AJAX.DropDownLoadAsyncOnChange(System.Web.UI.WebControls.DropDownList,System.Web.UI.WebControls.DropDownList,System.String)">
+            <summary>
+            Preenche um DropDownList com os dados retornados por uma instrução SQL SELECT, passando um valor '{0}' por String.Format
+            </summary>
+            <param name="ddlChange">DropDownList a ser monitorado (onchange)</param>
+            <param name="ddlTarget">DropDownList a ser carreganda quando o "onchange" da outra DropDownList for executado</param>
+            <param name="cSQL">Comando SQL a ser excutado no load assincrono</param>
+            <remarks>Esta rotina utiliza o Metodo "DataSelect"
+            Exemplo de comando SQL: SELECT ClienteID,Cliente FROM Clientes WHERE UF='{0}'
+            Onde o parametro {0} será passado pela ddlChange (selectdvalue)
+            Note que esta rotina não preve SQL INJECT, e por isso deve ser usada com cautela
+            </remarks>
+        </member>
+        <member name="M:FrameWork.Services.AJAX.DropDownLoadAsyncOnChange(System.Web.UI.WebControls.DropDownList,System.Web.UI.WebControls.DropDownList,System.String,System.String)">
+            <summary>
+            Preenche um DropDownList com os dados retornados por uma instrução SQL SELECT, passando um valor '{0}' por String.Format
+            </summary>
+            <param name="ddlChange">DropDownList a ser monitorado (onchange)</param>
+            <param name="ddlTarget">DropDownList a ser carreganda quando o "onchange" da outra DropDownList for executado</param>
+            <param name="cSQL">Comando SQL a ser excutado no load assincrono</param>
+            <param name="cSelectedValue">Item a ser selecionado quando a dropdown for carregada completamente</param>
+            <remarks>Esta rotina utiliza o Metodo "DataSelect"
+            Exemplo de comando SQL: SELECT ClienteID,Cliente FROM Clientes WHERE UF='{0}'
+            Onde o parametro {0} será passado pela ddlChange (selectdvalue)
+            Note que esta rotina não preve SQL INJECT, e por isso deve ser usada com cautela
+            </remarks>
+        </member>
+        <member name="M:FrameWork.Services.AJAX.GetFullName(System.Type,System.Web.UI.Page)">
+            <summary>
+            Obtem em uma string todas as informações nescessárias do nome da classe dentro de um padrão estabelecido para poder recriar o objeto novamente
+            </summary>
+            <param name="tp">Type da classe (tipo)</param>
+            <returns>Assemby,FullaName</returns>
+        </member>
+        <member name="M:FrameWork.Services.AJAX.DataSelect(System.String)">
+            <summary>
+            Retorna dados vindo de um SQL SELECT que retona 2 campos, para ser utilizado em dropdownlist ou autocomplete
+            </summary>
+            <param name="cSQLPRM">String SQL codificada em Base 64 a ser executada</param>
+            <returns>Array de string, onde cada linha éseparada em 2 itens pelo caracter '|'</returns>
+        </member>
+        <member name="M:FrameWork.Services.AJAX.GetItens(System.String)">
+            <summary>
+            Função para teste e comunição com AJAX
+            </summary>
+            <param name="cParmeter">Sring a ser concatenada nos itens do array a ser gerado</param>
+            <returns>Array com numero + string cParameter</returns>
+        </member>
+        <member name="M:FrameWork.Services.AJAX.GetItens(System.Object,System.String,System.String)">
+            <summary>
+            Retorna os itens para uma lista de autocomplete
+            </summary>
+            <param name="objRef">Instancia do objeto de dados</param>
+            <param name="cPref">Váriável já digitada</param>
+            <param name="cSQL">comando SQL a ser executando onde o Prefixo (cPrev) será adicionado como {0}</param>
+            <example>
+            GetItens( me, cPref, "SELECT ID,Nome FROM Pessoas WHERE Nome LIKE '%{0}%'")
+            </example>
+            <returns>uma lista de strings com o conteudo final a ser retornado</returns>
+        </member>
+        <member name="M:FrameWork.Services.AJAX.TextLoadAsync(System.Web.UI.WebControls.TextBox,System.Type,System.String)">
+            <summary>
+            Ativa o Recurso de Auto Complete em um TextBox utilizando os valores de "AJAXLoadListItens()" para ler os dados igual, a uma dropdownlist
+            </summary>
+            <param name="txt">TextBox a receber o recurso</param>
+            <param name="tp">Type (classe) que contem o metodo que obtem os dados</param>
+            <param name="cMethod">Nome do Metodo que receberá um parametro string que contem o texto atual</param>
+        </member>
+        <member name="T:FrameWork.Services.AJAXVars">
+            <summary>
+            Lista de váriáveis disponiveis no JavaScript embutido AJAX
+            </summary>
+        </member>
+        <member name="F:FrameWork.Services.AJAXVars.none">
+            <summary>
+            Informa para Não Incluir ou associar nenuma variável
+            </summary>
+        </member>
+        <member name="F:FrameWork.Services.AJAXVars.ImpactroServices">
+            <summary>
+            Variável que contem o caminho e nome relativo da webservice de obtenção de dados ajax, por padrão: 'wsutil.asmx'
+            </summary>
+        </member>
+        <member name="F:FrameWork.Services.AJAXVars.CardTypes">
+            <summary>
+            Nome do controle RabioButtonList onde estão os tipos de cartões de credito
+            </summary>
+        </member>
+        <member name="F:FrameWork.Services.AJAXVars.Cep">
+            <summary>
+            Nome do TextBox que contem o campo CEP
+            </summary>
+        </member>
+        <member name="F:FrameWork.Services.AJAXVars.Endereco">
+            <summary>
+            Nome do TextBox que contem o campo Endereço
+            </summary>
+        </member>
+        <member name="F:FrameWork.Services.AJAXVars.Numero">
+            <summary>
+            Informa que o campo Numero/Complemento é a parte do endereçco, com isso não é adicionada a virgula ao final do endereço
+            </summary>
+        </member>
+        <member name="F:FrameWork.Services.AJAXVars.Bairro">
+            <summary>
+            Nome do TextBox que contem o campo Bairro
+            </summary>
+        </member>
+        <member name="F:FrameWork.Services.AJAXVars.Cidade">
+            <summary>
+            Nome do TextBox que contem o campo Cidade
+            </summary>
+        </member>
+        <member name="F:FrameWork.Services.AJAXVars.Estado">
+            <summary>
+            Nome do TextBox que contem o campo Estado
+            </summary>
+        </member>
+        <member name="F:FrameWork.Services.AJAXVars.UFTipo">
+            <summary>
+            Nome do TextBox que contem o campo UFTipo (Tipo de Cidade: C-Capital, I-Interior)
+            </summary>
+        </member>
+        <member name="T:FrameWork.Services.IGetHtml">
+            <summary>
+            Interface para conteudo HTML para ser renderizado assincronamente
+            </summary>
+        </member>
+        <member name="M:FrameWork.Services.IGetHtml.GetHtml(FrameWork.WebControls.IPageSite,System.String)">
+            <summary>
+            Retorna o conteudo HTML para ser renderizado
+            </summary>
+            <param name="ipg">Instancia de uma página com  interface 'IPageSite' implementada</param>
+            <param name="cPrm">Parametros</param>
+            <returns>HTML</returns>
+        </member>
+        <member name="F:FrameWork.Services.ParameterDataItem.Name">
+            <summary>
+            Nome do parametro
+            </summary>
+        </member>
+        <member name="F:FrameWork.Services.ParameterDataItem.Value">
+            <summary>
+            Valor do Parametro
+            </summary>
+        </member>
+        <member name="M:FrameWork.Services.ParameterDataItem.#ctor(System.String,System.Object)">
+            <summary>
+            constroe um Paremento com um nome e valor específicos
+            </summary>
+        </member>
+        <member name="T:FrameWork.Services.VISAInfo">
+            <summary>
+            Cria uma nova instancia para utiliza VisaNet
+            Por padrão as variáveis internas estão com os valores para homologação 
+            </summary>
+        </member>
+        <member name="F:FrameWork.Services.VISAInfo.MerchID">
+            <summary>
+            Código de Afiliação no Vaisanet (10 digitos)
+            </summary>
+        </member>
+        <member name="F:FrameWork.Services.VISAInfo.MerchINI">
+            <summary>
+            nome do arquivo .INI no servidor
+            </summary>
+        </member>
+        <member name="F:FrameWork.Services.VISAInfo.SecureCode">
+            <summary>
+            True, para exibir o campo Código de segurança na página de cartão
+            </summary>
+        </member>
+        <member name="F:FrameWork.Services.VISAInfo.AutoCapture">
+            <summary>
+            Informa se é para tentar realizar a captura automaticamente apos a autorização
+            </summary>
+        </member>
+        <member name="F:FrameWork.Services.BradescoInfo.Agencia">
+            <summary>
+            Número da Agencia 
+            </summary>
+        </member>
+        <member name="F:FrameWork.Services.BradescoInfo.Conta">
+            <summary>
+            Número da Conta
+            </summary>
+        </member>
+        <member name="F:FrameWork.Services.BradescoInfo.LojaNumero">
+            <summary>
+            Número da Loja Bradesco
+            </summary>
+        </member>
+        <member name="F:FrameWork.Services.BradescoInfo.Assinatura">
+            <summary>
+            chave de assinatura
+            </summary>
+        </member>
+        <member name="F:FrameWork.Services.BradescoInfo.AssinaturaTransferencia">
+            <summary>
+            chave de assinatura para transferencia online
+            </summary>
+        </member>
+        <member name="T:FrameWork.Services.wsUtil">
+            <summary>
+            Classe de WebServices responsável pelas rotinas Ajax, e outras padrão para a maioria dos websites
+            </summary>
+        </member>
+        <member name="F:FrameWork.Services.wsUtil.dbCEP">
+            <summary>
+            Nome da variável em AppSettings que contem a SQL Connection do SQL de CEPs
+            </summary>
+        </member>
+        <member name="M:FrameWork.Services.wsUtil.Upload(System.String,System.Byte[],System.DateTime,System.DateTime)">
+            <summary>
+            Salva uma Imagem (ou qualquer tipo de arquivo) via serialização dos bytes do arquivo
+            </summary>
+            <param name="cFileName">Nome do arquivo a ser gravado</param>
+            <param name="data">Array de Bytes a ser gravado</param>
+            <param name="dtCreate">Data de Criação</param>
+            <param name="dtModify">Data de Alteração</param>
+            <returns>"OK" se tiver tudo certo, ou a Mensagem de Exception</returns>
+        </member>
+        <member name="M:FrameWork.Services.wsUtil.FileExist(System.String)">
+            <summary>
+            Informa se um arquivo existe ou não em um cliente WebService
+            </summary>
+            <param name="cFileName">Nome do arquivo a verificar</param>
+            <returns>Verdadeiro se existir</returns>
+        </member>
+        <member name="M:FrameWork.Services.wsUtil.GetListFiles(System.String,System.String)">
+            <summary>
+            Obtem a lista de arquivos, em forma de Array de String (utilizado no Editor HTML)
+            </summary>
+            <param name="cPath">Path a ser pesquisado</param>
+            <param name="cTypes">Mascara de extenções (*.gif;*.jpg)</param>
+            <returns>String, ou Mensagem e StackTrace da Exception</returns>
+        </member>
+        <member name="M:FrameWork.Services.wsUtil.AJAXCardValid(System.String,System.String)">
+            <summary>
+            Valida o numero de um cartão de credito online em página para AJAX
+            </summary>
+            <param name="cCard">Tipo de cartão</param>
+            <param name="cNumber">Numero de cartão</param>
+            <returns>"OK", ou "NUMERO INVALIDO"</returns>
+            <remarks>Esta classe basicamente utiliza a Classe e Metodo: Cards.isValid(cCard, cNumber)</remarks>
+        </member>
+        <member name="M:FrameWork.Services.wsUtil.AJAXLoadListItens(System.String,System.String,System.String)">
+            <summary>
+            Carrega um DropDownList, com dados assincronamente
+            </summary>
+            <param name="cType">Type (Full Name) da Classe a ser instanciada</param>
+            <param name="cMethod">Nome do Metodo da Classe</param>
+            <param name="cParmeter">Paramento a ser passado para o Metodo</param>
+            <returns>Array de String no formato "valur|Text" com os elementos da dropdownlist</returns>
+        </member>
+        <member name="M:FrameWork.Services.wsUtil.GetEndereco(System.String)">
+            <summary>
+            Obtem o Endereçco com pleto baseado no CEP
+            </summary>
+            <param name="cCep">CEP a ser obtido o endereço</param>
+            <returns>Estrutura com as informações do Encereço (Rua, Bairro, Cidade, Estado, Capital/Interior )</returns>
+        </member>
+        <member name="M:FrameWork.Services.wsUtil.GetCepEndereco(System.String,System.String)">
+            <summary>
+            Obtem um endereço baseada-se no CEP
+            </summary>
+            <param name="cnDirect">Conexão SQL para acessar o banco de dados</param>
+            <param name="cCep">CEP destino</param>
+            <returns></returns>
+        </member>
+        <member name="M:FrameWork.Services.wsUtil.GetPedidoInfo(System.Int32)">
+            <summary>
+            Obtem informações do pedido baseado no número do pedido
+            </summary>
+            <param name="nID">Número do pedido</param>
+            <returns>Estrutura contendo os dados do pedido</returns>
+            <exception cref="T:System.NotImplementedException">Esta rotina deve ser reescrita no lado do cliente</exception>
+        </member>
+        <member name="M:FrameWork.Services.wsUtil.GetLojaInfo">
+            <summary>
+            Obtem informações sobre a Loja
+            </summary>
+            <returns>Estrutura contendo o dados da loja</returns>
+            <exception cref="T:System.NotImplementedException">Esta rotina deve ser reescrita no lado do cliente</exception>
+        </member>
+        <member name="M:FrameWork.Services.wsUtil.SetCard(System.Int32,System.String)">
+            <summary>
+            Informa os dados do cartão para um específico pedido
+            </summary>
+            <param name="nID">Código do pedido</param>
+            <param name="cCardInfo">Dados do cartão</param>
+            <returns>Esta rotina é invocada pelo servidor de pagamento da impactro para iformar o site os dados do cartão digitados no servidor da impactro</returns>
+            <exception cref="T:System.NotImplementedException">Esta rotina deve ser reescrita no lado do cliente</exception>
+        </member>
+        <member name="M:FrameWork.Services.wsUtil.SendCardResult(System.Int32,System.String,System.String)">
+            <summary>
+            Informa os dados do resultado da transação Visanet, Amex, MasterCard executadas do lado do servidor Impactro para o site cliente
+            </summary>
+            <param name="nID">Código do Pedido de Venda</param>
+            <param name="cData">Dados da transação (código transação)</param>
+            <param name="cMessage">Mensagem de erro ou sucesso</param>
+            <returns></returns>
+        </member>
+        <member name="M:FrameWork.Services.Cards.CheckSum(System.String)">
+            <summary>
+            Rotina que Verifica o cheksum de cartões de credito
+            </summary>
+            <param name="cCardNumber">Numero do cartão de credito</param>
+            <returns></returns>
+            <example>CheckSum("345678901234564")</example>
+        </member>
+        <member name="T:FrameWork.Services.CardTypes">
+            <summary>
+            tipos de Cartão de Credito Suportados
+            </summary>
+        </member>
+        <member name="T:FrameWork.WebServices.wsServices">
+            <remarks/>
+        </member>
+        <member name="M:FrameWork.WebServices.wsServices.#ctor">
+            <remarks/>
+        </member>
+        <member name="E:FrameWork.WebServices.wsServices.GetMoedaInfoCompleted">
+            <remarks/>
+        </member>
+        <member name="E:FrameWork.WebServices.wsServices.GetEnderecoCompleted">
+            <remarks/>
+        </member>
+        <member name="E:FrameWork.WebServices.wsServices.SendErrorCompleted">
+            <remarks/>
+        </member>
+        <member name="E:FrameWork.WebServices.wsServices.GeraCodVerCompleted">
+            <remarks/>
+        </member>
+        <member name="M:FrameWork.WebServices.wsServices.GetMoedaInfo(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:FrameWork.WebServices.wsServices.GetMoedaInfoAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:FrameWork.WebServices.wsServices.GetMoedaInfoAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:FrameWork.WebServices.wsServices.GetEndereco(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:FrameWork.WebServices.wsServices.GetEnderecoAsync(System.String)">
+            <remarks/>
+        </member>
+        <member name="M:FrameWork.WebServices.wsServices.GetEnderecoAsync(System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:FrameWork.WebServices.wsServices.SendError(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:FrameWork.WebServices.wsServices.SendErrorAsync(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:FrameWork.WebServices.wsServices.SendErrorAsync(System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:FrameWork.WebServices.wsServices.GeraCodVer(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:FrameWork.WebServices.wsServices.GeraCodVerAsync(System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:FrameWork.WebServices.wsServices.GeraCodVerAsync(System.String,System.String,System.String,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:FrameWork.WebServices.wsServices.CancelAsync(System.Object)">
+            <remarks/>
+        </member>
+        <member name="T:FrameWork.WebServices.MoedaInfo">
+            <remarks/>
+        </member>
+        <member name="P:FrameWork.WebServices.MoedaInfo.Data">
+            <remarks/>
+        </member>
+        <member name="P:FrameWork.WebServices.MoedaInfo.Moeda">
+            <remarks/>
+        </member>
+        <member name="P:FrameWork.WebServices.MoedaInfo.Valor">
+            <remarks/>
+        </member>
+        <member name="P:FrameWork.WebServices.MoedaInfo.Cache">
+            <remarks/>
+        </member>
+        <member name="T:FrameWork.WebServices.CepEndereco">
+            <remarks/>
+        </member>
+        <member name="P:FrameWork.WebServices.CepEndereco.Endereco">
+            <remarks/>
+        </member>
+        <member name="P:FrameWork.WebServices.CepEndereco.Bairro">
+            <remarks/>
+        </member>
+        <member name="P:FrameWork.WebServices.CepEndereco.Cidade">
+            <remarks/>
+        </member>
+        <member name="P:FrameWork.WebServices.CepEndereco.Estado">
+            <remarks/>
+        </member>
+        <member name="P:FrameWork.WebServices.CepEndereco.CEP">
+            <remarks/>
+        </member>
+        <member name="P:FrameWork.WebServices.CepEndereco.Tipo">
+            <remarks/>
+        </member>
+        <member name="P:FrameWork.WebServices.CepEndereco.ESedex">
+            <remarks/>
+        </member>
+        <member name="P:FrameWork.WebServices.CepEndereco.Result">
+            <remarks/>
+        </member>
+        <member name="T:FrameWork.WebServices.GetMoedaInfoCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:FrameWork.WebServices.GetMoedaInfoCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:FrameWork.WebServices.GetMoedaInfoCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:FrameWork.WebServices.GetEnderecoCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:FrameWork.WebServices.GetEnderecoCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:FrameWork.WebServices.GetEnderecoCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:FrameWork.WebServices.SendErrorCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:FrameWork.WebServices.SendErrorCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:FrameWork.WebServices.SendErrorCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+        <member name="T:FrameWork.WebServices.GeraCodVerCompletedEventHandler">
+            <remarks/>
+        </member>
+        <member name="T:FrameWork.WebServices.GeraCodVerCompletedEventArgs">
+            <remarks/>
+        </member>
+        <member name="P:FrameWork.WebServices.GeraCodVerCompletedEventArgs.Result">
+            <remarks/>
+        </member>
+    </members>
+</doc>

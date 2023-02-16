@@ -5,47 +5,48 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="head" runat="Server">
 	<style type="text/css">
+
 		.principal .box-slide {
-				background-repeat: no-repeat;
-				background-size: cover;
-				background-position-x: center;
-			}
-			.nav-item a {
-				color: #253465;
-			}
+			background-repeat: no-repeat !important;
+			background-size: cover !important;
+			background-position-x: center !important;
+		}
+		.nav-item a {
+			color: #253465 !important;
+		}
 
-			.navbar-collapse.show .nav-item a {
-				color: #FFFFFF;
-			}
+		.navbar-collapse.show .nav-item a {
+			color: #FFFFFF !important;
+		}
 
-			header{
-				height: 128px;
-				background: #FFFFFF;
-				box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 30%);
-				border-radius: 8px;
+		header{
+			height: 128px !important;
+			background: #FFFFFF !important;
+			box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 30%) !important;
+			border-radius: 8px !important;
+		}
+		.logo {
+			box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 0%) !important;
+		}
+		.lingua {
+			color: #253465 !important;
+		}
+		.navbar-toggler.collapsed:not(:disabled):not(.disabled) {
+			background: url("/content/img/icon-menu-hover.png") center no-repeat !important;
+		}
+		.navbar-toggler:not(:disabled):not(.disabled) {
+			background: url("/content/img/icon-menu.png") center no-repeat !important;
+		}
+		@media (min-width: 768px) and (max-width: 991px) {
+			header {
+				height: 98px !important;
 			}
-			.logo {
-				box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 0%);
+		}
+		@media (min-width: 0px) and (max-width: 767px) {
+			header {
+				height: 92px !important;
 			}
-			.lingua {
-				color: #253465;
-			}
-			.navbar-toggler.collapsed:not(:disabled):not(.disabled) {
-    			background: url("/content/img/icon-menu-hover.png") center no-repeat !important;
-			}
-			.navbar-toggler:not(:disabled):not(.disabled) {
-    			background: url("/content/img/icon-menu.png") center no-repeat;
-			}
-			@media (min-width: 768px) and (max-width: 991px) {
-				header {
-					height: 98px;
-				}
-			}
-			@media (min-width: 0px) and (max-width: 767px) {
-				header {
-					height: 92px;
-				}
-			}
+		}
 	</style>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="content" runat="Server">
@@ -84,8 +85,8 @@
 					 
 					<div class="text-project" data-aos="fade-down">
 						<h4>Contato de Suporte:</h4>
-						<p><a href="tel:+55(11)4113-4123">+55 (11) 4113-4123</a></p>
-						<p><a href="mailto:suporte(a)mlpro.com.br">suporte(a)mlpro.com.br</a></p>
+						<p><a href="tel:+55(11)4113-4123" alt="Telefone" title="Telefone">+55 (11) 4113-4123</a></p>
+						<p><a href="mailto:suporte(a)mlpro.com.br" alt="Email" title="Email">suporte(a)mlpro.com.br</a></p>
 					</div>
 				</div>
 				<div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 texto-project" data-aos="fade-down" data-aos-duration="500">
@@ -110,21 +111,21 @@
 				 
 				<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sem-espaco">
 					<div class="slide-missao-visao-valores-mlpro" data-aos="fade-down">
-						<a href="https://mlproepm.sharepoint.com/sites/Suporte/Lists/Chamados/NewForm.aspx" target="_blank" class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 link-deco">
+						<a href="https://mlproepm.sharepoint.com/sites/Suporte/Lists/Chamados/NewForm.aspx" alt="Solicite um novo chamado" title="Solicite um novo chamado" target="_blank" class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 link-deco">
 							<div class="box-slide-solucoes-mlpro ativo titulo">
 								<i class="icon-chamados-um-solicite"></i>
 								<h3>Solicite um <br />novo chamado</h3>
 							</div>
 						</a>
 
-						<a href="https://mlproepm.sharepoint.com/sites/Suporte/SitePages/Lista%20de%20Chamados.aspx" target="_blank" class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 link-deco">
+						<a href="https://mlproepm.sharepoint.com/sites/Suporte/SitePages/Lista%20de%20Chamados.aspx" alt="Acompanhe os seus chamados" title="Acompanhe os seus chamados" target="_blank" class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 link-deco">
 							<div class="box-slide-solucoes-mlpro titulo">
 								<i class="icon-acompanhe-chamado"></i>
 								<h3>Acompanhe os <br />seus chamados</h3>
 							</div>
 						</a>
 
-						<a href="https://mlproepm.sharepoint.com/sites/Suporte/SitePages/Chamados.aspx" target="_blank" class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 link-deco">
+						<a href="https://mlproepm.sharepoint.com/sites/Suporte/SitePages/Chamados.aspx" alt="Acompanhe as horas dos seus chamados" title="Acompanhe as horas dos seus chamados" target="_blank" class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 link-deco">
 							<div class="box-slide-solucoes-mlpro titulo">
 								<i class="icon-hora-chamado"></i>
 								<h3>Acompanhe as horas <br />dos seus chamados</h3>
@@ -148,12 +149,12 @@
 						<li data-aos="fade-down">
 							<i class="icon-telefone-mlpro"></i>
 							<p>
-								<a href="tel:+55(11)4113-4123">
+								<a href="tel:+55(11)4113-4123" alt="Telefone" title="Telefone">
 									+55 (11) 4113-4123
 								</a>
 							</p>
 							<p>
-								<a href="https://api.whatsapp.com/send?1=BR&phone=5511994997179">
+								<a href="https://api.whatsapp.com/send?1=BR&phone=5511994997179" alt="WhatsApp" title="WhatsApp">
 									+55 (11) 99499-7179
 								</a>
 							</p>
@@ -161,7 +162,7 @@
 						<li data-aos="fade-down">
 							<i class="icon-email-mlpro"></i>
 							<p class="line-one">
-								<a href="mailto:contato(a)mlpro.com.br">
+								<a href="mailto:contato(a)mlpro.com.br" alt="Email" title="Email">
 									contato(a)mlpro.com.br
 								</a>
 							</p>

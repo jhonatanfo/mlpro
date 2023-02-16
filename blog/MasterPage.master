@@ -5,12 +5,240 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="head" runat="Server">
 	<link rel="stylesheet" type="text/css" href="/content/css/blog.min.css" />
 	<script type="text/javascript" src="/content/js/blog.min.js"></script>
+	<style type="text/css">
+
+		.container {
+			margin-bottom: initial !important
+		}
+
+		.principal .box-slide {
+			background-repeat: no-repeat !important;
+			background-size: cover !important;
+			background-position-x: center !important;
+		}
+		.nav-item a {
+			color: #253465 !important;
+		}
+
+		.navbar-collapse.show .nav-item a {
+			color: #FFFFFF !important;
+		}
+
+		header{
+			height: 128px !important;
+			background: #FFFFFF !important;
+			box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 30%) !important;
+			border-radius: 8px !important;
+		}
+		.logo {
+			box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 0%) !important;
+		}
+		.lingua {
+			color: #253465 !important;
+		}
+		.navbar-toggler.collapsed:not(:disabled):not(.disabled) {
+			background: url("/content/img/icon-menu-hover.png") center no-repeat !important;
+		}
+		.navbar-toggler:not(:disabled):not(.disabled) {
+			background: url("/content/img/icon-menu.png") center no-repeat !important;
+		}
+		@media (min-width: 768px) and (max-width: 991px) {
+			header {
+				height: 98px !important;
+			}
+		}
+		@media (min-width: 0px) and (max-width: 767px) {
+			header {
+				height: 92px !important;
+			}
+		}
+	</style>
 </asp:Content>
 
 <asp:Content ID="Content4" ContentPlaceHolderID="linguaContent" runat="Server"></asp:Content>
 
-<asp:Content ID="Content5" ContentPlaceHolderID="content" runat="Server">
-	<section class="pg-project">
+ 
+
+<asp:Content ID="Content5" ContentPlaceHolderID="content" runat="Server" >
+
+		<section class="blog-bg-mlpro">
+			<div class="container">
+				<div class="row sem-espaco">
+					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+						<h1 data-aos="fade-down">Blog MLPro</h1>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="container blog-conteudo-mlpro">
+				<div class="row sem-espaco">
+					<div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 right"  data-aos="fade-down">
+						<h2>Posts</h2>
+						<div class="border">
+							<h3>2022</h3>
+
+							<h4>Agosto</h4>
+							<p><a href="">Como Gerenciar Problemas no Project Online</a></p>
+							<p><a href="">Como Gerenciar Riscos no PWA</a></p>
+							<hr>
+
+							<h4>Julho</h4>
+							<p><a href="">Fim do Suporte ao Microsoft Project Server</a></p>
+							<p><a href="">Novidade: Integração do Power BI no Power Point</a></p>
+							<hr>
+
+							<h4>Junho</h4>
+							<p><a href="">Novidade: Microsoft Power Pages</a></p>
+							<p><a href="">Como verificar a disponibilidade de recursos no PWA</a></p>
+							<hr>
+
+							<h4>Maio</h4>
+							<p><a href="">Quais opções de licença do Power BI e suas diferenças</a></p>
+							<p><a href="">Qual a diferença entre empresa baseada em Projetos e baseada em Produtos?</a></p>
+							<hr>
+
+							<h4>Abril</h4>
+							<p><a href="">Project for Office (Plan E3) 365 vs Project Plan 3</a></p>
+							<p><a href="">O que é Microsoft PPM?</a></p>
+							<hr>
+
+							<h4>Março</h4>
+							<p><a href="">Como realizar um bom cronograma de projetos</a></p>
+							<p><a href="">Erro de instância no PWA: O que fazer</a></p>
+							<hr>
+
+							<h4>Fevereiro</h4>
+							<p><a href="">Novidade: E-mail automático no Project Online</a></p>
+							<hr>
+
+							<h4>Janeiro</h4>
+							<p><a href="">5 dicas para realizar uma boa gestão de projetos</a></p>
+							<p><a href="">Project Web App: O que é e como instalar</a></p>
+							<hr>
+
+						</div>
+
+						<div class="border">
+							<h5><a href="">2021</a></h5>
+							<h5><a href="">2020</a></h5>
+							<h5><a href="">2019</a></h5>
+							<h5><a href="">2018</a></h5>
+							<h5><a href="">2017</a></h5>
+							<h5><a href="">2016</a></h5>
+							<h5><a href="">2015</a></h5>
+							<h5><a href="">2014</a></h5>
+						</div>
+					</div>
+					<div class="col-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 left"  data-aos="fade-down">
+						<h2><i class=""></i>31 de agosto de 2022</h2>
+						<hr>
+						<h3>Como Gerenciar Problemas no Project Online</h3>
+						<p>
+							Leandro Lima, Nathalia Souza e Ricardo Sabino.<br>
+							15/09/2022
+						</p>
+
+						<img src="/content/img/blog-01.png" alt="Relatórios de status do projeto automáticos por e-mail" title="Relatórios de status do projeto automáticos por e-mail" class="float-left">
+						
+						<p>
+							É natural que uma empresa tenha que lidar com problemas e imprevistos. Logo, registrá-los é uma tarefa essencial para manter todos os envolvidos no projeto cientes da situação atual e garantir a resolução do problema o mais rápido possível, evitando comprometer o andamento e prazo do projeto. No nosso último artigo falamos sobre como gerenciar riscos no Project Online. Porém, e quando o risco realmente acontece ou quando um problema inesperado  surge, o que fazer? Neste artigo iremos ensinar como cadastrar e gerenciar os problemas do seu projeto no Project Online.
+						</p>
+						<p>
+							O PWA disponibiliza uma lista nativa de problemas dentro do site do projeto (Sharepoint) para o registro e monitoramento dos problemas. Além disso, a MLPro oferece relatórios personalizados possibilitando melhor visualização das informações com gráficos e de forma mais dinâmica, sendo fundamentais para um gerenciamento mais eficiente e um projeto de sucesso.
+						</p>
+
+						<p><b>A origem dos problemas</b></p>
+						<p>
+							<b>Quando já havia um risco cadastrado:</b> Um problema pode ser criado a partir de um risco já identificado e cadastrado anteriormente. Quando o risco acontece, é necessário fechá-lo e cadastrá-lo como um novo problema. A grande diferença neste caso é que provavelmente ele já possui um plano de ação e vai ser solucionado mais rápido, já que não será uma surpresa e os colaboradores do projeto já haviam previsto a possibilidade de acontecer.
+						</p>
+						<p>
+							<b>Quando não havia um risco cadastrado:</b> Nem todo problema pode ter sido identificado anteriormente como um risco e cadastrado com antecedência. Ele pode acontecer sem previsões e neste caso, o problema deve ser cadastrado e os colaboradores devem definir se ele é grave e qual o impacto gera sobre o projeto, para então desenvolver um plano de ação adequado.
+						</p>
+						<p><b>Como registrar e gerenciar os problemas no Project Online</b></p>
+						<p><b>Para registrar os riscos:</b></p>
+						<p>Entre na Central de Projetos > Site do Projeto. Nessa tela, você consegue ter uma breve visualização de quantos problemas estão cadastrados no projeto e quantos deles estão em aberto.</p>
+						
+						<br>
+
+						<img src="/content/img/blog-02.png" class="img-responsive" alt="A implantação do PPM Easy - azul" title="A implantação do PPM Easy - azul">
+
+						<br>
+						<br>
+						<br>
+
+						<p>Ao clicar em “Problemas” no Menu lateral, irá aparecer todos os problemas cadastrados no seu projeto. Para criar um, clique em “Novo Item”.</p>
+						
+						<br>
+
+						<img src="/content/img/blog-03.png" class="img-responsive" alt="Problemas" title="Problemas">
+
+						<br>
+						<br>
+						<br>
+
+						<p>Em seguida, a tela para cadastro do problema irá abrir, basta preencher conforme as características do problema.</p>
+						
+						<br>
+						<br>
+
+						<img src="/content/img/blog-04.png" class="img-responsive" alt="Problemas - novo item" title="Problemas - novo item">
+
+						<br>
+						
+						<p><b>Plano de ação:</b> O problema pode ter um plano de ação já cadastrado ou não. Se não houver, é recomendado que a equipe se reúna e para o desenvolvimento de um plano ideal para este problema, dependendo do seu nível de gravidade.</p>
+						
+						<p>
+							<b>
+								Relatórios da MLPro para gestão de problemas<br>
+								Dashboard Easy
+							</b>
+						</p>
+
+						<p>Esse relatório permite uma ótima visualização dos problemas em seus projetos, sendo eles: atrasados, em andamento, resolvidos, cancelados, abertos ou fechados. É extremamente útil pois os números e gráficos ajudam a identificar se o andamento do projeto e as ações para eliminar ou mitigar estes problemas estão sendo efetivas, tudo com uma visão em nível gerencial.</p>
+
+						<br>
+						
+						<img src="/content/img/blog-05.png" class="img-responsive" alt="Dashboard portfólio easy" title="Dashboard portfólio easy">
+						<br>
+						<br>
+						<br>
+
+						
+						<p><b>Dashboard de Projetos</b><br>Esse relatório mostra todos os seus projetos (podendo selecionar apenas um para visualização) com colunas como a de “problemas” que contém símbolos representando se há problema e se ele está ativo atrasado ou dentro do prazo, facilitando também a visualização de como está o andamento do projeto de forma geral.</p>
+					
+						<br>
+
+						<br>
+
+						
+
+						<img src="/content/img/blog-06.png" class="img-responsive" alt="Dashboard projetos" title="Dashboard projetos">
+						<br>
+						<br>
+						<br>
+
+						
+						<p><b>E-mail automatizado de Relatório de Status do Projeto</b><br>
+							A MLPro desenvolveu um relatório que é enviado por e-mail de forma automatizada e permite a visualização de todos os pontos importantes do seu projeto. No quadro de “Problemas em Aberto” por exemplo, há a descrição dos problemas existentes. Isso além de possibilitar fácil visualização, é extremamente útil para manter os envolvidos sempre cientes de como está o projeto, e o melhor, sem que eles precisem consultar manualmente no Sharepoint.</p>	
+					
+						<br>
+
+						<img src="/content/img/blog-07.png" class="img-responsive" alt="Relatório de status de projetos" title="Relatório de status de projetos">
+						
+						<br>
+						<br>
+
+						<p>Lembre-se que um bom gerente de projetos deve realizar um bom gerenciamento de problemas! Em caso de dúvidas ou interesse, entre em contato com a MLPro preenchendo o formulário de 1º contato.</p>
+							
+					
+					</div>
+				</div>
+			</div>
+		</section>
+
+	<section class="pg-project" style="display:none">
 		<div class="container">
 			<div class="row sem-espaco">
 				<div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 titulo-project">
@@ -19,7 +247,8 @@
 			</div>
 		</div>
 	</section>
-	<section class="pg-project">
+
+	<section class="pg-project" style="display:none">
 		<div class="container">
 			<div class="row sem-espaco">
 				<div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 posts">
@@ -33,6 +262,7 @@
 			</div>
 		</div>
 	</section>
+
 	<script type="text/javascript">
 		$(document).ready(function () {
 			$("#ctl00_ctl00_headermaster").addClass("topo-internas");

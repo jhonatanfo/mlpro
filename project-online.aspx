@@ -11,44 +11,44 @@
 		<style type="text/css">
 
 			.principal .box-slide {
-				background-repeat: no-repeat;
-				background-size: cover;
-				background-position-x: center;
+				background-repeat: no-repeat !important;
+				background-size: cover !important;
+				background-position-x: center !important;
 			}
 			.nav-item a {
-				color: #253465;
+				color: #253465 !important;
 			}
 
 			.navbar-collapse.show .nav-item a {
-				color: #FFFFFF;
+				color: #FFFFFF !important;
 			}
 
 			header{
-				height: 128px;
-				background: #FFFFFF;
-				box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 30%);
-				border-radius: 8px;
+				height: 128px !important;
+				background: #FFFFFF !important;
+				box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 30%) !important;
+				border-radius: 8px !important;
 			}
 			.logo {
-				box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 0%);
+				box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 0%) !important;
 			}
 			.lingua {
-				color: #253465;
+				color: #253465 !important;
 			}
 			.navbar-toggler.collapsed:not(:disabled):not(.disabled) {
     			background: url("/content/img/icon-menu-hover.png") center no-repeat !important;
 			}
 			.navbar-toggler:not(:disabled):not(.disabled) {
-    			background: url("/content/img/icon-menu.png") center no-repeat;
+    			background: url("/content/img/icon-menu.png") center no-repeat !important;
 			}
 			@media (min-width: 768px) and (max-width: 991px) {
 				header {
-					height: 98px;
+					height: 98px !important;
 				}
 			}
 			@media (min-width: 0px) and (max-width: 767px) {
 				header {
-					height: 92px;
+					height: 92px !important;
 				}
 			}
 		</style>
@@ -126,7 +126,7 @@
 						<h3>Microsoft PPM e EPM</h3>
 						<p>Solicite uma demonstração do produto, será um prazer<br />mostrarmos como podemos melhorar
 							a gestão do portfólio de<br />projetos da sua empresa.</p>
-						<a href="/contato/" class="btn-project-contato">Contato <i></i></a>
+						<a href="/contato/" class="btn-project-contato" alt="Contato" title="Contato">Contato <i></i></a>
 					</div>
 				</div>
 			</div>
@@ -143,58 +143,58 @@
 					<div class="slide-clientes-mlpro" data-aos="fade-down">
 						<a target="_blank" href="https://www.voeazul.com.br/">
 							<span class="pos-1-1">
-								<img src="/content/img/clientes-home.png" alt="Azul" />
+								<img src="/content/img/clientes-home.png" alt="Azul" title="Azul" />
 							</span>
 						</a>
 						<a target="_blank" href="https://www.portoseguro.com.br/">
 							<span class="pos-1-2">
-								<img src="/content/img/clientes-home.png" alt="Porto Serguro" />
+								<img src="/content/img/clientes-home.png" alt="Porto Serguro" title="Porto Serguro" />
 							</span>
 						</a>
 						<a target="_blank" href="http://www.ibope.com.br/">
 							<span class="pos-1-3">
-								<img src="/content/img/clientes-home.png" alt="Ibope" />
+								<img src="/content/img/clientes-home.png" alt="Ibope" title="Ibope" />
 							</span>
 						</a>
 						<a target="_blank" href="https://www.tigre.com.br/">
 							<span class="pos-1-4">
-								<img src="/content/img/clientes-home.png" alt="Tigre" />
+								<img src="/content/img/clientes-home.png" alt="Tigre" title="Tigre" />
 							</span>
 						</a>
 						<a target="_blank" href="https://www.vunesp.com.br/">
 							<span class="pos-1-5">
-								<img src="/content/img/clientes-home.png" alt="Vunesp" />
+								<img src="/content/img/clientes-home.png" alt="Vunesp" title="Vunesp" />
 							</span>
 						</a>
 						<a target="_blank" href="https://www.camil.com.br/">
 							<span class="pos-1-6">
-								<img src="/content/img/clientes-home.png" alt="Camil" />
+								<img src="/content/img/clientes-home.png" alt="Camil" title="Camil" />
 							</span>
 						</a>
 
 						<a target="_blank" href="https://www.metrorio.com.br/">
 							<span class="pos-2-1">
-								<img src="/content/img/clientes-home.png" alt="Metro Rio" />
+								<img src="/content/img/clientes-home.png" alt="Metro Rio" title="Metro Rio" />
 							</span>
 						</a>
 						<a target="_blank" href="https://www.cristalia.com.br/">
 							<span class="pos-2-2">
-								<img src="/content/img/clientes-home.png" alt="Cristalia" />
+								<img src="/content/img/clientes-home.png" alt="Cristalia" title="Cristalia" />
 							</span>
 						</a>
 						<a target="_blank" href="https://www.alphavilleurbanismo.com.br/">
 							<span class="pos-2-3">
-								<img src="/content/img/clientes-home.png" alt="Alphaville" />
+								<img src="/content/img/clientes-home.png" alt="Alphaville" title="Alphaville" />
 							</span>
 						</a>
 						<a target="_blank" href="http://www.ype.ind.br/">
 							<span class="pos-2-4">
-								<img src="/content/img/clientes-home.png" alt="Ype" />
+								<img src="/content/img/clientes-home.png" alt="Ype" title="Ype" />
 							</span>
 						</a>
 						<a target="_blank" href="https://www.gocil.com.br/">
 							<span class="pos-2-5">
-								<img src="/content/img/clientes-home.png" alt="Gocil" />
+								<img src="/content/img/clientes-home.png" alt="Gocil" title="Gocil" />
 							</span>
 						</a>
 					</div>
@@ -215,12 +215,12 @@
 							<li data-aos="fade-down">
 								<i class="icon-telefone-mlpro"></i>
 								<p>
-									<a href="tel:+55(11)4113-4123">
+									<a href="tel:+55(11)4113-4123" alt="Telefone" title="Telefone">
 										+55 (11) 4113-4123
 									</a>
 								</p>
 								<p>
-									<a href="https://api.whatsapp.com/send?1=BR&phone=5511994997179">
+									<a href="https://api.whatsapp.com/send?1=BR&phone=5511994997179" alt="WhatsApp" title="WhatsApp">
 										+55 (11) 99499-7179
 									</a>
 								</p>
@@ -228,7 +228,7 @@
 							<li data-aos="fade-down">
 								<i class="icon-email-mlpro"></i>
 								<p class="line-one">
-									<a href="mailto:contato(a)mlpro.com.br">
+									<a href="mailto:contato(a)mlpro.com.br" alt="Email" title="Email">
 										contato(a)mlpro.com.br
 									</a>
 								</p>

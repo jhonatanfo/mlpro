@@ -120,14 +120,14 @@
 
 				<div class="collapse navbar-collapse justify-content-end" id="conteudoNavbarSuportado" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
 					<ul class="navbar-nav">
-						<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-						<li class="nav-item"><a class="nav-link" href="/project-online/">Project Online</a></li>
-						<li class="nav-item"><a class="nav-link" href="/institucional/">Institucional</a></li>
-						<li class="nav-item"><a class="nav-link" href="/clientes/">Clientes</a></li>
-						<li class="nav-item"><a class="nav-link" href="/suporte/">Suporte</a></li>
-						<li class="nav-item"><a class="nav-link" href="/contato/">Contato</a></li>
-						<li class="nav-item"><a class="nav-link" href="/devops/">Devops</a></li>
-						<li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
+						<li class="nav-item"><a class="nav-link" href="/" alt="Home" title="Home">Home</a></li>
+						<li class="nav-item"><a class="nav-link" alt="Project Online" title="Project Online" href="/project-online/">Project Online</a></li>
+						<li class="nav-item"><a class="nav-link" alt="Institucional" title="Institucional" href="/institucional/">Institucional</a></li>
+						<li class="nav-item"><a class="nav-link" alt="Clientes" title="Clientes" href="/clientes/">Clientes</a></li>
+						<li class="nav-item"><a class="nav-link" alt="Suporte" title="Suporte" href="/suporte/">Suporte</a></li>
+						<li class="nav-item"><a class="nav-link" alt="Contato" title="Contato" href="/contato/">Contato</a></li>
+						<li class="nav-item"><a class="nav-link" alt="Devops" title="Devops" href="/devops/">Devops</a></li>
+						<li class="nav-item"><a class="nav-link" alt="Blog" title="Blog" href="/blog/">Blog</a></li>
 					</ul>
 				</div>
 
@@ -145,31 +145,31 @@
 						<img src="/content/img/logo-rodape.png" alt="MLPro - Soluções PPM" title="MLPro - Soluções PPM" width="180"  />
 						
 						<ul class="rodape-rede-social-mlpro">
-							<li><a href="https://www.instagram.com/MLProPPM/"><i class="icon-instagram"></i></a></li>
-							<li><a href="https://www.facebook.com/MLProPPM/"><i class="icon-facebook"></i></a></li>
-							<li><a href="https://www.linkedin.com/company/mlpro---solu-es-epm/"><i class="icon-linkedin"></i></a></li>
-							<li><a href="https://twitter.com/MLProPPM"><i class="icon-twitter"></i></a></li>
+							<li><a href="https://www.instagram.com/MLProPPM/" alt="Instagram" title="Instagram"><i class="icon-instagram"></i></a></li>
+							<li><a href="https://www.facebook.com/MLProPPM/" alt="Facebook" title="Facebook"><i class="icon-facebook"></i></a></li>
+							<li><a href="https://www.linkedin.com/company/mlpro---solu-es-epm/" alt="Linkedin" title="Linkedin"><i class="icon-linkedin"></i></a></li>
+							<li><a href="https://twitter.com/MLProPPM"><i class="icon-twitter" alt="Twitter" title="Twitter"></i></a></li>
 						</ul>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-4 rodape-contato-mlpro">
 						<h2>CONTATO</h2>
 						<p itemprop="telephone">
-							<a href="tel:+55(11)4113-4123">
+							<a href="tel:+55(11)4113-4123" alt="Telefone" title="Telefone">
 								+55 (11) 4113-4123
 							</a>
 						</p>
 						<p>
-							<a href="https://api.whatsapp.com/send?1=BR&phone=5511994997179&text=Este%20contato%20foi%20iniciado%20pelo%20site%20da%20MLPro.%0D%0ATenho%20interesse%20em%20saber%20mais%20sobre%20os%20produtos%20oferecidos." target="_blank">
+							<a href="https://api.whatsapp.com/send?1=BR&phone=5511994997179&text=Este%20contato%20foi%20iniciado%20pelo%20site%20da%20MLPro.%0D%0ATenho%20interesse%20em%20saber%20mais%20sobre%20os%20produtos%20oferecidos." target="_blank" alt="WhatsApp" title="WhatsApp">
 								+55 (11) 99499-7179
 							</a>
 						</p>
 						<p>
-							<a href="mailto:contato%40mlpro.com.br" itemprop="email">
+							<a href="mailto:contato%40mlpro.com.br" itemprop="email" alt="Email" title="Email">
 								contato(a)mlpro.com.br
 							</a>
 						</p>
 						<p itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
-							<a href="/contato/#mapa">
+							<a href="/contato/#mapa" alt="Mapa" title="Mapa">
 								<span itemprop="streetAddress">Rua Restinga, 113 - Sala 1706</span>
 								<br />
 								CEP: <span itemprop="postalCode">03065-020</span> - Tatuapé  
@@ -181,18 +181,18 @@
 					<div class="col-xs-12 col-sm-6 col-md-2 rodape-menu-mlpro">
 						<h2>INSTITUCIONAL</h2>
 						<ul>
-							<li><a href="/">Home</a></li>
-							<li><a href="/project-online/">Project Online</a></li>
-							<li><a href="/institucional/">Institucional</a></li>
-							<li><a href="/clientes/">Clientes</a></li>
+							<li><a href="/" alt="Home" title="Home">Home</a></li>
+							<li><a href="/project-online/" alt="Project Online" title="Project Online">Project Online</a></li>
+							<li><a href="/institucional/" alt="Institucional" title="Institucional">Institucional</a></li>
+							<li><a href="/clientes/" alt="Clientes" title="Clientes">Clientes</a></li>
 						</ul>
 					</div>
 					<div class="col-xs-12 col-sm-6 col-md-2 rodape-menu-mlpro espaco">
 						<ul>
-							<li><a href="/suporte/">Suporte</a></li>
-							<li><a href="/contato/">Contato</a></li>
-							<li><a href="/devops/">DevOps</a></li>
-							<li><a href="/blog/">Blog</a></li>
+							<li><a href="/suporte/" alt="Suporte" title="Suporte">Suporte</a></li>
+							<li><a href="/contato/" alt="Contato" title="Contato">Contato</a></li>
+							<li><a href="/devops/" alt="DevOps" title="DevOps">DevOps</a></li>
+							<li><a href="/blog/" alt="Blog" title="Blog">Blog</a></li>
 						</ul>
 					</div>
 				</div>
@@ -203,15 +203,14 @@
 				<div class="row sem-espaco">
 					<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 sem-espaco">
 						<p>
-							Desenvolvido por <a target="_blank" href="http://homebrasil.com/">HomeBrasil</a> | Parceria por <a target="_blank" href="https://www.melicontrol.com.br/">Melicontrol</a> – Gerenciador de vendas do Mercado Livre
-						</p>
+							Desenvolvido por <a target="_blank" href="http://homebrasil.com/" alt="HomeBrasil" title="HomeBrasil">HomeBrasil</a> | Parceria por <a target="_blank" href="https://www.melicontrol.com.br/" alt="Melicontrol" title="Melicontrol">Melicontrol</a> – Gerenciador de vendas do Mercado Livre </p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</footer>
 	<div id="WhatsApp" style="display: none;">
-		<a href="https://api.whatsapp.com/send?1=BR&phone=5511994997179&text=Este%20contato%20foi%20iniciado%20pelo%20site%20da%20MLPro.%0D%0ATenho%20interesse%20em%20saber%20mais%20sobre%20os%20produtos%20oferecidos." target="_blank" class="shake"><img src="/content/img/whatsapp.png" width="60" height="61" alt="" title="" /></a>
+		<a href="https://api.whatsapp.com/send?1=BR&phone=5511994997179&text=Este%20contato%20foi%20iniciado%20pelo%20site%20da%20MLPro.%0D%0ATenho%20interesse%20em%20saber%20mais%20sobre%20os%20produtos%20oferecidos." target="_blank" class="shake"><img src="/content/img/whatsapp.png" width="60" height="61" alt="Whatsapp" title="Whatsapp" /></a>
 	</div>
 	<script type="text/javascript">
 		$("A[href^='mailto:']").each(function () { $(this).attr("href", $(this).attr("href").replace("(a)", "@")).html($(this).html().replace("(a)", "@")); });

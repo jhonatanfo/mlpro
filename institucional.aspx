@@ -6,47 +6,48 @@
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="head" runat="Server">
 	<style type="text/css">
+
 		.principal .box-slide {
-				background-repeat: no-repeat;
-				background-size: cover;
-				background-position-x: center;
-			}
-			.nav-item a {
-				color: #253465;
-			}
+			background-repeat: no-repeat !important;
+			background-size: cover !important;
+			background-position-x: center !important;
+		}
+		.nav-item a {
+			color: #253465 !important;
+		}
 
-			.navbar-collapse.show .nav-item a {
-				color: #FFFFFF;
-			}
+		.navbar-collapse.show .nav-item a {
+			color: #FFFFFF !important;
+		}
 
-			header{
-				height: 128px;
-				background: #FFFFFF;
-				box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 30%);
-				border-radius: 8px;
+		header{
+			height: 128px !important;
+			background: #FFFFFF !important;
+			box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 30%) !important;
+			border-radius: 8px !important;
+		}
+		.logo {
+			box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 0%) !important;
+		}
+		.lingua {
+			color: #253465 !important;
+		}
+		.navbar-toggler.collapsed:not(:disabled):not(.disabled) {
+			background: url("/content/img/icon-menu-hover.png") center no-repeat !important;
+		}
+		.navbar-toggler:not(:disabled):not(.disabled) {
+			background: url("/content/img/icon-menu.png") center no-repeat !important;
+		}
+		@media (min-width: 768px) and (max-width: 991px) {
+			header {
+				height: 98px !important;
 			}
-			.logo {
-				box-shadow: 0px -8px 23px 13px rgb(37 52 101 / 0%);
+		}
+		@media (min-width: 0px) and (max-width: 767px) {
+			header {
+				height: 92px !important;
 			}
-			.lingua {
-				color: #253465;
-			}
-			.navbar-toggler.collapsed:not(:disabled):not(.disabled) {
-    			background: url("/content/img/icon-menu-hover.png") center no-repeat !important;
-			}
-			.navbar-toggler:not(:disabled):not(.disabled) {
-    			background: url("/content/img/icon-menu.png") center no-repeat;
-			}
-			@media (min-width: 768px) and (max-width: 991px) {
-				header {
-					height: 98px;
-				}
-			}
-			@media (min-width: 0px) and (max-width: 767px) {
-				header {
-					height: 92px;
-				}
-			}
+		}
 	</style>
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="content" runat="Server">
@@ -97,8 +98,8 @@
 		<div class="container">
 			<div class="row sem-espaco">
 				<div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 img-project">
-					<img src="/content/img/microsoft-project-server-project-online.jpg"                                                              alt="Microsoft Project Server e Microsoft Project Online"                                                      title="Microsoft Project Server e Microsoft Project Online"           width="288" height="232" class="institucional-img-project" data-aos="fade-down" data-aos-duration="1600" />
-					<img src="/content/img/microsoft-partner-gold-project-and-portfolio-management-box.jpg"                                          alt="Microsoft Partnet Gold - Project and Portfolio Management"                                                title="Microsoft Partnet Gold - Project and Portfolio Management"     width="288" height="232" class="institucional-img-project" data-aos="fade-down" data-aos-duration="900" />
+					<img src="/content/img/microsoft-project-server-project-online.jpg" alt="Microsoft Project Server e Microsoft Project Online" title="Microsoft Project Server e Microsoft Project Online" width="288" height="232" class="institucional-img-project" data-aos="fade-down" data-aos-duration="1600" />
+					<img src="/content/img/microsoft-partner-gold-project-and-portfolio-management-box.jpg" alt="Microsoft Partnet Gold - Project and Portfolio Management" title="Microsoft Partnet Gold - Project and Portfolio Management"     width="288" height="232" class="institucional-img-project" data-aos="fade-down" data-aos-duration="900" />
 				</div>
 				<div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8 texto-project" data-aos="fade-down" data-aos-duration="500">
 					<ul>
@@ -223,12 +224,12 @@
 						<li data-aos="fade-down">
 							<i class="icon-telefone-mlpro"></i>
 							<p>
-								<a href="tel:+55(11)4113-4123">
+								<a href="tel:+55(11)4113-4123" alt="Telefone" title="Telefone">
 									+55 (11) 4113-4123
 								</a>
 							</p>
 							<p>
-								<a href="https://api.whatsapp.com/send?1=BR&phone=5511994997179">
+								<a href="https://api.whatsapp.com/send?1=BR&phone=5511994997179" alt="Whatsapp" title="Whatsapp">
 									+55 (11) 99499-7179
 								</a>
 							</p>
@@ -236,7 +237,7 @@
 						<li data-aos="fade-down">
 							<i class="icon-email-mlpro"></i>
 							<p class="line-one">
-								<a href="mailto:contato(a)mlpro.com.br">
+								<a href="mailto:contato(a)mlpro.com.br" alt="Email" title="Email">
 									contato(a)mlpro.com.br
 								</a>
 							</p>

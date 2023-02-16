@@ -20,6 +20,8 @@ public partial class contato : System.Web.UI.Page
 
 	protected void btnEnviar_Click(object sender, EventArgs e)
 	{
+		String strResultadoEnvio = "Email enviado com sucesso!!!!";
+
 		if (FrameWork.Util.GetString(token.Value) == "") {
 
 		} else if (FrameWork.Util.GetString(nome.Value).Length == 0) {
@@ -56,7 +58,6 @@ public partial class contato : System.Web.UI.Page
 
 			string strAssunto = "MLPro Soluções PPM - Contato";
 			string FilePath   = Server.MapPath("../template_email/FaleConosco.html");
-
 			string result     = verifyRecaptcha(FrameWork.Util.GetString(token.Value));
 
 			if (result.IndexOf("\"success\":true") > -1) {
@@ -69,10 +70,16 @@ public partial class contato : System.Web.UI.Page
 				strArq = strArq.Replace("#Assunto" , FrameWork.Util.GetString(assunto.Value ));
 				strArq = strArq.Replace("#Mensagem", FrameWork.Util.GetString(mensagem.Value));
 
-				String strResultadoEnvio = FrameWork.Util.GetString(EnvioEmail(strAssunto, strArq));
+				//strResultadoEnvio = FrameWork.Util.GetString(EnvioEmail(strAssunto, strArq));
+				strResultadoEnvio = EnvioEmail(strAssunto, strArq);
+			} else {
+				strResultadoEnvio = "Revalidar Recaptcha.";
 			}
 
-			Funcoes.msgbox("Email enviado com sucesso!", this);
+			DebugMessage.Text = ""; //strResultadoEnvio.Replace("\n", "<br />").Replace("\r", "");
+			Funcoes.msgbox(( strResultadoEnvio == null ? "null" : strResultadoEnvio.Replace("\n", "\\n").Replace("\r", "") ), this);
+//			Funcoes.msgbox("Email enviado com sucesso!", this);
+
 
 			nome.Attributes.Add("style", "");
 			email.Attributes.Add("style", "");
@@ -80,15 +87,17 @@ public partial class contato : System.Web.UI.Page
 			assunto.Attributes.Add("style", "");
 			mensagem.Attributes.Add("style", "");
 
-			nome.Value     = "";
-			email.Value    = "";
-			telefone.Value = "";
-			assunto.Value  = "";
-			mensagem.Value = "";
+			if(strResultadoEnvio == "Email enviado com sucesso!") {
+				nome.Value     = "";
+				email.Value    = "";
+				telefone.Value = "";
+				assunto.Value  = "";
+				mensagem.Value = "";
+			}
 		}
 	}
 
-	public static string verifyRecaptcha(string token)
+	public string verifyRecaptcha(string token)
 	{
 		// recaptcha v3
 		string secretKey  = "6LdFRYIUAAAAABnHTG1YaL5slTSMFNQOU3BmLU6t";
@@ -109,6 +118,7 @@ public partial class contato : System.Web.UI.Page
 
 		System.IO.StreamReader sr = new System.IO.StreamReader(resp.GetResponseStream());
 		string result = sr.ReadToEnd().Trim().Replace(" ", "");
+
 		// Response.Write( sr.ReadToEnd().Trim() );
 		// { "success": false, "error-codes": [ "invalid-input-secret" ] }
 		// { "success": true, "challenge_ts": "2019-06-14T13:24:24Z", "hostname": "www.mlpro.com.br", "score": 0.9, "action": "homepage" }
@@ -116,54 +126,62 @@ public partial class contato : System.Web.UI.Page
 		return result;
 	}
 
-	public static object EnvioEmail(string titulo, string corpo)
+	public string EnvioEmail(string titulo, string corpo)
 	{
-		string sErro = "";
-
-		string email_SendInfoFrom        =                       ConfigurationManager.AppSettings["email_SendInfoFrom"       ] ;
-		string email_SendInfoTo          =                       ConfigurationManager.AppSettings["email_SendInfoTo"         ] ;
-		string email_SendInfoCC          =                       ConfigurationManager.AppSettings["email_SendInfoCC"         ] ;
-		string email_SendInfoCCO         =                       ConfigurationManager.AppSettings["email_SendInfoCCO"        ] ;
-		string email_EmailHost           =                       ConfigurationManager.AppSettings["email_EmailHost"          ] ;
-		int    email_Port                = FrameWork.Util.GetInt(ConfigurationManager.AppSettings["email_Port"               ]);
-		string email_UsuarioAutenticacao =                       ConfigurationManager.AppSettings["email_UsuarioAutenticacao"] ;
-		string email_SenhaAutenticacao   =                       ConfigurationManager.AppSettings["email_SenhaAutenticacao"  ] ;
-
-		System.Net.Mail.MailMessage objEmail = new System.Net.Mail.MailMessage();
-		SmtpClient client = new SmtpClient();
-
-		//AUTENTICACAO NO SERVIDOR DE EMAIL
-		client.Credentials = new System.Net.NetworkCredential(email_UsuarioAutenticacao, email_SenhaAutenticacao);
-		client.Host        = email_EmailHost;
-		client.Port        = FrameWork.Util.GetInt(email_Port);
-		client.EnableSsl   = true;
-
-		objEmail.Subject    = titulo;
-		objEmail.Body       = corpo;
-		objEmail.IsBodyHtml = true;
-
-		objEmail.From = new MailAddress(email_SendInfoFrom);
-		
-		if (!string.IsNullOrEmpty(FrameWork.Util.GetString(email_SendInfoTo))) {
-			string[] arremail = email_SendInfoTo.Replace(";", ",").Split(',');
-			for (int n = 0; n <= arremail.Length - 1; n++) if (arremail[n].Length > 0) objEmail.To.Add(arremail[n]);
-		}
-		
-		if (!string.IsNullOrEmpty(FrameWork.Util.GetString(email_SendInfoCC))) {
-			string[] arremail = email_SendInfoCC.Replace(";", ",").Split(',');
-			for (int n = 0; n <= arremail.Length - 1; n++) if (arremail[n].Length > 0) objEmail.CC.Add(arremail[n]);
-		}
-		
-		if (!string.IsNullOrEmpty(FrameWork.Util.GetString(email_SendInfoCCO))) {
-			string[] arremail = email_SendInfoCCO.Replace(";", ",").Split(',');
-			for (int n = 0; n <= arremail.Length - 1; n++) if (arremail[n].Length > 0) objEmail.Bcc.Add(arremail[n]);
-		}
+		string sErro = "...";
 
 		try {
-			client.Send(objEmail);
-			sErro = "Email enviado com sucesso!!!!";
+
+			string email_SendInfoFrom        =                       ConfigurationManager.AppSettings["email_SendInfoFrom"       ] ;
+			string email_SendInfoTo          =                       ConfigurationManager.AppSettings["email_SendInfoTo"         ] ;
+			string email_SendInfoCC          =                       ConfigurationManager.AppSettings["email_SendInfoCC"         ] ;
+			string email_SendInfoCCO         =                       ConfigurationManager.AppSettings["email_SendInfoCCO"        ] ;
+			string email_EmailHost           =                       ConfigurationManager.AppSettings["email_EmailHost"          ] ;
+			int    email_Port                = FrameWork.Util.GetInt(ConfigurationManager.AppSettings["email_Port"               ]);
+			string email_UsuarioAutenticacao =                       ConfigurationManager.AppSettings["email_UsuarioAutenticacao"] ;
+			string email_SenhaAutenticacao   =                       ConfigurationManager.AppSettings["email_SenhaAutenticacao"  ] ;
+
+			System.Net.Mail.MailMessage objEmail = new System.Net.Mail.MailMessage();
+			SmtpClient client = new SmtpClient();
+
+			//AUTENTICACAO NO SERVIDOR DE EMAIL
+			//client.DeliveryMethod = SmtpDeliveryMethod.Network;
+			client.Credentials    = new System.Net.NetworkCredential(email_UsuarioAutenticacao, email_SenhaAutenticacao);
+			client.Host           = email_EmailHost;
+			client.Port           = FrameWork.Util.GetInt(email_Port);
+			client.EnableSsl      = true;
+
+			objEmail.Subject    = titulo;
+			objEmail.Body       = corpo;
+			objEmail.IsBodyHtml = true;
+
+			objEmail.From = new MailAddress(email_SendInfoFrom);
+			
+			if (!string.IsNullOrEmpty(FrameWork.Util.GetString(email_SendInfoTo))) {
+				string[] arremail = email_SendInfoTo.Replace(";", ",").Split(',');
+				for (int n = 0; n <= arremail.Length - 1; n++) if (arremail[n].Length > 0) objEmail.To.Add(arremail[n]);
+			}
+			
+			if (!string.IsNullOrEmpty(FrameWork.Util.GetString(email_SendInfoCC))) {
+				string[] arremail = email_SendInfoCC.Replace(";", ",").Split(',');
+				for (int n = 0; n <= arremail.Length - 1; n++) if (arremail[n].Length > 0) objEmail.CC.Add(arremail[n]);
+			}
+			
+			if (!string.IsNullOrEmpty(FrameWork.Util.GetString(email_SendInfoCCO))) {
+				string[] arremail = email_SendInfoCCO.Replace(";", ",").Split(',');
+				for (int n = 0; n <= arremail.Length - 1; n++) if (arremail[n].Length > 0) objEmail.Bcc.Add(arremail[n]);
+			}
+
+			try {
+				client.Send(objEmail);
+				objEmail.Dispose();
+				sErro = "Email enviado com sucesso!";
+			} catch (Exception ex) {
+				sErro = "Error no send: " + ex.ToString();
+			}
+
 		} catch (Exception ex) {
-			sErro = "Error no send: " + ex.ToString();
+			sErro = "Error : " + ex.ToString();
 		}
 
 		return sErro;

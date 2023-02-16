@@ -30,7 +30,7 @@
 								e Project Online nos processos de: Consultoria, Implantação, Configuração, Customização,
 								Integração, Treinamento, Administração e Suporte...
 							</p>
-							<a href="/project-online/" data-aos="fade-down" class="btn-veja">
+							<a href="/project-online/" data-aos="fade-down" class="btn-veja" alt="Veja mais" title="veja mais">
 								veja mais
 							</a>
 						</div>
@@ -39,7 +39,7 @@
 			</div>
 			<div class="logo-microsoft-partner-2022">
 				<div class="container">
-					<img src="/content/img/logo-microsoft-partner-2022.png" data-aos="fade-down"  >
+					<img src="/content/img/logo-microsoft-partner-2022.png" data-aos="fade-down" alt="Microsoft Partner" title="Microsoft Partner">
 				</div>
 			</div>
 		</section>
@@ -56,35 +56,35 @@
 								<i class="icon-instalacao-configuracao-ppm"></i>
 								<h3>Instalação e Configuração do Microsoft PPM:</h3>
 								<p>Implantação e Consultoria, garantindo a aplicação das melhores práticas do mercado.</p>
-								<a href="/project-online/" class="btn-saiba-solucoes">Saiba mais</a>
+								<a href="/project-online/" class="btn-saiba-solucoes" alt="Instalação e Configuração do Microsoft PPM" title="Instalação e Configuração do Microsoft PPM">Saiba mais</a>
 							</div>
 
 							<div class="box-slide-solucoes-mlpro">
 								<i class="icon-solucoes-exclusivas-mlpro"></i>
 								<h3>Soluções Exclusivas MLPro</h3>
 								<p>Visando atender às melhores práticas de gerenciamento de projetos</p>
-								<a href="/project-online/" class="btn-saiba-solucoes">Saiba mais</a>
+								<a href="/project-online/" class="btn-saiba-solucoes" alt="Soluções Exclusivas MLPro" title="Soluções Exclusivas MLPro">Saiba mais</a>
 							</div>
 
 							<div class="box-slide-solucoes-mlpro">
 								<i class="icon-consultoria-ppm"></i>
 								<h3>Consultoria PPM</h3>
 								<p>Aplicação prática da ferramenta em projetos do cliente, assegurando que a empresa obtenha resultados de forma mais rápida </p>
-								<a href="/project-online/" class="btn-saiba-solucoes">Saiba mais</a>
+								<a href="/project-online/" class="btn-saiba-solucoes" alt="Consultoria PPM" title="Consultoria PPM">Saiba mais</a>
 							</div>
 
 							<div class="box-slide-solucoes-mlpro">
 								<i class="icon-treinamento-ppm"></i>
 								<h3>Treinamento PPM</h3>
 								<p>Treinamento em Project Online, Project Server, Project Professional e no SharePoint.</p>
-								<a href="/project-online/" class="btn-saiba-solucoes">Saiba mais</a>
+								<a href="/project-online/" class="btn-saiba-solucoes" alt="Treinamento PPM" title="Treinamento PPM">Saiba mais</a>
 							</div>
 
 							<div class="box-slide-solucoes-mlpro">
 								<i class="icon-treinamento-ppm"></i>
 								<h3>Treinamento PPM</h3>
 								<p>Treinamento em Project Online, Project Server, Project Professional e no SharePoint.</p>
-								<a href="/project-online/" class="btn-saiba-solucoes">Saiba mais</a>
+								<a href="/project-online/" class="btn-saiba-solucoes" alt="Treinamento PPM" title="Treinamento PPM">Saiba mais</a>
 							</div>
 						</div>
 					</div>
@@ -116,7 +116,7 @@
 						<li><i class="icon-melhoria"></i>Melhoria na produtividade de 13% dos recursos do Projeto;</li>
 						<li><i class="icon-reducao"></i>Redução do estouro no orçamento do projeto em 5%.</li>
 					</ul>
-					<a href="/project-online/" data-aos="fade-down">Saiba mais</a>
+					<a href="/project-online/" data-aos="fade-down" alt="Saiba mais" title="Saiba mais">Saiba mais</a>
 				</div>
 
 			</div>
@@ -170,58 +170,58 @@
 					<div class="slide-clientes-mlpro" data-aos="fade-down">
 						<a target="_blank" href="https://www.voeazul.com.br/">
 							<span class="pos-1-1">
-								<img src="/content/img/clientes-home.png" alt="Azul" />
+								<img src="/content/img/clientes-home.png" alt="Azul" title="Azul" />
 							</span>
 						</a>
 						<a target="_blank" href="https://www.portoseguro.com.br/">
 							<span class="pos-1-2">
-								<img src="/content/img/clientes-home.png" alt="Porto Serguro" />
+								<img src="/content/img/clientes-home.png" alt="Porto Serguro" title="Porto Serguro" />
 							</span>
 						</a>
 						<a target="_blank" href="http://www.ibope.com.br/">
 							<span class="pos-1-3">
-								<img src="/content/img/clientes-home.png" alt="Ibope" />
+								<img src="/content/img/clientes-home.png" alt="Ibope" title="Ibope" />
 							</span>
 						</a>
 						<a target="_blank" href="https://www.tigre.com.br/">
 							<span class="pos-1-4">
-								<img src="/content/img/clientes-home.png" alt="Tigre" />
+								<img src="/content/img/clientes-home.png" alt="Tigre" title="Tigre" />
 							</span>
 						</a>
 						<a target="_blank" href="https://www.vunesp.com.br/">
 							<span class="pos-1-5">
-								<img src="/content/img/clientes-home.png" alt="Vunesp" />
+								<img src="/content/img/clientes-home.png" alt="Vunesp" title="Vunesp" />
 							</span>
 						</a>
 						<a target="_blank" href="https://www.camil.com.br/">
 							<span class="pos-1-6">
-								<img src="/content/img/clientes-home.png" alt="Camil" />
+								<img src="/content/img/clientes-home.png" alt="Camil" title="Camil" />
 							</span>
 						</a>
 
 						<a target="_blank" href="https://www.metrorio.com.br/">
 							<span class="pos-2-1">
-								<img src="/content/img/clientes-home.png" alt="Metro Rio" />
+								<img src="/content/img/clientes-home.png" alt="Metro Rio" title="Metro Rio" />
 							</span>
 						</a>
 						<a target="_blank" href="https://www.cristalia.com.br/">
 							<span class="pos-2-2">
-								<img src="/content/img/clientes-home.png" alt="Cristalia" />
+								<img src="/content/img/clientes-home.png" alt="Cristalia" title="Cristalia" />
 							</span>
 						</a>
 						<a target="_blank" href="https://www.alphavilleurbanismo.com.br/">
 							<span class="pos-2-3">
-								<img src="/content/img/clientes-home.png" alt="Alphaville" />
+								<img src="/content/img/clientes-home.png" alt="Alphaville" title="Alphaville" />
 							</span>
 						</a>
 						<a target="_blank" href="http://www.ype.ind.br/">
 							<span class="pos-2-4">
-								<img src="/content/img/clientes-home.png" alt="Ype" />
+								<img src="/content/img/clientes-home.png" alt="Ype" title="Ype" />
 							</span>
 						</a>
 						<a target="_blank" href="https://www.gocil.com.br/">
 							<span class="pos-2-5">
-								<img src="/content/img/clientes-home.png" alt="Gocil" />
+								<img src="/content/img/clientes-home.png" alt="Gocil" title="Gocil" />
 							</span>
 						</a>
 					</div>
@@ -450,12 +450,12 @@
 							<li data-aos="fade-down">
 								<i class="icon-telefone-mlpro"></i>
 								<p>
-									<a href="tel:+55(11)4113-4123">
+									<a href="tel:+55(11)4113-4123" alt="Telefone" title="Telefone">
 										+55 (11) 4113-4123
 									</a> 
 								</p>
 								<p>
-									<a href="https://api.whatsapp.com/send?1=BR&phone=5511994997179">
+									<a href="https://api.whatsapp.com/send?1=BR&phone=5511994997179" alt="Whatsapp" title="Whatsapp">
 										+55 (11) 99499-7179
 									</a>
 								</p>
@@ -463,7 +463,7 @@
 							<li data-aos="fade-down">
 								<i class="icon-email-mlpro"></i>
 								<p class="line-one">
-									<a href="mailto:contato(a)mlpro.com.br">
+									<a href="mailto:contato(a)mlpro.com.br" alt="Email" title="Email">
 										contato(a)mlpro.com.br
 									</a>
 								</p>
